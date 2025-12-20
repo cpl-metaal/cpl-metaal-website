@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offerte Aanvragen | CPL Metaal</title>
+    <meta name="description" content="Vraag direct een vrijblijvende offerte aan bij CPL Metaal. ✓ Reactie binnen 24 uur ✓ Vakkundig advies ✓ Maatwerk mogelijk">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1a5490;
+            --primary-dark: #143f6d;
+            --secondary: #ff6b35;
+            --dark: #1d3a55;
+            --light: #ecf0f1;
+            --white: #ffffff;
+            --gray-50: #f8f9fa;
+            --gray-300: #ced4da;
+            --gray-600: #495057;
+            --success: #28a745;
+            --error: #dc3545;
+            --font-display: 'Rajdhani', sans-serif;
+            --font-body: 'Karla', sans-serif;
+            --space-4: 1rem;
+            --space-5: 1.5rem;
+            --space-6: 2rem;
+            --radius: 8px;
+            --radius-lg: 16px;
+            --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--dark);
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark);
+            margin-bottom: var(--space-4);
+        }
+
+        h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+        h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+
+        p { margin-bottom: var(--space-4); }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+
+        a:hover { color: var(--primary-dark); }
+
+        .container {
+            width: 100%;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 15px; }
+        }
+
+        .section { padding: clamp(3rem, 8vw, 6rem) 0; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.75rem;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid transparent;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--white);
+            border: none;
+        }
+
+        /* HEADER */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-300);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+
+        .logo img { height: 60px; width: auto; }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: var(--space-6);
+            list-style: none;
+        }
+
+        .nav-link {
+            font-family: var(--font-display);
+            font-weight: 500;
+            font-size: 1.0625rem;
+            color: var(--dark);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--dark);
+            margin: 5px 0;
+        }
+
+        /* PAGE HEADER */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, #2874a6 100%);
+            color: var(--white);
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        /* FORM SECTION */
+        .form-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-5);
+        }
+
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-group {
+            margin-bottom: var(--space-5);
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        label .required {
+            color: var(--error);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid var(--gray-300);
+            border-radius: var(--radius);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: border-color var(--transition);
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: start;
+            gap: 0.75rem;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 0.25rem;
+            flex-shrink: 0;
+        }
+
+        .checkbox-group label {
+            margin-bottom: 0;
+            font-weight: 400;
+        }
+
+        .form-info {
+            background: var(--gray-50);
+            padding: var(--space-5);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-6);
+        }
+
+        .form-info h3 {
+            margin-bottom: 1rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-4);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .info-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--secondary);
+            flex-shrink: 0;
+        }
+
+        .alert {
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius);
+            margin-bottom: var(--space-5);
+            display: none;
+        }
+
+        .alert.show {
+            display: block;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+
+        .alert-error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        /* FOOTER */
+        .site-footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.8);
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul { list-style: none; }
+        .footer-section li { margin-bottom: 0.5rem; }
+        .footer-section a { color: rgba(255,255,255,0.8); }
+        .footer-section a:hover { color: var(--secondary); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 992px) {
+            .nav-menu { display: none; }
+            .mobile-menu-btn { display: block; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="CPL Metaal">
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="#" class="nav-link">Producten</a></li>
+                    <li><a href="#" class="nav-link">Toepassingen</a></li>
+                    <li><a href="#" class="nav-link">Over Ons</a></li>
+                    <li><a href="#" class="nav-link">Contact</a></li>
+                    <li><a href="offerte-aanvragen.html" class="btn btn-primary btn-sm">Offerte Aanvragen</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Vrijblijvende Offerte Aanvragen</h1>
+            <p style="font-size: 1.125rem; margin: 0; opacity: 0.95;">Vul onderstaand formulier in en wij nemen binnen 24 uur contact met u op</p>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="form-container">
+                    <!-- Form Benefits -->
+                    <div class="form-info">
+                        <h3>Wat u kunt verwachten</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <svg class="info-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <strong>Reactie binnen 24 uur</strong>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <svg class="info-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <strong>Vrijblijvend & kosteloos</strong>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <svg class="info-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <strong>Maatwerk mogelijk</strong>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <svg class="info-icon" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+                                </svg>
+                                <div>
+                                    <strong>Vakkundig advies</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Success/Error Messages -->
+                    <div id="successMessage" class="alert alert-success">
+                        <strong>✓ Bedankt voor uw aanvraag!</strong><br>
+                        We hebben uw offerte-aanvraag ontvangen en nemen binnen 24 uur contact met u op.
+                    </div>
+
+                    <div id="errorMessage" class="alert alert-error">
+                        <strong>✗ Er is iets misgegaan</strong><br>
+                        Probeer het opnieuw of neem telefonisch contact met ons op: 010 123 4567
+                    </div>
+
+                    <!-- Contact Form -->
+                    <form id="offerteForm" method="POST">
+                        <div class="form-grid">
+                            <!-- Naam -->
+                            <div class="form-group">
+                                <label for="naam">Naam <span class="required">*</span></label>
+                                <input type="text" id="naam" name="naam" required placeholder="Uw naam">
+                            </div>
+
+                            <!-- Bedrijf -->
+                            <div class="form-group">
+                                <label for="bedrijf">Bedrijf</label>
+                                <input type="text" id="bedrijf" name="bedrijf" placeholder="Bedrijfsnaam (optioneel)">
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="email">E-mailadres <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required placeholder="uw@email.nl">
+                            </div>
+
+                            <!-- Telefoon -->
+                            <div class="form-group">
+                                <label for="telefoon">Telefoonnummer <span class="required">*</span></label>
+                                <input type="tel" id="telefoon" name="telefoon" required placeholder="06 12345678">
+                            </div>
+
+                            <!-- Product -->
+                            <div class="form-group">
+                                <label for="product">Product <span class="required">*</span></label>
+                                <select id="product" name="product" required>
+                                    <option value="">-- Selecteer een product --</option>
+                                    <option value="Strekmetaal">Strekmetaal</option>
+                                    <option value="Geperforeerd Metaal">Geperforeerd Metaal</option>
+                                    <option value="Gaasproducten">Gaasproducten</option>
+                                    <option value="Roosters">Roosters</option>
+                                    <option value="Cortenstaal">Cortenstaal</option>
+                                    <option value="Maatwerk">Maatwerk / Anders</option>
+                                </select>
+                            </div>
+
+                            <!-- Toepassing -->
+                            <div class="form-group">
+                                <label for="toepassing">Toepassing</label>
+                                <select id="toepassing" name="toepassing">
+                                    <option value="">-- Selecteer toepassing (optioneel) --</option>
+                                    <option value="Gevelbekleding">Gevelbekleding</option>
+                                    <option value="Balkons & Balustrades">Balkons & Balustrades</option>
+                                    <option value="Dakopbouw">Dakopbouw</option>
+                                    <option value="Hekwerk & Terreinafscheiding">Hekwerk & Terreinafscheiding</option>
+                                    <option value="Vloeren & Trappen">Vloeren & Trappen</option>
+                                    <option value="Industrie & Machineafscherming">Industrie & Machineafscherming</option>
+                                    <option value="Groenvoorziening">Groenvoorziening</option>
+                                    <option value="Interieur">Interieur</option>
+                                    <option value="Anders">Anders</option>
+                                </select>
+                            </div>
+
+                            <!-- Specificaties -->
+                            <div class="form-group full-width">
+                                <label for="specificaties">Specificaties en wensen <span class="required">*</span></label>
+                                <textarea id="specificaties" name="specificaties" required placeholder="Beschrijf zo gedetailleerd mogelijk:&#10;- Afmetingen (lengte x breedte)&#10;- Materiaal (staal, aluminium, RVS, etc.)&#10;- Hoeveelheid&#10;- Afwerking (verzinkt, gepoedercoat, etc.)&#10;- Eventuele tekeningen of referenties&#10;- Gewenste levertijd"></textarea>
+                            </div>
+
+                            <!-- Bestand Upload -->
+                            <div class="form-group full-width">
+                                <label for="bestand">Bestand toevoegen</label>
+                                <input type="file" id="bestand" name="bestand" accept=".pdf,.jpg,.jpeg,.png,.dwg,.dxf">
+                                <small style="color: var(--gray-600); display: block; margin-top: 0.5rem;">
+                                    Toegestaan: PDF, JPG, PNG, DWG, DXF (max 10MB)
+                                </small>
+                            </div>
+
+                            <!-- Privacy Checkbox -->
+                            <div class="form-group full-width">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="privacy" name="privacy" required>
+                                    <label for="privacy">
+                                        Ik ga akkoord met de <a href="#" target="_blank">privacyverklaring</a> en geef toestemming om mijn gegevens te verwerken voor deze offerte-aanvraag. <span class="required">*</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="form-group full-width">
+                                <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.125rem; padding: 1.125rem;">
+                                    📋 Verstuur Offerte-Aanvraag
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Contact Info -->
+                    <div style="margin-top: var(--space-8); padding: var(--space-5); background: var(--gray-50); border-radius: var(--radius-lg); text-align: center;">
+                        <h3>Liever direct contact?</h3>
+                        <p>Bel ons op <strong><a href="tel:+31101234567">010 123 4567</a></strong> of mail naar <strong><a href="mailto:info@cplmetaal.nl">info@cplmetaal.nl</a></strong></p>
+                        <p style="margin: 0; color: var(--gray-600);">Bereikbaar: ma-vr van 08:00 - 17:00 uur</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>CPL Metaal</h4>
+                    <p>Specialist in hoogwaardige metaalproducten voor bouw, industrie en architectuur.</p>
+                    <p style="margin-top: 1rem;">
+                        <strong>Tel:</strong> 010 123 4567<br>
+                        <strong>Email:</strong> info@cplmetaal.nl
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Producten</h4>
+                    <ul>
+                        <li><a href="strekmetaal.html">Strekmetaal</a></li>
+                        <li><a href="#">Geperforeerd Metaal</a></li>
+                        <li><a href="#">Gaasproducten</a></li>
+                        <li><a href="#">Roosters</a></li>
+                        <li><a href="#">Cortenstaal</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Bedrijf</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Over Ons</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="offerte-aanvragen.html">Offerte Aanvragen</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 CPL Metaal. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FORM HANDLER SCRIPT -->
+    <script>
+        document.getElementById('offerteForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const successMsg = document.getElementById('successMessage');
+            const errorMsg = document.getElementById('errorMessage');
+            
+            // Hide previous messages
+            successMsg.classList.remove('show');
+            errorMsg.classList.remove('show');
+            
+            // Show loading state
+            form.classList.add('loading');
+            submitBtn.textContent = '⏳ Bezig met verzenden...';
+            submitBtn.disabled = true;
+            
+            // Create email body
+            const emailBody = `
+NIEUWE OFFERTE-AANVRAAG VIA WEBSITE
+
+CONTACTGEGEVENS:
+Naam: ${formData.get('naam')}
+Bedrijf: ${formData.get('bedrijf') || 'Niet opgegeven'}
+Email: ${formData.get('email')}
+Telefoon: ${formData.get('telefoon')}
+
+PRODUCTINFORMATIE:
+Product: ${formData.get('product')}
+Toepassing: ${formData.get('toepassing') || 'Niet opgegeven'}
+
+SPECIFICATIES EN WENSEN:
+${formData.get('specificaties')}
+
+---
+Deze aanvraag is verzonden via het contact formulier op cplmetaal.nl
+Datum: ${new Date().toLocaleString('nl-NL')}
+            `.trim();
+            
+            // Use mailto as fallback (opens email client)
+            const mailto = `mailto:info@cplmetaal.nl?subject=Offerte Aanvraag - ${formData.get('product')}&body=${encodeURIComponent(emailBody)}`;
+            
+            try {
+                // Open mailto link
+                window.location.href = mailto;
+                
+                // Show success message after short delay
+                setTimeout(() => {
+                    form.classList.remove('loading');
+                    submitBtn.textContent = '✓ Verzonden!';
+                    successMsg.classList.add('show');
+                    
+                    // Reset form
+                    setTimeout(() => {
+                        form.reset();
+                        submitBtn.textContent = '📋 Verstuur Offerte-Aanvraag';
+                        submitBtn.disabled = false;
+                    }, 3000);
+                }, 500);
+                
+            } catch (error) {
+                console.error('Error:', error);
+                form.classList.remove('loading');
+                submitBtn.textContent = '📋 Verstuur Offerte-Aanvraag';
+                submitBtn.disabled = false;
+                errorMsg.classList.add('show');
+            }
+        });
+    </script>
+</body>
+</html>
