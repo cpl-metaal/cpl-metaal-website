@@ -250,9 +250,21 @@
 
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: var(--space-5);
             margin: var(--space-6) 0;
+        }
+        
+        @media (max-width: 992px) {
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .feature-item {
@@ -447,7 +459,7 @@
                                     <li>✓ Diverse maasgroottes</li>
                                 </ul>
                                 
-                                <a href="strekmetaal.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Meer over strekmetaal →</a>
+                                <a href="strekmetaal.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Strekmetaal →</a>
                             </div>
                         </article>
 
@@ -465,7 +477,7 @@
                                     <li>✓ Diverse materialen</li>
                                 </ul>
                                 
-                                <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Meer over geperforeerd metaal →</a>
+                                <a href="geperforeerd-metaal.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Geperforeerd Metaal →</a>
                             </div>
                         </article>
 
@@ -483,7 +495,7 @@
                                     <li>✓ Veroudert mooi</li>
                                 </ul>
                                 
-                                <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Meer over cortenstaal →</a>
+                                <a href="cortenstaal.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Cortenstaal →</a>
                             </div>
                         </article>
                     </div>
@@ -544,60 +556,98 @@
             </div>
         </section>
 
-        <!-- TECHNISCHE INFO -->
+        <!-- INSPIRATIE AFBEELDINGEN -->
         <section class="section bg-light">
             <div class="container">
                 <div class="content-section">
-                    <h2>Technische aspecten</h2>
-                    <p>Bij het ontwerpen van metalen gevelbekleding zijn verschillende technische aspecten van belang:</p>
+                    <h2>Meer Inspiratie Afbeeldingen</h2>
+                    <p style="text-align: center; margin-bottom: var(--space-6);">Ontdek de mogelijkheden van metalen gevelbekleding in verschillende projecten</p>
                     
-                    <div class="feature-grid">
-                        <div class="feature-item">
-                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-3 3a1 1 0 100 2h.01a1 1 0 100-2H10zm-4 1a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1zm1-4a1 1 0 100 2h.01a1 1 0 100-2H7zm2 1a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm4-4a1 1 0 100 2h.01a1 1 0 100-2H13zM9 9a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zM7 8a1 1 0 000 2h.01a1 1 0 000-2H7z" clip-rule="evenodd"/></svg>
-                            <div>
-                                <strong>Bevestigingssystemen</strong>
-                                <p style="margin: 0;">Zichtbaar of onzichtbaar, afhankelijk van het gewenste effect</p>
+                    <div class="inspiration-grid">
+                        <!-- Placeholder images - replace with actual images -->
+                        <div class="inspiration-item">
+                            <div class="inspiration-image" style="background: linear-gradient(135deg, #1a5490 0%, #2874a6 100%); height: 300px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-lg); color: white; font-size: 1.125rem;">
+                                Strekmetaal Gevel<br>Voorbeeld 1
                             </div>
+                            <p style="margin-top: 1rem; font-weight: 500;">Modern kantoorgebouw met strekmetaal facade</p>
                         </div>
-                        <div class="feature-item">
-                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/></svg>
-                            <div>
-                                <strong>Onderkonstruktie</strong>
-                                <p style="margin: 0;">Aluminium of stalen profielen voor stabiele montage</p>
+                        
+                        <div class="inspiration-item">
+                            <div class="inspiration-image" style="background: linear-gradient(135deg, #1a5490 0%, #2874a6 100%); height: 300px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-lg); color: white; font-size: 1.125rem;">
+                                Geperforeerd Metaal<br>Voorbeeld 2
                             </div>
+                            <p style="margin-top: 1rem; font-weight: 500;">Geperforeerde panelen als zonwering</p>
                         </div>
-                        <div class="feature-item">
-                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/></svg>
-                            <div>
-                                <strong>Ventilatieopeningen</strong>
-                                <p style="margin: 0;">Berekening van vrije oppervlakte voor luchtcirculatie</p>
+                        
+                        <div class="inspiration-item">
+                            <div class="inspiration-image" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); height: 300px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-lg); color: white; font-size: 1.125rem;">
+                                Cortenstaal<br>Voorbeeld 3
                             </div>
+                            <p style="margin-top: 1rem; font-weight: 500;">Cortenstaal wooncomplex met natuurlijke patina</p>
                         </div>
-                        <div class="feature-item">
-                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd"/></svg>
-                            <div>
-                                <strong>Brandveiligheid</strong>
-                                <p style="margin: 0;">Klasse A1 brandgedrag, niet-brandbaar materiaal</p>
+                        
+                        <div class="inspiration-item">
+                            <div class="inspiration-image" style="background: linear-gradient(135deg, #1a5490 0%, #2874a6 100%); height: 300px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-lg); color: white; font-size: 1.125rem;">
+                                Strekmetaal Parkeergarage<br>Voorbeeld 4
                             </div>
+                            <p style="margin-top: 1rem; font-weight: 500;">Parkeergarage met ventilerende gevelpanelen</p>
                         </div>
-                        <div class="feature-item">
-                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11 4a1 1 0 10-2 0v4a1 1 0 102 0V7zm-3 1a1 1 0 10-2 0v3a1 1 0 102 0V8zM8 9a1 1 0 00-2 0v2a1 1 0 102 0V9z" clip-rule="evenodd"/></svg>
-                            <div>
-                                <strong>Akoestiek</strong>
-                                <p style="margin: 0;">Geluidsabsorptie in combinatie met minerale wol</p>
+                        
+                        <div class="inspiration-item">
+                            <div class="inspiration-image" style="background: linear-gradient(135deg, #1a5490 0%, #2874a6 100%); height: 300px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-lg); color: white; font-size: 1.125rem;">
+                                Industrieel Project<br>Voorbeeld 5
                             </div>
+                            <p style="margin-top: 1rem; font-weight: 500;">Industrieel pand met metalen bekleding</p>
                         </div>
-                        <div class="feature-item">
-                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"/></svg>
-                            <div>
-                                <strong>Milieuprestatie</strong>
-                                <p style="margin: 0;">Duurzaam, recyclebaar en lange levensduur</p>
+                        
+                        <div class="inspiration-item">
+                            <div class="inspiration-image" style="background: linear-gradient(135deg, #1a5490 0%, #2874a6 100%); height: 300px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-lg); color: white; font-size: 1.125rem;">
+                                Architectonisch Detail<br>Voorbeeld 6
                             </div>
+                            <p style="margin-top: 1rem; font-weight: 500;">Detail shot van gevelbekleding</p>
                         </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: var(--space-8);">
+                        <p style="font-size: 1.125rem; margin-bottom: 1.5rem;">Wilt u uw project bespreken?</p>
+                        <a href="offerte-aanvragen.html" class="btn btn-primary btn-lg">📋 Vraag Offerte Aan</a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <style>
+        .inspiration-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-6);
+        }
+        
+        .inspiration-item {
+            text-align: center;
+        }
+        
+        .inspiration-image {
+            overflow: hidden;
+            transition: transform var(--transition);
+        }
+        
+        .inspiration-image:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 992px) {
+            .inspiration-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .inspiration-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        </style>
 
         <!-- CTA -->
         <section class="section">
@@ -607,7 +657,7 @@
                     <p style="font-size: 1.125rem; margin-bottom: 2rem; color: rgba(255,255,255,0.95);">Onze specialisten denken graag met u mee over de perfecte geveloplossing voor uw project</p>
                     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                         <a href="offerte-aanvragen.html" class="btn btn-secondary" style="font-size: 1.125rem; padding: 1rem 2rem;">📋 Vraag Offerte Aan</a>
-                        <a href="tel:+31101234567" class="btn" style="font-size: 1.125rem; padding: 1rem 2rem; background: white; color: var(--primary);">📞 Bel: 010 123 4567</a>
+                        <a href="tel:+31647939058" class="btn" style="font-size: 1.125rem; padding: 1rem 2rem; background: white; color: var(--primary);">📞 Bel: +31 (6) 47 93 90 58</a>
                     </div>
                 </div>
             </div>
@@ -622,7 +672,7 @@
                     <h4>CPL Metaal</h4>
                     <p>Specialist in hoogwaardige metaalproducten voor bouw, industrie en architectuur.</p>
                     <p style="margin-top: 1rem;">
-                        <strong>Tel:</strong> 010 123 4567<br>
+                        <strong>Tel:</strong> +31 (6) 47 93 90 58<br>
                         <strong>Email:</strong> info@cplmetaal.nl
                     </p>
                 </div>

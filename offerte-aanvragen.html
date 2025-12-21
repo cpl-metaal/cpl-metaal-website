@@ -450,16 +450,16 @@
                     <!-- Contact Form -->
                     <form id="offerteForm" method="POST">
                         <div class="form-grid">
-                            <!-- Naam -->
+                            <!-- Naam Contactpersoon -->
                             <div class="form-group">
-                                <label for="naam">Naam <span class="required">*</span></label>
-                                <input type="text" id="naam" name="naam" required placeholder="Uw naam">
+                                <label for="naam">Naam contactpersoon <span class="required">*</span></label>
+                                <input type="text" id="naam" name="naam" required placeholder="Voor- en achternaam">
                             </div>
 
-                            <!-- Bedrijf -->
+                            <!-- Bedrijf (VERPLICHT) -->
                             <div class="form-group">
-                                <label for="bedrijf">Bedrijf</label>
-                                <input type="text" id="bedrijf" name="bedrijf" placeholder="Bedrijfsnaam (optioneel)">
+                                <label for="bedrijf">Bedrijfsnaam <span class="required">*</span></label>
+                                <input type="text" id="bedrijf" name="bedrijf" required placeholder="Bedrijfsnaam">
                             </div>
 
                             <!-- Email -->
@@ -505,15 +505,63 @@
                                 </select>
                             </div>
 
+                            <!-- Afmetingen -->
+                            <div class="form-group">
+                                <label for="afmetingen">Afmetingen</label>
+                                <input type="text" id="afmetingen" name="afmetingen" placeholder="Bijv. 2000 x 1000 mm">
+                            </div>
+
+                            <!-- Materiaal -->
+                            <div class="form-group">
+                                <label for="materiaal">Materiaal</label>
+                                <select id="materiaal" name="materiaal">
+                                    <option value="">-- Selecteer materiaal (optioneel) --</option>
+                                    <option value="Staal">Staal</option>
+                                    <option value="Aluminium">Aluminium</option>
+                                    <option value="RVS">RVS</option>
+                                    <option value="Verzinkt staal">Verzinkt staal</option>
+                                    <option value="Koper">Koper</option>
+                                    <option value="Messing">Messing</option>
+                                </select>
+                            </div>
+
+                            <!-- Aantal/Oppervlak -->
+                            <div class="form-group">
+                                <label for="aantal">Aantal stuks / Totaal oppervlak in m²</label>
+                                <input type="text" id="aantal" name="aantal" placeholder="Bijv. 50 stuks of 25 m²">
+                            </div>
+
+                            <!-- Afwerking -->
+                            <div class="form-group">
+                                <label for="afwerking">Afwerking</label>
+                                <select id="afwerking" name="afwerking">
+                                    <option value="">-- Selecteer afwerking (optioneel) --</option>
+                                    <option value="Poedercoaten">Poedercoaten</option>
+                                    <option value="Thermisch verzinken">Thermisch verzinken</option>
+                                    <option value="Anodiseren">Anodiseren</option>
+                                    <option value="Galvaniseren">Galvaniseren</option>
+                                    <option value="Verchromen">Verchromen</option>
+                                    <option value="Vernikkelen">Vernikkelen</option>
+                                    <option value="Onbehandeld">Onbehandeld</option>
+                                    <option value="Anders">Anders</option>
+                                </select>
+                            </div>
+
+                            <!-- Gewenste levertijd -->
+                            <div class="form-group">
+                                <label for="levertijd">Gewenste levertijd</label>
+                                <input type="text" id="levertijd" name="levertijd" placeholder="Bijv. binnen 2 weken">
+                            </div>
+
                             <!-- Specificaties -->
                             <div class="form-group full-width">
-                                <label for="specificaties">Specificaties en wensen <span class="required">*</span></label>
-                                <textarea id="specificaties" name="specificaties" required placeholder="Beschrijf zo gedetailleerd mogelijk:&#10;- Afmetingen (lengte x breedte)&#10;- Materiaal (staal, aluminium, RVS, etc.)&#10;- Hoeveelheid&#10;- Afwerking (verzinkt, gepoedercoat, etc.)&#10;- Eventuele tekeningen of referenties&#10;- Gewenste levertijd"></textarea>
+                                <label for="specificaties">Overige specificaties en wensen</label>
+                                <textarea id="specificaties" name="specificaties" placeholder="Eventuele aanvullende informatie, bijzonderheden of vragen"></textarea>
                             </div>
 
                             <!-- Bestand Upload -->
                             <div class="form-group full-width">
-                                <label for="bestand">Bestand toevoegen</label>
+                                <label for="bestand">Bestand toevoegen (bijv. tekening of referentie)</label>
                                 <input type="file" id="bestand" name="bestand" accept=".pdf,.jpg,.jpeg,.png,.dwg,.dxf">
                                 <small style="color: var(--gray-600); display: block; margin-top: 0.5rem;">
                                     Toegestaan: PDF, JPG, PNG, DWG, DXF (max 10MB)
@@ -542,7 +590,7 @@
                     <!-- Contact Info -->
                     <div style="margin-top: var(--space-8); padding: var(--space-5); background: var(--gray-50); border-radius: var(--radius-lg); text-align: center;">
                         <h3>Liever direct contact?</h3>
-                        <p>Bel ons op <strong><a href="tel:+31101234567">010 123 4567</a></strong> of mail naar <strong><a href="mailto:info@cplmetaal.nl">info@cplmetaal.nl</a></strong></p>
+                        <p>Bel ons op <strong><a href="tel:+31647939058">+31 (6) 47 93 90 58</a></strong> of mail naar <strong><a href="mailto:info@cplmetaal.nl">info@cplmetaal.nl</a></strong></p>
                         <p style="margin: 0; color: var(--gray-600);">Bereikbaar: ma-vr van 08:00 - 17:00 uur</p>
                     </div>
                 </div>
@@ -558,7 +606,7 @@
                     <h4>CPL Metaal</h4>
                     <p>Specialist in hoogwaardige metaalproducten voor bouw, industrie en architectuur.</p>
                     <p style="margin-top: 1rem;">
-                        <strong>Tel:</strong> 010 123 4567<br>
+                        <strong>Tel:</strong> +31 (6) 47 93 90 58<br>
                         <strong>Email:</strong> info@cplmetaal.nl
                     </p>
                 </div>
@@ -616,8 +664,8 @@
 NIEUWE OFFERTE-AANVRAAG VIA WEBSITE
 
 CONTACTGEGEVENS:
-Naam: ${formData.get('naam')}
-Bedrijf: ${formData.get('bedrijf') || 'Niet opgegeven'}
+Naam contactpersoon: ${formData.get('naam')}
+Bedrijfsnaam: ${formData.get('bedrijf')}
 Email: ${formData.get('email')}
 Telefoon: ${formData.get('telefoon')}
 
@@ -625,8 +673,15 @@ PRODUCTINFORMATIE:
 Product: ${formData.get('product')}
 Toepassing: ${formData.get('toepassing') || 'Niet opgegeven'}
 
-SPECIFICATIES EN WENSEN:
-${formData.get('specificaties')}
+SPECIFICATIES:
+Afmetingen: ${formData.get('afmetingen') || 'Niet opgegeven'}
+Materiaal: ${formData.get('materiaal') || 'Niet opgegeven'}
+Aantal/Oppervlak: ${formData.get('aantal') || 'Niet opgegeven'}
+Afwerking: ${formData.get('afwerking') || 'Niet opgegeven'}
+Gewenste levertijd: ${formData.get('levertijd') || 'Niet opgegeven'}
+
+OVERIGE WENSEN:
+${formData.get('specificaties') || 'Geen aanvullende informatie'}
 
 ---
 Deze aanvraag is verzonden via het contact formulier op cplmetaal.nl
