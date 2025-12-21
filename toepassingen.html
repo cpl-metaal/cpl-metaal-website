@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Producten | CPL Metaal</title>
-    <meta name="description" content="Ontdek ons volledige assortiment metaalproducten: strekmetaal, geperforeerd metaal, gaasproducten, roosters en cortenstaal. ✓ Maatwerk ✓ Vakkundig advies">
+    <title>Toepassingen | CPL Metaal</title>
+    <meta name="description" content="Ontdek alle toepassingen van onze metaalproducten: gevelbekleding, hekwerk, balkons, vloeren, industrie en meer. ✓ Maatwerk ✓ Professioneel">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -187,21 +187,15 @@
             color: rgba(255,255,255,0.9);
         }
 
-        /* PRODUCT GRID */
-        .product-grid {
+        /* APPLICATION GRID */
+        .application-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: var(--space-6);
         }
 
-        @media (max-width: 992px) {
-            .product-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 640px) {
-            .product-grid {
+        @media (max-width: 768px) {
+            .application-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -212,6 +206,8 @@
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: all var(--transition);
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
@@ -219,8 +215,40 @@
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
         }
 
+        .card-header {
+            background: linear-gradient(135deg, var(--primary) 0%, #2874a6 100%);
+            padding: var(--space-6);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .card-header h3 {
+            color: var(--white);
+            font-size: 2rem;
+            margin: 0;
+        }
+
         .card-body {
             padding: var(--space-6);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-body ul {
+            list-style: none;
+            padding: 0;
+            margin: var(--space-4) 0;
+            flex: 1;
+        }
+
+        .card-body ul li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--gray-300);
+        }
+
+        .card-body ul li:last-child {
+            border-bottom: none;
         }
 
         /* FOOTER */
@@ -290,12 +318,12 @@
     <!-- PAGE HEADER -->
     <section class="page-header">
         <div class="container">
-            <h1>Onze Producten</h1>
-            <p style="font-size: 1.25rem; margin: 0; opacity: 0.95;">Hoogwaardige metaalproducten voor bouw, industrie en architectuur</p>
+            <h1>Toepassingen</h1>
+            <p style="font-size: 1.25rem; margin: 0; opacity: 0.95;">Ontdek waar onze metaalproducten het verschil maken</p>
             <div class="breadcrumb">
                 <a href="index.html" style="color: rgba(255,255,255,0.9);">Home</a>
                 <span>›</span>
-                <span>Producten</span>
+                <span>Toepassingen</span>
             </div>
         </div>
     </section>
@@ -304,97 +332,148 @@
     <main>
         <section class="section">
             <div class="container">
-                <div class="product-grid">
-                    <!-- Strekmetaal -->
+                <div class="application-grid">
+                    <!-- Gevelbekleding -->
                     <article class="card">
-                        <div style="background: linear-gradient(135deg, #1a5490 0%, #2874a6 100%); height: 240px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-                            🔷
+                        <div class="card-header">
+                            <h3>🏢 Gevelbekleding</h3>
                         </div>
                         <div class="card-body">
-                            <h3>Strekmetaal</h3>
-                            <p>Veelzijdig en sterk metaalproduct voor gevelbekleding, hekwerk, trappen en architectonische toepassingen.</p>
-                            <ul style="list-style: none; padding: 0; margin: 1rem 0;">
-                                <li>✓ Diverse maasgroottes</li>
-                                <li>✓ Verschillende materialen</li>
+                            <p>Architectonische gevelbekleding met strekmetaal, geperforeerd metaal of cortenstaal. Creëer unieke gevels die opvallen en beschermen.</p>
+                            <ul>
+                                <li>✓ Esthetische oplossingen</li>
+                                <li>✓ Ventilatie & zonwering</li>
+                                <li>✓ Duurzaam & onderhoudsarm</li>
+                                <li>✓ Diverse materialen</li>
+                            </ul>
+                            <a href="toepassingen/gevelbekleding/" class="btn btn-primary" style="width: 100%; margin-top: auto;">Bekijk gevelbekleding →</a>
+                        </div>
+                    </article>
+
+                    <!-- Hekwerk & Terreinafscheiding -->
+                    <article class="card">
+                        <div class="card-header">
+                            <h3>🔒 Hekwerk & Terreinafscheiding</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Veilige en duurzame afscheidingen met strekmetaal of gaasproducten voor bedrijfsterreinen, bouwplaatsen en openbare ruimtes.</p>
+                            <ul>
+                                <li>✓ Hoogwaardige beveiliging</li>
+                                <li>✓ Sterk & duurzaam</li>
+                                <li>✓ Maatwerk mogelijk</li>
+                                <li>✓ Snel te plaatsen</li>
+                            </ul>
+                            <a href="toepassingen/hekwerk-terreinafscheiding/" class="btn btn-primary" style="width: 100%; margin-top: auto;">Bekijk hekwerk →</a>
+                        </div>
+                    </article>
+
+                    <!-- Balkons & Balustrades -->
+                    <article class="card">
+                        <div class="card-header">
+                            <h3>🏗️ Balkons & Balustrades</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Veilige en stijlvolle balkonoplossingen volgens bouwvoorschriften met architectonische uitstraling voor woningbouw en utiliteit.</p>
+                            <ul>
+                                <li>✓ Voldoet aan NEN-normen</li>
+                                <li>✓ Modern design</li>
+                                <li>✓ Veilig & stevig</li>
+                                <li>✓ Diverse afwerkingen</li>
+                            </ul>
+                            <a href="toepassingen/balkons-balustrades/" class="btn btn-primary" style="width: 100%; margin-top: auto;">Bekijk balkons →</a>
+                        </div>
+                    </article>
+
+                    <!-- Vloeren & Trappen -->
+                    <article class="card">
+                        <div class="card-header">
+                            <h3>🪜 Vloeren & Trappen</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Antislip vloerplaten en traptreden van strekmetaal of roosters. Veilig, duurzaam en geschikt voor zware belasting.</p>
+                            <ul>
+                                <li>✓ Antislip oppervlak</li>
+                                <li>✓ Hoog draagvermogen</li>
+                                <li>✓ Industrie & utiliteit</li>
                                 <li>✓ Op maat leverbaar</li>
                             </ul>
-                            <a href="strekmetaal/" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Bekijk strekmetaal →</a>
+                            <a href="toepassingen/vloeren-trappen/" class="btn btn-primary" style="width: 100%; margin-top: auto;">Bekijk vloeren & trappen →</a>
                         </div>
                     </article>
 
-                    <!-- Geperforeerd Metaal -->
+                    <!-- Industrie & Machineafscherming -->
                     <article class="card">
-                        <div style="background: linear-gradient(135deg, #1a5490 0%, #2874a6 100%); height: 240px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-                            ⚫
+                        <div class="card-header">
+                            <h3>⚙️ Industrie & Machineafscherming</h3>
                         </div>
                         <div class="card-body">
-                            <h3>Geperforeerd Metaal</h3>
-                            <p>Metaalplaten met precisiegemaakte perforaties in diverse patronen. Perfect voor gevelpanelen en decoratieve toepassingen.</p>
-                            <ul style="list-style: none; padding: 0; margin: 1rem 0;">
-                                <li>✓ Maatwerk perforaties</li>
-                                <li>✓ Verschillende patronen</li>
-                                <li>✓ Hoogwaardige afwerking</li>
+                            <p>Professionele afscherming voor machines, apparaten en productieruimtes. CE-conform volgens machinerichtlijn voor optimale veiligheid.</p>
+                            <ul>
+                                <li>✓ CE-conform</li>
+                                <li>✓ Veilig & functioneel</li>
+                                <li>✓ Ventilatie mogelijk</li>
+                                <li>✓ Eenvoudig te monteren</li>
                             </ul>
-                            <a href="geperforeerd-metaal/" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Bekijk geperforeerd metaal →</a>
+                            <a href="toepassingen/industrie-machineafscherming/" class="btn btn-primary" style="width: 100%; margin-top: auto;">Bekijk industrie →</a>
                         </div>
                     </article>
 
-                    <!-- Gaasproducten -->
+                    <!-- Groenvoorziening -->
                     <article class="card">
-                        <div style="background: linear-gradient(135deg, #1a5490 0%, #2874a6 100%); height: 240px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-                            🔲
+                        <div class="card-header">
+                            <h3>🌿 Groenvoorziening</h3>
                         </div>
                         <div class="card-body">
-                            <h3>Gaasproducten</h3>
-                            <p>Van draadgaas tot geweven gaas. Toepasbaar voor zeeftechniek, filterindustrie en machineafscherming.</p>
-                            <ul style="list-style: none; padding: 0; margin: 1rem 0;">
-                                <li>✓ Diverse gaastypen</li>
-                                <li>✓ Maaswijdtes op maat</li>
-                                <li>✓ RVS en verzinkt</li>
+                            <p>Cortenstaal en gaasproducten voor tuinen, parken en landschapsinrichting. Duurzaam, onderhoudsarm en esthetisch.</p>
+                            <ul>
+                                <li>✓ Natuurlijke uitstraling</li>
+                                <li>✓ Weerbestendig</li>
+                                <li>✓ Minimaal onderhoud</li>
+                                <li>✓ Langdurige levensduur</li>
                             </ul>
-                            <a href="gaasproducten/" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Bekijk gaasproducten →</a>
+                            <a href="toepassingen/groenvoorziening/" class="btn btn-primary" style="width: 100%; margin-top: auto;">Bekijk groenvoorziening →</a>
                         </div>
                     </article>
 
-                    <!-- Roosters -->
+                    <!-- Dakopbouw -->
                     <article class="card">
-                        <div style="background: linear-gradient(135deg, #1a5490 0%, #2874a6 100%); height: 240px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-                            ▦
+                        <div class="card-header">
+                            <h3>🏠 Dakopbouw</h3>
                         </div>
                         <div class="card-body">
-                            <h3>Roosters</h3>
-                            <p>Sterke metalen roosters voor vloeren, trappen en industriële toepassingen met excellent draagvermogen.</p>
-                            <ul style="list-style: none; padding: 0; margin: 1rem 0;">
-                                <li>✓ Hoog draagvermogen</li>
-                                <li>✓ Antislip oppervlak</li>
-                                <li>✓ Diverse mazen</li>
+                            <p>Metalen oplossingen voor dakopbouw, liftschachten en technische installaties. Functioneel en esthetisch verantwoord.</p>
+                            <ul>
+                                <li>✓ Technische afscherming</li>
+                                <li>✓ Ventilatie & bescherming</li>
+                                <li>✓ Architectonisch design</li>
+                                <li>✓ Maatwerk mogelijk</li>
                             </ul>
-                            <a href="roosters/" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Bekijk roosters →</a>
+                            <a href="toepassingen/dakopbouw/" class="btn btn-primary" style="width: 100%; margin-top: auto;">Bekijk dakopbouw →</a>
                         </div>
                     </article>
 
-                    <!-- Cortenstaal -->
+                    <!-- Interieur -->
                     <article class="card">
-                        <div style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); height: 240px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
-                            🏠
+                        <div class="card-header">
+                            <h3>🎨 Interieur</h3>
                         </div>
                         <div class="card-body">
-                            <h3>Cortenstaal</h3>
-                            <p>Weerbestendig staal met karakteristieke roestbruine uitstraling. Perfect voor groenvoorziening en decoratie.</p>
-                            <ul style="list-style: none; padding: 0; margin: 1rem 0;">
-                                <li>✓ Natuurlijke patina</li>
-                                <li>✓ Onderhoudsvrij</li>
-                                <li>✓ Duurzaam materiaal</li>
+                            <p>Decoratieve metaaloplossingen voor interieurprojecten. Van ruimtedelers tot designelementen, alles is mogelijk.</p>
+                            <ul>
+                                <li>✓ Uniek design</li>
+                                <li>✓ Ruimtedelers</li>
+                                <li>✓ Decoratieve panelen</li>
+                                <li>✓ Op maat gemaakt</li>
                             </ul>
-                            <a href="cortenstaal/" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Bekijk cortenstaal →</a>
+                            <a href="toepassingen/interieur/" class="btn btn-primary" style="width: 100%; margin-top: auto;">Bekijk interieur →</a>
                         </div>
                     </article>
                 </div>
 
                 <!-- CTA Section -->
                 <div style="background: var(--light); padding: var(--space-8); border-radius: var(--radius-lg); text-align: center; margin-top: var(--space-8);">
-                    <h2>Niet gevonden wat u zoekt?</h2>
-                    <p style="font-size: 1.125rem; margin-bottom: 2rem;">Wij leveren ook maatwerk oplossingen. Neem contact op voor een vrijblijvend adviesgesprek.</p>
+                    <h2>Uw toepassing niet gevonden?</h2>
+                    <p style="font-size: 1.125rem; margin-bottom: 2rem;">Wij denken graag met u mee over uw specifieke project. Neem contact op voor een vrijblijvend adviesgesprek.</p>
                     <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                         <a href="offerte-aanvragen.html" class="btn btn-primary" style="font-size: 1.125rem;">📋 Vraag Offerte Aan</a>
                         <a href="tel:+31647939058" class="btn btn-outline" style="font-size: 1.125rem;">📞 Bel: +31 (6) 47 93 90 58</a>
@@ -421,21 +500,21 @@
                 <div class="footer-section">
                     <h4>Producten</h4>
                     <ul>
-                        <li><a href="strekmetaal.html">Strekmetaal</a></li>
-                        <li><a href="geperforeerd-metaal.html">Geperforeerd Metaal</a></li>
-                        <li><a href="gaasproducten.html">Gaasproducten</a></li>
-                        <li><a href="roosters.html">Roosters</a></li>
-                        <li><a href="cortenstaal.html">Cortenstaal</a></li>
+                        <li><a href="producten/strekmetaal/">Strekmetaal</a></li>
+                        <li><a href="producten/geperforeerd-metaal/">Geperforeerd Metaal</a></li>
+                        <li><a href="producten/gaasproducten/">Gaasproducten</a></li>
+                        <li><a href="producten/roosters/">Roosters</a></li>
+                        <li><a href="producten/cortenstaal/">Cortenstaal</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h4>Toepassingen</h4>
                     <ul>
-                        <li><a href="gevelbekleding.html">Gevelbekleding</a></li>
-                        <li><a href="hekwerk-terreinafscheiding.html">Hekwerk</a></li>
-                        <li><a href="balkons-balustrades.html">Balkons & Balustrades</a></li>
-                        <li><a href="vloeren-trappen.html">Vloeren & Trappen</a></li>
+                        <li><a href="toepassingen/gevelbekleding/">Gevelbekleding</a></li>
+                        <li><a href="toepassingen/hekwerk-terreinafscheiding/">Hekwerk</a></li>
+                        <li><a href="toepassingen/balkons-balustrades/">Balkons & Balustrades</a></li>
+                        <li><a href="toepassingen/vloeren-trappen/">Vloeren & Trappen</a></li>
                     </ul>
                 </div>
                 
