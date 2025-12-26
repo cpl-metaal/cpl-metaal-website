@@ -8,6 +8,14 @@ description: Maatwerk in Strekmetaal, Geperforeerd Metaal & Gaasproducten
 url: https://www.cplmetaal.com
 baseurl: ""
 
+# ========================================
+# CLEAN URLs (BELANGRIJK!)
+# ========================================
+# Dit zorgt ervoor dat URLs GEEN .html extensie hebben
+# /strekmetaal.html wordt /strekmetaal/
+# /producten/strekmetaal.html wordt /producten/strekmetaal/
+permalink: pretty
+
 # Contact Informatie
 email: info@cplmetaal.com
 phone: "+31 (6) 47 93 90 58"
@@ -25,7 +33,6 @@ opening_hours: "Ma-Vr: 08:00 - 17:00"
 
 # Build Settings
 markdown: kramdown
-permalink: pretty
 timezone: Europe/Amsterdam
 lang: nl
 
