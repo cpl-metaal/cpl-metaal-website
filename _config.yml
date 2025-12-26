@@ -1,0 +1,45 @@
+# ========================================
+# CPL METAAL - JEKYLL CONFIGURATIE
+# ========================================
+
+# Site Informatie
+title: CPL Metaal
+description: Maatwerk in Strekmetaal, Geperforeerd Metaal & Gaasproducten
+url: https://www.cplmetaal.com
+baseurl: ""
+
+# Contact Informatie
+email: info@cplmetaal.com
+phone: "+31 (6) 47 93 90 58"
+phone_link: "tel:+31647939058"
+
+# Adres
+address:
+  street: Noordkant 24a
+  city: Sint Anthonis
+  postal: 5845 EW
+  country: Nederland
+
+# Openingstijden
+opening_hours: "Ma-Vr: 08:00 - 17:00"
+
+# Build Settings
+markdown: kramdown
+permalink: pretty
+timezone: Europe/Amsterdam
+lang: nl
+
+# Exclude van build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .gitignore
+
+# Plugins (GitHub Pages ondersteunt deze automatisch)
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
