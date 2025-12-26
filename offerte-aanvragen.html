@@ -488,23 +488,6 @@
                                 </select>
                             </div>
 
-                            <!-- Toepassing -->
-                            <div class="form-group">
-                                <label for="toepassing">Toepassing</label>
-                                <select id="toepassing" name="toepassing">
-                                    <option value="">-- Selecteer toepassing (optioneel) --</option>
-                                    <option value="Gevelbekleding">Gevelbekleding</option>
-                                    <option value="Balkons & Balustrades">Balkons & Balustrades</option>
-                                    <option value="Dakopbouw">Dakopbouw</option>
-                                    <option value="Hekwerk & Terreinafscheiding">Hekwerk & Terreinafscheiding</option>
-                                    <option value="Vloeren & Trappen">Vloeren & Trappen</option>
-                                    <option value="Industrie & Machineafscherming">Industrie & Machineafscherming</option>
-                                    <option value="Groenvoorziening">Groenvoorziening</option>
-                                    <option value="Interieur">Interieur</option>
-                                    <option value="Anders">Anders</option>
-                                </select>
-                            </div>
-
                             <!-- Afmetingen -->
                             <div class="form-group">
                                 <label for="afmetingen">Afmetingen</label>
@@ -671,7 +654,6 @@ Telefoon: ${formData.get('telefoon')}
 
 PRODUCTINFORMATIE:
 Product: ${formData.get('product')}
-Toepassing: ${formData.get('toepassing') || 'Niet opgegeven'}
 
 SPECIFICATIES:
 Afmetingen: ${formData.get('afmetingen') || 'Niet opgegeven'}

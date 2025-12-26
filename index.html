@@ -3,18 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CPL Metaal | Specialist in Strekmetaal, Geperforeerd Metaal, Gaasproducten en meer</title>
-    <meta name="description" content="CPL Metaal levert hoogwaardig strekmetaal, geperforeerd metaal en gaasproducten voor bouw en industrie. ✓ Maatwerk ✓ Concurrerende prijzen ✓ Vakkundig advies">
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jouwgebruikersnaam.github.io/cpl-metaal/">
-    <meta property="og:title" content="CPL Metaal | Specialist in Strekmetaal & Geperforeerd Metaal">
-    <meta property="og:description" content="Hoogwaardig strekmetaal, geperforeerd metaal en gaasproducten voor bouw en industrie">
-    <meta property="og:image" content="logo.png">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="logo.png">
+    <title>Strekmetaal | CPL Metaal</title>
+    <meta name="description" content="Hoogwaardig strekmetaal in diverse maasgroottes en materialen. Van kleine tot grote mazen, breeddam en vlakgewalst. ✓ Maatwerk ✓ Scherpe prijzen">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,42 +12,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* ROOT VARIABLES */
         :root {
             --primary: #1a5490;
             --primary-dark: #143f6d;
-            --primary-light: #2874a6;
             --secondary: #ff6b35;
             --dark: #1d3a55;
             --light: #ecf0f1;
             --white: #ffffff;
             --gray-50: #f8f9fa;
-            --gray-200: #dee2e6;
             --gray-300: #ced4da;
-            --gray-500: #6c757d;
             --gray-600: #495057;
-            
-            --font-display: 'Rajdhani', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-body: 'Karla', -apple-system, BlinkMacSystemFont, sans-serif;
-            
+            --font-display: 'Rajdhani', sans-serif;
+            --font-body: 'Karla', sans-serif;
             --space-4: 1rem;
             --space-5: 1.5rem;
             --space-6: 2rem;
-            --space-7: 3rem;
             --space-8: 4rem;
-            --space-9: 6rem;
-            
             --radius: 8px;
             --radius-lg: 16px;
-            
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
             --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
-            
             --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* RESET */
         *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
@@ -66,43 +42,27 @@
 
         html {
             scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
         }
 
         body {
             font-family: var(--font-body);
-            font-size: 1rem;
             line-height: 1.7;
             color: var(--dark);
-            background-color: var(--white);
         }
 
-        /* TYPOGRAPHY */
         h1, h2, h3, h4 {
             font-family: var(--font-display);
             font-weight: 700;
             line-height: 1.2;
             color: var(--dark);
             margin-bottom: var(--space-4);
-            letter-spacing: -0.02em;
         }
 
-        h1 {
-            font-size: clamp(2.25rem, 6vw, 4.5rem);
-            line-height: 1.1;
-        }
+        h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+        h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
 
-        h2 {
-            font-size: clamp(1.875rem, 4vw, 3rem);
-        }
-
-        h3 {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-        }
-
-        p {
-            margin-bottom: var(--space-4);
-        }
+        p { margin-bottom: var(--space-4); }
 
         a {
             color: var(--primary);
@@ -110,85 +70,30 @@
             transition: color var(--transition);
         }
 
-        a:hover {
-            color: var(--primary-dark);
-        }
+        a:hover { color: var(--primary-dark); }
 
-        .lead {
-            font-size: 1.25rem;
-            line-height: 1.6;
-            color: var(--gray-600);
-        }
-
-        /* LAYOUT */
         .container {
             width: 100%;
             max-width: 1240px;
             margin: 0 auto;
             padding: 0 1.5rem;
         }
-        
+
         @media (max-width: 768px) {
-            .container {
-                padding: 0 15px;
-            }
+            .container { padding: 0 15px; }
         }
 
         .section {
             padding: clamp(3rem, 8vw, 6rem) 0;
         }
 
-        .grid {
-            display: grid;
-            gap: var(--space-6);
-        }
-
-        .grid-3 {
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
-
-        .grid-2 {
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        }
-
-        .grid-2-desktop {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        /* UTILITIES */
-        .text-center {
-            text-align: center;
-        }
-
-        .text-white {
-            color: var(--white) !important;
-        }
-
-        .bg-gray {
-            background-color: var(--gray-50);
-        }
-
-        .bg-dark {
-            background-color: var(--dark);
-            color: var(--white);
-        }
-
-        .bg-gradient {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            color: var(--white);
-        }
-
-        /* BUTTONS */
         .btn {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
             gap: 0.5rem;
             padding: 0.875rem 1.75rem;
             font-family: var(--font-display);
-            font-size: 1rem;
             font-weight: 600;
-            text-decoration: none;
             border: 2px solid transparent;
             border-radius: var(--radius);
             cursor: pointer;
@@ -197,56 +102,17 @@
 
         .btn-primary {
             background-color: var(--primary);
-            border-color: var(--primary);
             color: var(--white);
-            box-shadow: var(--shadow-sm);
         }
 
         .btn-primary:hover {
             background-color: var(--primary-dark);
             transform: translateY(-2px);
-            box-shadow: var(--shadow);
         }
 
         .btn-secondary {
             background-color: var(--secondary);
-            border-color: var(--secondary);
             color: var(--white);
-        }
-
-        .btn-secondary:hover {
-            background-color: #e55a28;
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-
-        .btn-outline:hover {
-            background-color: var(--primary);
-            color: var(--white);
-        }
-
-        .btn-white {
-            background-color: var(--white);
-            color: var(--primary);
-        }
-
-        .btn-white:hover {
-            background-color: var(--gray-50);
-        }
-
-        .btn-lg {
-            padding: 1.125rem 2.25rem;
-            font-size: 1.125rem;
-        }
-
-        .btn-sm {
-            padding: 0.625rem 1.25rem;
-            font-size: 0.875rem;
         }
 
         /* HEADER */
@@ -255,33 +121,20 @@
             top: 0;
             z-index: 1000;
             background: var(--white);
-            border-bottom: 1px solid var(--gray-200);
-            box-shadow: var(--shadow-sm);
+            border-bottom: 1px solid var(--gray-300);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
 
         .header-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
+            padding: 1rem 0;
         }
 
-        .logo {
-            font-family: var(--font-display);
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-        }
-        
         .logo img {
             height: 60px;
             width: auto;
-        }
-
-        .logo span {
-            color: var(--secondary);
         }
 
         .nav-menu {
@@ -296,22 +149,6 @@
             font-weight: 500;
             font-size: 1.0625rem;
             color: var(--dark);
-            position: relative;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--secondary);
-            transition: width var(--transition);
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
         }
 
         .mobile-menu-btn {
@@ -326,132 +163,238 @@
             display: block;
             width: 24px;
             height: 2px;
-            background-color: var(--dark);
+            background: var(--dark);
             margin: 5px 0;
-            transition: all var(--transition);
         }
 
-        /* HERO */
-        .hero {
-            position: relative;
-            min-height: clamp(500px, 70vh, 700px);
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+        /* PAGE HEADER */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, #2874a6 100%);
             color: var(--white);
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: 
-                linear-gradient(30deg, transparent 40%, rgba(255, 255, 255, 0.03) 40%, rgba(255, 255, 255, 0.03) 60%, transparent 60%),
-                linear-gradient(60deg, transparent 40%, rgba(255, 255, 255, 0.02) 40%, rgba(255, 255, 255, 0.02) 60%, transparent 60%);
-            background-size: 100px 100px;
-            opacity: 0.5;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            padding: var(--space-9) 0;
-        }
-
-        .hero-title {
-            color: var(--white);
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .hero-subtitle {
-            font-size: clamp(1.25rem, 3vw, 1.75rem);
-            color: rgba(255, 255, 255, 0.95);
-            margin-bottom: var(--space-5);
-        }
-
-        .hero-cta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--space-4);
-            margin-bottom: var(--space-6);
-        }
-
-        .hero-features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--space-5);
-            margin-top: var(--space-6);
-        }
-
-        .hero-feature {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: rgba(255, 255, 255, 0.95);
-            font-weight: 500;
-        }
-
-        /* SECTION HEADER */
-        .section-header {
+            padding: 4rem 0 3rem;
             text-align: center;
+        }
+
+        .page-header h1 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* CONTENT SECTIONS */
+        .content-section {
             margin-bottom: var(--space-8);
         }
 
-        .section-label {
-            display: inline-block;
-            font-family: var(--font-display);
-            font-size: 0.875rem;
-            font-weight: 600;
+        .content-section h2 {
+            margin-bottom: var(--space-5);
+            padding-bottom: var(--space-4);
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-5);
+            margin: var(--space-6) 0;
+        }
+        
+        .feature-grid-4 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-5);
+            margin: var(--space-6) 0;
+        }
+        
+        @media (max-width: 992px) {
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .feature-grid, .feature-grid-4 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+        }
+
+        .feature-icon {
+            width: 24px;
+            height: 24px;
             color: var(--secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 0.75rem;
+            flex-shrink: 0;
         }
 
-        .section-description {
-            max-width: 700px;
-            margin: 0 auto;
-            font-size: 1.125rem;
-            color: var(--gray-600);
+        .application-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-6);
+        }
+        
+        @media (max-width: 992px) {
+            .application-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .application-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
-        /* CARDS */
-        .card {
+        .application-card {
             background: var(--white);
             border-radius: var(--radius-lg);
             overflow: hidden;
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--shadow);
             transition: all var(--transition);
+            display: flex;
+            flex-direction: column;
         }
 
-        .card:hover {
-            box-shadow: var(--shadow-lg);
+        .application-card:hover {
             transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+        
+        .application-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary) 0%, #2874a6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
         }
 
-        .card-body {
-            padding: var(--space-6);
+        .application-card-content {
+            padding: var(--space-5);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .application-card h3 {
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+            font-size: 1.25rem;
+        }
+        
+        .application-card p {
+            margin-bottom: auto;
+            color: var(--gray-600);
+        }
+        
+        .application-card .btn {
+            margin-top: var(--space-4);
+            width: 100%;
+            justify-content: center;
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--space-6) 0;
+        }
+
+        .specs-table th,
+        .specs-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-300);
+        }
+
+        .specs-table th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .specs-table tr:hover {
+            background: var(--gray-50);
+        }
+
+        .material-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-5);
+        }
+        
+        @media (max-width: 992px) {
+            .material-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .material-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .material-card {
+            padding: var(--space-5);
+            background: var(--white);
+            border: 2px solid var(--gray-300);
+            border-radius: var(--radius);
+            text-align: center;
+        }
+
+        .material-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-box {
+            background: var(--primary);
+            color: var(--white);
+            padding: var(--space-8);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            margin: var(--space-8) 0;
+        }
+
+        .cta-box h2 {
+            color: var(--white);
+            border: none;
+        }
+
+        .bg-light {
+            background: var(--light);
         }
 
         /* FOOTER */
         .site-footer {
-            background-color: var(--dark);
-            color: rgba(255, 255, 255, 0.8);
-            padding-top: var(--space-9);
-            padding-bottom: var(--space-6);
+            background: var(--dark);
+            color: rgba(255,255,255,0.8);
+            padding: 3rem 0 2rem;
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--space-7);
-            margin-bottom: var(--space-7);
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
         .footer-section h4 {
             color: var(--white);
-            margin-bottom: var(--space-4);
+            margin-bottom: 1rem;
         }
 
         .footer-section ul {
@@ -463,7 +406,7 @@
         }
 
         .footer-section a {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255,255,255,0.8);
         }
 
         .footer-section a:hover {
@@ -471,55 +414,18 @@
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: var(--space-5);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
             text-align: center;
             font-size: 0.875rem;
         }
 
-        /* RESPONSIVE */
         @media (max-width: 992px) {
             .nav-menu {
-                position: fixed;
-                top: 73px;
-                left: 0;
-                right: 0;
-                background: var(--white);
-                flex-direction: column;
-                padding: var(--space-5);
-                box-shadow: var(--shadow-lg);
-                transform: translateY(-100%);
-                opacity: 0;
-                visibility: hidden;
-                transition: all var(--transition);
+                display: none;
             }
-            
-            .nav-menu.active {
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-            }
-            
             .mobile-menu-btn {
                 display: block;
-            }
-            
-            .hero-cta {
-                flex-direction: column;
-            }
-            
-            .btn {
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .grid-2, .grid-3, .grid-2-desktop {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-grid {
-                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -528,23 +434,22 @@
     <!-- HEADER -->
     <header class="site-header">
         <div class="container header-container">
-            <a href="#" class="logo">
-                <img src="logo.png" alt="CPL Metaal" style="height: 60px; width: auto;">
+            <a href="../../index.html" class="logo">
+                <img src="../../logo.png" alt="CPL Metaal">
             </a>
             
             <nav class="nav">
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="producten.html" class="nav-link">Producten</a></li>
-                    <li><a href="toepassingen.html" class="nav-link">Toepassingen</a></li>
-                    <li><a href="#sectoren" class="nav-link">Sectoren</a></li>
-                    <li><a href="over-ons.html" class="nav-link">Over Ons</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li><a href="offerte-aanvragen.html" class="btn btn-primary btn-sm">Offerte Aanvragen</a></li>
+                <ul class="nav-menu">
+                    <li><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li><a href="#" class="nav-link">Producten</a></li>
+                    <li><a href="#" class="nav-link">Toepassingen</a></li>
+                    <li><a href="#" class="nav-link">Over Ons</a></li>
+                    <li><a href="#" class="nav-link">Contact</a></li>
+                    <li><a href="../../offerte-aanvragen.html" class="btn btn-primary btn-sm">Offerte Aanvragen</a></li>
                 </ul>
             </nav>
             
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+            <button class="mobile-menu-btn">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -552,247 +457,385 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="container hero-content">
-            <h1 class="hero-title">Specialist in Metaalproducten voor Bouwsector & Industrie</h1>
-            <p class="hero-subtitle">Hoogwaardig strekmetaal, geperforeerd metaal en meer metaalproducten</p>
-            <p class="lead" style="color: rgba(255, 255, 255, 0.95); max-width: 700px;">CPL Metaal is uw betrouwbare partner voor innovatieve metaaloplossingen. Van gevelbekleding en terreinafscheiding tot dakopbouw en industriële zeefplaten.</p>
-            
-            <div class="hero-cta">
-                <a href="offerte-aanvragen.html" class="btn btn-secondary btn-lg">
-                    📋 Offerte Aanvragen
-                </a>
-                <a href="#producten" class="btn btn-white btn-lg">
-                    📦 Bekijk Producten
-                </a>
-            </div>
-            
-            <div class="hero-features">
-                <div class="hero-feature">✓ Maatwerk mogelijk</div>
-                <div class="hero-feature">✓ Vakkundig advies</div>
-                <div class="hero-feature">✓ Snelle levering</div>
-                <div class="hero-feature">✓ Scherpe prijzen</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRODUCTS -->
-    <section class="section bg-gray" id="producten">
+    <!-- PAGE HEADER -->
+    <section class="page-header">
         <div class="container">
-            <div class="section-header">
-                <h2>Onze Producten</h2>
-                <p class="section-description">Ontdek ons uitgebreide assortiment metaalproducten</p>
-            </div>
-            
-            <div class="grid grid-3">
-                <article class="card">
-                    <div style="background: linear-gradient(135deg, #1a5490 0%, #2874a6 100%); height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem;">
-                        🔷
-                    </div>
-                    <div class="card-body">
-                        <h3>Strekmetaal</h3>
-                        <p>Veelzijdig en sterk metaalproduct voor gevelbekleding, hekwerk, trappen en architectonische toepassingen.</p>
-                        <a href="producten/strekmetaal/" class="btn btn-outline" style="width: 100%; margin-top: 1rem;">Bekijk strekmetaal →</a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div style="background: linear-gradient(135deg, #1a5490 0%, #2874a6 100%); height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem;">
-                        ⚫
-                    </div>
-                    <div class="card-body">
-                        <h3>Geperforeerd Metaal</h3>
-                        <p>Metaalplaten met precisiegemaakte perforaties in diverse patronen. Perfect voor gevelpanelen en decoratieve toepassingen.</p>
-                        <a href="producten/geperforeerd-metaal/" class="btn btn-outline" style="width: 100%; margin-top: 1rem;">Bekijk geperforeerd metaal →</a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div style="background: linear-gradient(135deg, #1a5490 0%, #2874a6 100%); height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem;">
-                        🔲
-                    </div>
-                    <div class="card-body">
-                        <h3>Gaasproducten</h3>
-                        <p>Van draadgaas tot geweven gaas. Toepasbaar voor zeeftechniek, filterindustrie en machineafscherming.</p>
-                        <a href="producten/gaasproducten/" class="btn btn-outline" style="width: 100%; margin-top: 1rem;">Bekijk gaasproducten →</a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div style="background: linear-gradient(135deg, #1a5490 0%, #2874a6 100%); height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem;">
-                        ▦
-                    </div>
-                    <div class="card-body">
-                        <h3>Roosters</h3>
-                        <p>Sterke metalen roosters voor vloeren, trappen en industriële toepassingen met excellent draagvermogen.</p>
-                        <a href="producten/roosters/" class="btn btn-outline" style="width: 100%; margin-top: 1rem;">Bekijk roosters →</a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem;">
-                        🏠
-                    </div>
-                    <div class="card-body">
-                        <h3>Cortenstaal</h3>
-                        <p>Weerbestendig staal met karakteristieke roestbruine uitstraling. Perfect voor groenvoorziening en decoratie.</p>
-                        <a href="producten/cortenstaal/" class="btn btn-outline" style="width: 100%; margin-top: 1rem;">Bekijk cortenstaal →</a>
-                    </div>
-                </article>
-            </div>
-            
-            <div style="text-align: center; margin-top: var(--space-8);">
-                <a href="producten.html" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2.5rem;">Bekijk alle producten →</a>
+            <h1>Strekmetaal</h1>
+            <p style="font-size: 1.25rem; margin: 0; opacity: 0.95;">Veelzijdig en sterk metaalproduct voor gevelbekleding, hekwerk en meer</p>
+            <div class="breadcrumb">
+                <a href="../../index.html" style="color: rgba(255,255,255,0.9);">Home</a>
+                <span>›</span>
+                <span>Producten</span>
+                <span>›</span>
+                <span>Strekmetaal</span>
             </div>
         </div>
     </section>
 
-    <!-- APPLICATIONS -->
-    <section class="section" id="toepassingen">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Toepassingen</span>
-                <h2>Waar maken onze producten het verschil?</h2>
-            </div>
-            
-            <div class="grid grid-2">
-                <article class="card">
-                    <div class="card-body">
-                        <h3>🏢 Gevelbekleding</h3>
-                        <p>Architectonische gevelbekleding met strekmetaal, geperforeerd metaal of cortenstaal. Creëer unieke gevels die opvallen.</p>
-                        <a href="toepassingen/gevelbekleding/" class="btn btn-outline" style="width: 100%; margin-top: 1rem;">Bekijk gevelbekleding →</a>
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- WAT IS STREKMETAAL -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Wat is strekmetaal?</h2>
+                    <p>Strekmetaal is een metaalproduct dat wordt gemaakt uit één massieve metalen plaat. Door sneden in de plaat aan te brengen en het materiaal vervolgens uit te rekken, ontstaan openingen die samen een sterk patroon vormen.</p>
+                    <p>Het materiaal is nooit gelast of gevlochten en bestaat uit één doorlopend geheel. Hierdoor is strekmetaal lichter en sterker dan veel andere rooster- of gaasproducten en goed te snijden en te plooien.</p>
+                </div>
+
+                <div class="content-section">
+                    <h2>Voordelen strekmetaal</h2>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <div>
+                                <strong>Sterk en duurzaam</strong>
+                                <p style="margin: 0; font-size: 0.9375rem;">Eén doorlopend metaal zonder lasverbindingen</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <div>
+                                <strong>Licht van gewicht</strong>
+                                <p style="margin: 0; font-size: 0.9375rem;">Tot 40% lichter dan massieve plaat</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <div>
+                                <strong>Goede lucht- en lichtdoorlaat</strong>
+                                <p style="margin: 0; font-size: 0.9375rem;">Ideaal voor ventilatie en natuurlijke verlichting</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <div>
+                                <strong>Materiaalbesparend</strong>
+                                <p style="margin: 0; font-size: 0.9375rem;">Geen materiaalverlies bij productie</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <div>
+                                <strong>Veel ontwerpvrijheid</strong>
+                                <p style="margin: 0; font-size: 0.9375rem;">Diverse mazen, materialen en afwerkingen</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <div>
+                                <strong>Antislip en veilig</strong>
+                                <p style="margin: 0; font-size: 0.9375rem;">Perfect voor vloeren en trappen</p>
+                            </div>
+                        </div>
                     </div>
-                </article>
+                </div>
+            </div>
+        </section>
 
-                <article class="card">
-                    <div class="card-body">
-                        <h3>🔒 Hekwerk & Terreinafscheiding</h3>
-                        <p>Veilige en duurzame afscheidingen met strekmetaal of gaasproducten voor bedrijfsterreinen en bouwplaatsen.</p>
-                        <a href="toepassingen/hekwerk-terreinafscheiding/" class="btn btn-outline" style="width: 100%; margin-top: 1rem;">Bekijk hekwerk & terreinafscheiding →</a>
+        <!-- TOEPASSINGEN -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Toepassingen van strekmetaal</h2>
+                    <div class="application-grid">
+                        <div class="application-card">
+                            <div class="application-image">
+                                <!-- Ruimte voor afbeelding gevelbekleding -->
+                            </div>
+                            <div class="application-card-content">
+                                <h3>Gevelbekleding</h3>
+                                <p>Architectonische gevelbekleding met unieke uitstraling en functionele voordelen zoals ventilatie en zonwering.</p>
+                                <a href="../../toepassingen/gevelbekleding/" class="btn btn-primary">Gevelbekleding →</a>
+                            </div>
+                        </div>
+
+                        <div class="application-card">
+                            <div class="application-image">
+                                <!-- Ruimte voor afbeelding balkons -->
+                            </div>
+                            <div class="application-card-content">
+                                <h3>Balkons & Balustrades</h3>
+                                <p>Veilige en stijlvolle invulling van balkonhekken volgens bouwvoorschriften met moderne uitstraling.</p>
+                                <a href="../../toepassingen/balkons-balustrades/" class="btn btn-primary">Balkons & Balustrades →</a>
+                            </div>
+                        </div>
+
+                        <div class="application-card">
+                            <div class="application-image">
+                                <!-- Ruimte voor afbeelding dakopbouw -->
+                            </div>
+                            <div class="application-card-content">
+                                <h3>Dakopbouw</h3>
+                                <p>Ventilatiepanelen en afschermingen voor technische installaties, liftschachten en daktechniek.</p>
+                                <a href="../../toepassingen/dakopbouw/" class="btn btn-primary">Dakopbouw →</a>
+                            </div>
+                        </div>
+
+                        <div class="application-card">
+                            <div class="application-image">
+                                <!-- Ruimte voor afbeelding hekwerk -->
+                            </div>
+                            <div class="application-card-content">
+                                <h3>Hekwerk & Terreinafscheiding</h3>
+                                <p>Sterke en transparante afscheidingen voor bedrijventerreinen, bouwplaatsen en openbare ruimtes.</p>
+                                <a href="../../toepassingen/hekwerk-terreinafscheiding/" class="btn btn-primary">Hekwerk & Terreinafscheiding →</a>
+                            </div>
+                        </div>
+
+                        <div class="application-card">
+                            <div class="application-image">
+                                <!-- Ruimte voor afbeelding vloeren -->
+                            </div>
+                            <div class="application-card-content">
+                                <h3>Vloeren & Trappen</h3>
+                                <p>Antislip traptreden en loopvlakken met optimale grip, drainage en hoog draagvermogen.</p>
+                                <a href="../../toepassingen/vloeren-trappen/" class="btn btn-primary">Vloeren & Trappen →</a>
+                            </div>
+                        </div>
+
+                        <div class="application-card">
+                            <div class="application-image">
+                                <!-- Ruimte voor afbeelding interieur -->
+                            </div>
+                            <div class="application-card-content">
+                                <h3>Interieur</h3>
+                                <p>Roomdividers, wandpanelen en decoratieve elementen voor modern en industrieel interieur.</p>
+                                <a href="../../toepassingen/interieur/" class="btn btn-primary">Interieur →</a>
+                            </div>
+                        </div>
+
+                        <div class="application-card">
+                            <div class="application-image">
+                                <!-- Ruimte voor afbeelding industrie -->
+                            </div>
+                            <div class="application-card-content">
+                                <h3>Industrie & Machineafscherming</h3>
+                                <p>CE-conforme beschermkappen met ventilatie, zichtcontrole en toegankelijkheid voor onderhoud.</p>
+                                <a href="../../toepassingen/industrie-machineafscherming/" class="btn btn-primary">Industrie & Machineafscherming →</a>
+                            </div>
+                        </div>
                     </div>
-                </article>
+                </div>
+            </div>
+        </section>
 
-                <article class="card">
-                    <div class="card-body">
-                        <h3>🏗️ Balkons & Balustrades</h3>
-                        <p>Veilige en stijlvolle balkon-oplossingen volgens bouwvoorschriften met architectonische uitstraling.</p>
-                        <a href="toepassingen/balkons-balustrades/" class="btn btn-outline" style="width: 100%; margin-top: 1rem;">Bekijk balkons & balustrades →</a>
+        <!-- SPECIFICATIES -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Strekmetaal maasafmetingen</h2>
+                    <table class="specs-table">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Maaswijdte</th>
+                                <th>Typische toepassing</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Micro mazen</strong></td>
+                                <td>0,5 mm tot 6,0 mm</td>
+                                <td>Filtertoepassingen, decoratief</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kleine mazen</strong></td>
+                                <td>6,0 mm t/m 22,0 mm</td>
+                                <td>Interieur, balustrades</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Medium mazen</strong></td>
+                                <td>23,0 mm t/m 61,0 mm</td>
+                                <td>Gevelbekleding, hekwerk</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Grote mazen</strong></td>
+                                <td>Vanaf 62,0 mm</td>
+                                <td>Industriële toepassingen, roosters</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="content-section">
+                    <h2>Strekmetaal maasvormen</h2>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2L2 7l8 5 8-5-8-5zM2 17l8 5 8-5M2 12l8 5 8-5"/></svg>
+                            <div>
+                                <strong>Ruitvormig</strong>
+                                <p style="margin: 0;">Meest gebruikte vorm, universeel toepasbaar</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><rect x="3" y="3" width="14" height="14"/></svg>
+                            <div>
+                                <strong>Vierkant</strong>
+                                <p style="margin: 0;">Moderne uitstraling, strak rasterpatroon</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="7"/></svg>
+                            <div>
+                                <strong>Rond</strong>
+                                <p style="margin: 0;">Zachte uitstraling, decoratief</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><rect x="2" y="7" width="16" height="6"/></svg>
+                            <div>
+                                <strong>Breeddam</strong>
+                                <p style="margin: 0;">Extra brede strips, meer draagkracht</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><rect x="3" y="3" width="14" height="14" rx="0"/></svg>
+                            <div>
+                                <strong>Vlakgewalst</strong>
+                                <p style="margin: 0;">Plat oppervlak, glad afgewerkt</p>
+                            </div>
+                        </div>
                     </div>
-                </article>
+                </div>
+            </div>
+        </section>
 
-                <article class="card">
-                    <div class="card-body">
-                        <h3>🪜 Vloeren & Trappen</h3>
-                        <p>Antislip vloerplaten en traptreden van strekmetaal of roosters. Veilig en duurzaam.</p>
-                        <a href="toepassingen/vloeren-trappen/" class="btn btn-outline" style="width: 100%; margin-top: 1rem;">Bekijk vloeren & trappen →</a>
+        <!-- MATERIALEN -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Materialen voor strekmetaal</h2>
+                    <div class="material-grid">
+                        <div class="material-card">
+                            <h4>Staal</h4>
+                            <p><strong>Eigenschappen:</strong> Hoge sterkte, kosteneffectief</p>
+                            <p><strong>Toepassing:</strong> Industrie, bouw, algemeen gebruik</p>
+                        </div>
+
+                        <div class="material-card">
+                            <h4>Verzinkt Staal</h4>
+                            <p><strong>Eigenschappen:</strong> Corrosiebestendig, onderhoudsarm</p>
+                            <p><strong>Toepassing:</strong> Buitentoepassingen, hekwerk</p>
+                        </div>
+
+                        <div class="material-card">
+                            <h4>Aluminium</h4>
+                            <p><strong>Eigenschappen:</strong> Lichtgewicht, corrosiebestendig</p>
+                            <p><strong>Toepassing:</strong> Gevelbekleding, architectuur</p>
+                        </div>
+
+                        <div class="material-card">
+                            <h4>RVS (Roestvrij Staal)</h4>
+                            <p><strong>Eigenschappen:</strong> Zeer corrosiebestendig, hygiënisch</p>
+                            <p><strong>Toepassing:</strong> Food industry, premium gevels</p>
+                        </div>
+
+                        <div class="material-card">
+                            <h4>Koper</h4>
+                            <p><strong>Eigenschappen:</strong> Karakteristieke uitstraling, patineert</p>
+                            <p><strong>Toepassing:</strong> Decoratieve toepassingen</p>
+                        </div>
+
+                        <div class="material-card">
+                            <h4>Messing</h4>
+                            <p><strong>Eigenschappen:</strong> Goudkleurig, decoratief</p>
+                            <p><strong>Toepassing:</strong> Interieur, designprojecten</p>
+                        </div>
                     </div>
-                </article>
+                </div>
 
-                <article class="card">
-                    <div class="card-body">
-                        <h3>⚙️ Industrie & Machineafscherming</h3>
-                        <p>Professionele afscherming voor machines en apparaten. CE-conform volgens machinerichtlijn.</p>
-                        <a href="toepassingen/industrie-machineafscherming/" class="btn btn-outline" style="width: 100%; margin-top: 1rem;">Bekijk industrie & machineafscherming →</a>
+                <div class="content-section">
+                    <h2>Afwerkingen van strekmetaal</h2>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <div>
+                                <strong>Thermisch verzinken</strong>
+                                <p style="margin: 0;">Maximale corrosiebescherming voor buitentoepassingen</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <div>
+                                <strong>Poedercoaten</strong>
+                                <p style="margin: 0;">RAL kleuren naar keuze, duurzame kleurlaag</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <div>
+                                <strong>Anodiseren</strong>
+                                <p style="margin: 0;">Voor aluminium, diverse kleuren mogelijk</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <div>
+                                <strong>Onbehandeld</strong>
+                                <p style="margin: 0;">Natuurlijke metaaluitstraling, industrieel karakter</p>
+                            </div>
+                        </div>
                     </div>
-                </article>
+                </div>
+            </div>
+        </section>
 
-                <article class="card">
-                    <div class="card-body">
-                        <h3>🌿 Groenvoorziening</h3>
-                        <p>Cortenstaal en gaasproducten voor tuinen en landschapsinrichting. Duurzaam en onderhoudsarm.</p>
-                        <a href="toepassingen/groenvoorziening/" class="btn btn-outline" style="width: 100%; margin-top: 1rem;">Bekijk groenvoorziening →</a>
+        <!-- PRODUCTIE -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Productie en bewerking</h2>
+                    <p>CPL Metaal beschikt over moderne bewerkingsmogelijkheden om strekmetaal precies naar uw wensen te vervaardigen:</p>
+                    
+                    <div class="feature-grid-4">
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/></svg>
+                            <div>
+                                <strong>Knippen</strong>
+                                <p style="margin: 0;">Op maat snijden met waterstraal of CNC</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14a6 6 0 110-12 6 6 0 010 12z"/></svg>
+                            <div>
+                                <strong>Zetten en kanten</strong>
+                                <p style="margin: 0;">Plooien en kanten naar gewenste vorm</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="6"/></svg>
+                            <div>
+                                <strong>Walsen</strong>
+                                <p style="margin: 0;">Vlakgewalst voor glad oppervlak</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M3 3h14v14H3V3zm2 2v10h10V5H5z"/></svg>
+                            <div>
+                                <strong>Lassen tot panelen</strong>
+                                <p style="margin: 0;">Complete panelen incl. frames</p>
+                            </div>
+                        </div>
                     </div>
-                </article>
+                </div>
             </div>
-            
-            <div style="text-align: center; margin-top: var(--space-8);">
-                <a href="toepassingen.html" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2.5rem;">Bekijk alle toepassingen →</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SECTORS -->
-    <section class="section bg-dark" id="sectoren">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label" style="color: #ff6b35;">Voor Welke Sector Werkt U?</span>
-                <h2 class="text-white">Gespecialiseerde Oplossingen voor Uw Branche</h2>
-            </div>
-            
-            <div class="grid grid-2-desktop">
-                <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 16px;">
-                    <div style="font-size: 3rem; color: #ff6b35; margin-bottom: 1rem;">01</div>
-                    <h3 style="color: white;">Bouwsector</h3>
-                    <p style="color: rgba(255,255,255,0.8);">Professionele metaaloplossingen voor aannemers en bouwbedrijven. Van gevelbekleding tot trappen en hekwerk.</p>
-                </div>
-
-                <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 16px;">
-                    <div style="font-size: 3rem; color: #ff6b35; margin-bottom: 1rem;">02</div>
-                    <h3 style="color: white;">Architecten</h3>
-                    <p style="color: rgba(255,255,255,0.8);">Creatieve vrijheid met technische perfectie. Wij helpen uw architectonische visie te realiseren.</p>
-                </div>
-
-                <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 16px;">
-                    <div style="font-size: 3rem; color: #ff6b35; margin-bottom: 1rem;">03</div>
-                    <h3 style="color: white;">Industrie</h3>
-                    <p style="color: rgba(255,255,255,0.8);">Betrouwbare leverancier voor zeeftechniek, filterindustrie en machineafscherming.</p>
-                </div>
-
-                <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 16px;">
-                    <div style="font-size: 3rem; color: #ff6b35; margin-bottom: 1rem;">04</div>
-                    <h3 style="color: white;">Groenvoorziening</h3>
-                    <p style="color: rgba(255,255,255,0.8);">Duurzame metaalproducten voor hoveniers en landschapsarchitecten.</p>
+        <!-- CTA -->
+        <section class="section">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Interesse in strekmetaal?</h2>
+                    <p style="font-size: 1.125rem; margin-bottom: 2rem; color: rgba(255,255,255,0.95);">Neem contact op voor vakkundig advies, vrijblijvende offerte of technische specificaties</p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="../../offerte-aanvragen.html" class="btn btn-secondary" style="font-size: 1.125rem; padding: 1rem 2rem;">📋 Vraag Offerte Aan</a>
+                        <a href="tel:+31647939058" class="btn btn-white" style="font-size: 1.125rem; padding: 1rem 2rem; background: white; color: var(--primary);">📞 Bel: +31 (6) 47 93 90 58</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section bg-gradient" id="contact">
-        <div class="container text-center">
-            <h2 class="text-white" style="margin-bottom: 1.5rem;">Klaar om uw Project te Starten?</h2>
-            <p class="lead text-white" style="margin-bottom: 2rem;">Neem contact op voor vakkundig advies en een vrijblijvende offerte</p>
-            
-            <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-bottom: 2rem;">
-                <a href="offerte-aanvragen.html" class="btn btn-white btn-lg">
-                    📋 Vraag Offerte Aan
-                </a>
-                <a href="tel:+31101234567" class="btn btn-secondary btn-lg">
-                    📞 Bel: 010 123 4567
-                </a>
-            </div>
-            
-            <div style="color: rgba(255,255,255,0.95); font-size: 1rem;">
-                <p><strong>Direct contact:</strong></p>
-                <p>Tel: 010 123 4567 | Email: info@cplmetaal.nl</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- TRUST SIGNALS -->
-    <section class="section">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; text-align: center;">
-                <div>
-                    <div style="font-family: var(--font-display); font-size: 3.5rem; font-weight: 700; color: #1a5490;">15+</div>
-                    <div style="font-weight: 600; color: #6c757d;">Jaren ervaring</div>
-                </div>
-                <div>
-                    <div style="font-family: var(--font-display); font-size: 3.5rem; font-weight: 700; color: #1a5490;">100%</div>
-                    <div style="font-weight: 600; color: #6c757d;">Kwaliteitsgarantie</div>
-                </div>
-                <div>
-                    <div style="font-family: var(--font-display); font-size: 3.5rem; font-weight: 700; color: #1a5490;">24u</div>
-                    <div style="font-weight: 600; color: #6c757d;">Reactietijd</div>
-                </div>
-                <div>
-                    <div style="font-family: var(--font-display); font-size: 3.5rem; font-weight: 700; color: #1a5490;">5+</div>
-                    <div style="font-weight: 600; color: #6c757d;">Materiaalsoorten</div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- FOOTER -->
     <footer class="site-footer">
@@ -801,17 +844,16 @@
                 <div class="footer-section">
                     <h4>CPL Metaal</h4>
                     <p>Specialist in hoogwaardige metaalproducten voor bouw, industrie en architectuur.</p>
-                    <p style="margin-top: 1.5rem;">
-                        <strong>Tel:</strong> 010 123 4567<br>
-                        <strong>Email:</strong> info@cplmetaal.nl<br>
-                        <strong>Locatie:</strong> Rotterdam
+                    <p style="margin-top: 1rem;">
+                        <strong>Tel:</strong> +31 (6) 47 93 90 58<br>
+                        <strong>Email:</strong> info@cplmetaal.nl
                     </p>
                 </div>
                 
                 <div class="footer-section">
                     <h4>Producten</h4>
                     <ul>
-                        <li><a href="#">Strekmetaal</a></li>
+                        <li><a href="../strekmetaal/">Strekmetaal</a></li>
                         <li><a href="#">Geperforeerd Metaal</a></li>
                         <li><a href="#">Gaasproducten</a></li>
                         <li><a href="#">Roosters</a></li>
@@ -820,22 +862,12 @@
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Toepassingen</h4>
-                    <ul>
-                        <li><a href="#">Gevelbekleding</a></li>
-                        <li><a href="#">Hekwerk</a></li>
-                        <li><a href="#">Balkons & Balustrades</a></li>
-                        <li><a href="#">Vloeren & Trappen</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
                     <h4>Bedrijf</h4>
                     <ul>
-                        <li><a href="#">Over CPL Metaal</a></li>
-                        <li><a href="#">Maatwerk</a></li>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="#">Over Ons</a></li>
                         <li><a href="#">Contact</a></li>
-                        <li><a href="offerte-aanvragen.html">Offerte</a></li>
+                        <li><a href="../../offerte-aanvragen.html">Offerte Aanvragen</a></li>
                     </ul>
                 </div>
             </div>
@@ -845,36 +877,5 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        // Mobile Menu
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navMenu = document.getElementById('navMenu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-        // Close menu on link click
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#' && href.length > 1) {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }
-            });
-        });
-    </script>
 </body>
 </html>
