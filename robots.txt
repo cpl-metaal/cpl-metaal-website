@@ -1,0 +1,10 @@
+# robots.txt voor CPL Metaal website
+User-agent: *
+Allow: /
+
+# Sitemap locatie
+Sitemap: https://cpl-metaal.github.io/cpl-metaal-website/sitemap.xml
+
+# Disallow specifieke directories (indien nodig)
+# Disallow: /private/
+# Disallow: /temp/
