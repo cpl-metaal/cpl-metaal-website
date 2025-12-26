@@ -1,0 +1,92 @@
+<!-- FOOTER (matches index.html design) -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Kolom 1: Bedrijfsinfo -->
+            <div class="footer-section">
+                <h4>{{ site.title }}</h4>
+                <p>Specialist in hoogwaardige metaalproducten voor bouw, industrie en architectuur.</p>
+                <p style="margin-top: 1.5rem;">
+                    <strong>Tel:</strong> {{ site.phone }}<br>
+                    <strong>Email:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+                    <strong>Locatie:</strong> {{ site.address.city }}
+                </p>
+            </div>
+            
+            <!-- Kolom 2: Producten -->
+            <div class="footer-section">
+                <h4>Producten</h4>
+                <ul>
+                    <li><a href="{{ '/producten/strekmetaal.html' | relative_url }}">Strekmetaal</a></li>
+                    <li><a href="{{ '/producten/geperforeerd-metaal.html' | relative_url }}">Geperforeerd Metaal</a></li>
+                    <li><a href="{{ '/producten/gaasproducten.html' | relative_url }}">Gaasproducten</a></li>
+                    <li><a href="{{ '/producten/roosters.html' | relative_url }}">Roosters</a></li>
+                    <li><a href="{{ '/producten/cortenstaal.html' | relative_url }}">Cortenstaal</a></li>
+                </ul>
+            </div>
+            
+            <!-- Kolom 3: Toepassingen -->
+            <div class="footer-section">
+                <h4>Toepassingen</h4>
+                <ul>
+                    <li><a href="{{ '/toepassingen/gevelbekleding.html' | relative_url }}">Gevelbekleding</a></li>
+                    <li><a href="{{ '/toepassingen/hekwerk-terreinafscheiding.html' | relative_url }}">Hekwerk</a></li>
+                    <li><a href="{{ '/toepassingen/balkons-balustrades.html' | relative_url }}">Balkons & Balustrades</a></li>
+                    <li><a href="{{ '/toepassingen/vloeren-trappen.html' | relative_url }}">Vloeren & Trappen</a></li>
+                </ul>
+            </div>
+            
+            <!-- Kolom 4: Bedrijf -->
+            <div class="footer-section">
+                <h4>Bedrijf</h4>
+                <ul>
+                    <li><a href="{{ '/over-ons.html' | relative_url }}">Over CPL Metaal</a></li>
+                    <li><a href="{{ '/maatwerk.html' | relative_url }}">Maatwerk</a></li>
+                    <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
+                    <li><a href="{{ '/offerte-aanvragen.html' | relative_url }}">Offerte</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. Alle rechten voorbehouden.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script>
+    // Mobile Menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+
+    if (mobileMenuBtn && navMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href && href !== '#') {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
+    });
+</script>
