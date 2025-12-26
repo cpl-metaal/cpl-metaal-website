@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaasproducten | Metaalgaas & Draadgaas | CPL Metaal</title>
+    <meta name="description" content="Gaasproducten: geweven gaas, gepuntlast gaas en gedrukt geweven gaas. Voor filtering, afscherming en beveiliging. ✓ Diverse maaswijdtes ✓ Alle materialen">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1a5490;
+            --primary-dark: #143f6d;
+            --secondary: #ff6b35;
+            --dark: #1d3a55;
+            --light: #ecf0f1;
+            --white: #ffffff;
+            --gray-50: #f8f9fa;
+            --gray-300: #ced4da;
+            --gray-600: #495057;
+            --font-display: 'Rajdhani', sans-serif;
+            --font-body: 'Karla', sans-serif;
+            --space-4: 1rem;
+            --space-5: 1.5rem;
+            --space-6: 2rem;
+            --space-8: 4rem;
+            --radius: 8px;
+            --radius-lg: 16px;
+            --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--dark);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark);
+            margin-bottom: var(--space-4);
+        }
+
+        h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+        h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+
+        p { margin-bottom: var(--space-4); }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+
+        a:hover { color: var(--primary-dark); }
+
+        .container {
+            width: 100%;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 15px; }
+        }
+
+        .section {
+            padding: clamp(3rem, 8vw, 6rem) 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.75rem;
+            font-family: var(--font-display);
+            font-weight: 600;
+            border: 2px solid transparent;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(26, 84, 144, 0.3);
+        }
+
+        .btn-outline {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-300);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 0;
+        }
+
+        .logo img {
+            height: 48px;
+            width: auto;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        nav a {
+            font-weight: 500;
+            transition: color var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 4rem 0 3rem;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+        }
+
+        .breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            font-size: 0.9375rem;
+            margin-top: 1rem;
+            opacity: 0.9;
+        }
+
+        .breadcrumb a {
+            color: var(--white);
+        }
+
+        /* Content Sections */
+        .content-section {
+            margin-bottom: var(--space-8);
+        }
+
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-5);
+            margin: var(--space-6) 0;
+        }
+
+        .feature-item {
+            padding: var(--space-5);
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition);
+        }
+
+        .feature-item:hover {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            transform: translateY(-4px);
+        }
+
+        .feature-item strong {
+            display: block;
+            color: var(--primary);
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Application Grid */
+        .application-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-5);
+            
+        }
+
+        .application-card {
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all var(--transition);
+        }
+
+        .application-card:hover {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            transform: translateY(-4px);
+        }
+
+        .application-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .application-card > div:not(.application-image) {
+            padding: var(--space-5);
+        }
+
+        .application-card > div:not(.application-image) {
+            padding: var(--space-5);
+        }
+
+        .application-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .application-card p {
+            margin-bottom: 1rem;
+        }
+
+        .application-card a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Tables */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--space-6) 0;
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .specs-table th,
+        .specs-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-300);
+        }
+
+        .specs-table th {
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .specs-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .specs-table tbody tr:hover {
+            background: var(--gray-50);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--gray-50);
+            text-align: center;
+            padding: var(--space-8) 0;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: var(--space-5);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: var(--space-8) 0 var(--space-5);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-6);
+            margin-bottom: var(--space-6);
+        }
+
+        .footer-section h3 {
+            color: var(--white);
+            margin-bottom: var(--space-4);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--space-5);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .feature-grid,
+            .application-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .feature-grid,
+            .application-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.875rem;
+            }
+
+            .hero {
+                padding: 2.5rem 0 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-container">
+            <a href="../../index.html" class="logo">
+                <img src="../../logo.png" alt="CPL Metaal">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../producten.html">Producten</a></li>
+                    <li><a href="../../toepassingen.html">Toepassingen</a></li>
+                    <li><a href="../../offerte-aanvragen.html" class="btn btn-primary" style="padding: 0.625rem 1.25rem;">Offerte Aanvragen</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>Gaasproducten</h1>
+            <p>Metalen matten en platen voor filtering, afscherming en beveiliging. Van fijnmazig tot grofmazig</p>
+            <div class="breadcrumb">
+                <a href="../../index.html">Home</a>
+                <span>›</span>
+                <a href="../../producten.html">Producten</a>
+                <span>›</span>
+                <span>Gaasproducten</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- WAT IS -->
+        <section class="section">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Wat is gaas?</h2>
+                    <p>Geperforeerd metaal is een metalen plaat waarin volgens een specifiek patroon gaten of perforaties zijn aangebracht. Deze perforaties kunnen variëren in vorm (rond, vierkant, sleuf, decoratief), grootte en verdeling, waardoor het materiaal unieke eigenschappen en toepassingsmogelijkheden krijgt.</p>
+                    
+                    <p>Door het strategisch aanbrengen van gaten veranderen de eigenschappen van het materiaal volledig. De plaat wordt lichter maar behoudt veel van zijn sterkte. Afhankelijk van het patroon en de gatgrootte ontstaan er nieuwe mogelijkheden voor lucht- en waterdoorlatendheid, lichtdoorvoer, geluidsisolatie en ventilatie.</p>
+                    
+                    <p>De perforaties worden aangebracht door middel van ponsen (stansen) of lasersnijden. Bij ponzen wordt een matrijs met grote kracht door het materiaal gedrukt om de gaten te vormen. Voor complexere patronen of precisiewerk wordt vaak lasersnijden toegepast. De doorlaatbaarheid van geperforeerd metaal kan oplopen tot wel 75%, afhankelijk van het gekozen patroon.</p>
+                </div>
+
+                <!-- VOORDELEN -->
+                <div class="content-section">
+                    <h2>Voordelen van gaasproducten</h2>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <strong>Veelzijdigheid</strong>
+                            <p>Geschikt voor talloze toepassingen, van industriële filtratie tot architectonische ontwerpen. Volledig aanpasbaar aan specifieke wensen.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Sterkte & Lichtheid</strong>
+                            <p>Behoudt veel van de originele sterkte terwijl het gewicht significant lager is. Ideaal voor constructies waar gewicht een rol speelt.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Lucht & Water Doorlatend</strong>
+                            <p>Tot 75% doorlaatbaarheid mogelijk, perfect voor ventilatie en drainage. Laat lucht en water door terwijl sterkte behouden blijft.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Lichtdoorvoer</strong>
+                            <p>Laat natuurlijk licht door terwijl privacy behouden blijft. Creëert interessante licht-schaduw effecten in architectuur.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Geluidsisolatie</strong>
+                            <p>Absorbeert geluidsgolven effectief, vermindert galm en verbetert akoestiek. Perfect voor openbare ruimtes en industriële toepassingen.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Esthetisch Aantrekkelijk</strong>
+                            <p>Visueel interessante patronen voegen textuur en dimensie toe aan ontwerpen. Van functioneel tot decoratief.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TOEPASSINGEN -->
+                <div class="content-section">
+                    <h2>Toepassingen van gaasproducten</h2>
+                    <div class="application-grid">
+                        <div class="application-card">
+                            <div class="application-image"></div>
+                            <div>
+                                <h3>Gevelbekleding</h3>
+                                <p>Moderne gevels met geperforeerde panelen voor ventilatie, lichtinval en een unieke uitstraling.</p>
+                                <a href="../../toepassingen/gevelbekleding/">Gevelbekleding →</a>
+                            </div>
+                        </div>
+
+                        <div class="application-card">
+                            <div class="application-image"></div>
+                            <div>
+                                <h3>Balkons & Balustrades</h3>
+                                <p>Veilige en decoratieve balkonhekken met doorzicht en ventilatie.</p>
+                                <a href="../../toepassingen/balkons-balustrades/">Balkons & Balustrades →</a>
+                            </div>
+                        </div>
+
+                        <div class="application-card">
+                            <div class="application-image"></div>
+                            <div>
+                                <h3>Ventilatie Systemen</h3>
+                                <p>Luchtdoorlaat voor HVAC-systemen, ventilatieroosters en klimaatbeheersing.</p>
+                                <a href="../../toepassingen/industrie-machineafscherming/">Ventilatie →</a>
+                            </div>
+                        </div>
+
+                        <div class="application-card">
+                            <div class="application-image"></div>
+                            <div>
+                                <h3>Filters & Zeven</h3>
+                                <p>Industriële filters voor olie, water, lucht en andere vloeistoffen.</p>
+                                <a href="../../toepassingen/industrie-machineafscherming/">Filters & Zeven →</a>
+                            </div>
+                        </div>
+
+                        <div class="application-card">
+                            <div class="application-image"></div>
+                            <div>
+                                <h3>Interieur & Akoestiek</h3>
+                                <p>Akoestische panelen voor geluidsabsorptie in kantoren, theaters en studio's.</p>
+                                <a href="../../toepassingen/interieur/">Interieur →</a>
+                            </div>
+                        </div>
+
+                        <div class="application-card">
+                            <div class="application-image"></div>
+                            <div>
+                                <h3>Machineafscherming</h3>
+                                <p>Veiligheidsafschermingen die zicht en ventilatie behouden.</p>
+                                <a href="../../toepassingen/industrie-machineafscherming/">Machineafscherming →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PERFORATIE PATRONEN -->
+                <div class="content-section">
+                    <h2>Typen gaas</h2>
+                    <p>Geperforeerd metaal is verkrijgbaar in diverse standaard en decoratieve patronen. Elk patroon heeft zijn eigen eigenschappen en toepassingen:</p>
+                    
+                    <table class="specs-table">
+                        <thead>
+                            <tr>
+                                <th>Patroon</th>
+                                <th>Beschrijving</th>
+                                <th>Toepassing</th>
+                                <th>Doorlaatbaarheid</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Rond (R)</strong></td>
+                                <td>Meest gebruikte patroon, 80% van alle perforaties</td>
+                                <td>Universeel, filters, ventilatie</td>
+                                <td>20-60%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Vierkant (C)</strong></td>
+                                <td>Hogere open oppervlakte dan rond</td>
+                                <td>Zeven, sorteren</td>
+                                <td>30-75%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sleuf (L)</strong></td>
+                                <td>Langwerpige openingen voor specifieke toepassingen</td>
+                                <td>Drainage, sorteren op grootte</td>
+                                <td>25-65%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ruit</strong></td>
+                                <td>Decoratief patroon met hoge sterkte</td>
+                                <td>Architectuur, design</td>
+                                <td>30-50%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Zeskant</strong></td>
+                                <td>Bijenraat patroon, optimale sterkte</td>
+                                <td>Constructie, design</td>
+                                <td>35-55%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Driehoek</strong></td>
+                                <td>Technisch patroon met directionele eigenschappen</td>
+                                <td>Specifieke technische toepassingen</td>
+                                <td>25-45%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Klaverblad</strong></td>
+                                <td>Decoratief patroon met goede doorlaat</td>
+                                <td>Architectuur, design elementen</td>
+                                <td>40-45%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Decoratief</strong></td>
+                                <td>Op maat gemaakte patronen via lasersnijden</td>
+                                <td>Kunst, unieke ontwerpen</td>
+                                <td>Variabel</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- AFMETINGEN -->
+                <div class="content-section">
+                    <h2>Maaswijdtes en specificaties</h2>
+                    <p>Geperforeerd metaal wordt gespecificeerd aan de hand van verschillende parameters. De belangrijkste maten zijn:</p>
+                    
+                    <table class="specs-table">
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Symbool</th>
+                                <th>Bereik</th>
+                                <th>Eenheid</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Gatdiameter (rond)</strong></td>
+                                <td>R</td>
+                                <td>0,4 - 150</td>
+                                <td>mm</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Steek (rond)</strong></td>
+                                <td>T</td>
+                                <td>2,0 - 28,0</td>
+                                <td>mm</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Gatgrootte (vierkant)</strong></td>
+                                <td>C</td>
+                                <td>3 - 100</td>
+                                <td>mm</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Steek (vierkant)</strong></td>
+                                <td>U</td>
+                                <td>Variabel</td>
+                                <td>mm</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sleuf afmetingen</strong></td>
+                                <td>LR</td>
+                                <td>Op maat</td>
+                                <td>mm</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Plaatdikte</strong></td>
+                                <td>-</td>
+                                <td>0,5 - 12</td>
+                                <td>mm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p style="margin-top: 1.5rem;"><strong>Belangrijke ontwerpregels:</strong></p>
+                    <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                        <li>Gatdiameter en dam (brug tussen gaten) moeten minimaal gelijk zijn aan de plaatdikte</li>
+                        <li>Bij te kleine dams kan materiaal scheuren of vervormen</li>
+                        <li>Steekpatronen kunnen driehoeksteek (60°), rechthoekig of verspringend zijn</li>
+                        <li>Driehoeksteek geeft een decoratiever uiterlijk, rechthoekig is functioneler</li>
+                    </ul>
+                </div>
+
+                <!-- MATERIALEN -->
+                <div class="content-section">
+                    <h2>Materialen voor gaasproducten</h2>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <strong>Staal (koud/warmgewalst)</strong>
+                            <p>Economisch, sterk, geschikt voor meeste toepassingen. Moet behandeld worden tegen corrosie.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>RVS 304</strong>
+                            <p>Corrosiebestendig, voor binnen en matig agressieve omgevingen. Meest gebruikte RVS kwaliteit.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>RVS 316</strong>
+                            <p>Extra corrosiebestendig, maritieme en chemische omgevingen. Bevat molybdeen voor extra bescherming.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Aluminium</strong>
+                            <p>Licht, corrosiebestendig, ideaal voor gevelbekleding. Goed te anodiseren in diverse kleuren.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Verzinkt Staal</strong>
+                            <p>Goede corrosieweerstand, economisch voor buitentoepassingen. Thermisch of elektrolytisch verzinkt.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Messing & Koper</strong>
+                            <p>Decoratief, unieke uitstraling, specifieke toepassingen. Ontwikkelt mooie patina over tijd.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AFWERKINGEN -->
+                <div class="content-section">
+                    <h2>Afwerkingen van gaasproducten</h2>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <strong>Poedercoaten (RAL)</strong>
+                            <p>Duurzame kleurlaag in elke RAL-kleur, UV-bestendig. Beschermt en verfraait in één behandeling.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Thermisch Verzinken</strong>
+                            <p>Dompelverzinken, maximale bescherming tegen corrosie. Zinklaag van 50-85 micron dikte.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Anodiseren (Aluminium)</strong>
+                            <p>Verhoogt corrosieweerstand en creëert diverse kleuren. Harde oxidelaag op oppervlak.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Elektrolytisch Polijsten</strong>
+                            <p>Hoogglans afwerking voor RVS, hygiënische toepassingen. Verwijdert oneffenheden op micronniveau.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Afbramen</strong>
+                            <p>Verwijderen van scherpe randen voor veilige handling. Essentieel voor montage en eindgebruik.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Onbehandeld</strong>
+                            <p>Blank staal of RVS, voor specifieke toepassingen. Goedkoopste optie, wel aanvullende bescherming nodig.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTIE EN BEWERKING -->
+        <section class="section" style="background: var(--gray-50);">
+            <div class="container">
+                <div class="content-section">
+                    <h2>Productie en bewerking</h2>
+                    <div class="feature-grid" style="grid-template-columns: repeat(2, 1fr);">
+                        
+                        <div class="feature-item">
+                            <strong>Weven</strong>
+                            <p>Draden worden over en onder elkaar geweven op geautomatiseerde weefmachines. Voor geweven gaas in diverse maaswijdtes van fijn tot grof.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Puntlassen</strong>
+                            <p>Elektrisch weerstandslassen van kruispunten. Creëert stijve, sterke panelen met exacte maatvoering voor hekwerk en constructie.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Knippen op Maat</strong>
+                            <p>Gaas kan geknipt worden met schaar, snijbrander of lasersnijden. Rollen of panelen op gewenste afmetingen geleverd.</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Randen Afwerken</strong>
+                            <p>Randen kunnen omgezet, gelast of voorzien van randversterking. Voor veilige montage en mooie afwerking.</p>
+                        </div>
+                    </div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Interesse in gaasproducten?</h2>
+                <p>Vraag direct een vrijblijvende offerte aan of neem contact met ons op voor advies op maat.</p>
+                <div class="cta-buttons">
+                    <a href="../../offerte-aanvragen.html" class="btn btn-primary">Offerte Aanvragen</a>
+                    <a href="tel:+31858881727" class="btn btn-outline">Bel: 085-8881727</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>CPL Metaal</h3>
+                    <p>Uw partner voor hoogwaardig metaalwerk op maat.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Producten</h3>
+                    <ul>
+                        <li><a href="../strekmetaal/">Strekmetaal</a></li>
+                        <li><a href="../geperforeerd-metaal/">Geperforeerd Metaal</a></li>
+                        <li><a href="../gaasproducten/">Gaasproducten</a></li>
+                        <li><a href="../roosters/">Metalen Roosters</a></li>
+                        <li><a href="../cortenstaal/">Cortenstaal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Toepassingen</h3>
+                    <ul>
+                        <li><a href="../../toepassingen/gevelbekleding/">Gevelbekleding</a></li>
+                        <li><a href="../../toepassingen/balkons-balustrades/">Balkons & Balustrades</a></li>
+                        <li><a href="../../toepassingen/hekwerk-terreinafscheiding/">Hekwerk</a></li>
+                        <li><a href="../../toepassingen/vloeren-trappen/">Vloeren & Trappen</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Telefoon: 085-8881727</li>
+                        <li>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="51383f373e1132213d3c342530303d7f3f3d">[email&#160;protected]</a></li>
+                        <li><a href="../../offerte-aanvragen.html">Offerte Aanvragen</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p
