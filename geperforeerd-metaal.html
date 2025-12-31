@@ -287,6 +287,41 @@
             font-weight: 600;
         }
 
+        .application-content .application-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: var(--primary);
+            color: var(--white) !important;
+            border: none;
+            border-radius: var(--radius);
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.0625rem;
+            cursor: pointer;
+            transition: all var(--transition);
+            text-decoration: none;
+        }
+
+        .application-content .application-btn:hover {
+            background: var(--primary-dark);
+            color: var(--white) !important;
+            transform: translateY(-2px);
+        }
+
+        .application-content .application-btn .arrow {
+            margin-left: 1rem;
+            font-size: 1.25rem;
+            transition: transform var(--transition);
+            color: var(--white);
+        }
+
+        .application-content .application-btn:hover .arrow {
+            transform: translateX(4px);
+        }
+
         /* SPECIFICATIONS TABLE */
         .specs-table {
             width: 100%;
@@ -521,54 +556,42 @@
                 <h2>Voordelen van geperforeerd metaal</h2>
                 <div class="feature-grid">
                     <div class="feature-item">
-                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                        </svg>
+                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         <div>
                             <strong>Ventilatie en luchtdoorlaat</strong>
                             <p style="margin: 0; font-size: 0.9375rem;">Geschikt waar luchtstromen nodig zijn, terwijl het paneel toch afsluit.</p>
                         </div>
                     </div>
                     <div class="feature-item">
-                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                        </svg>
+                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         <div>
                             <strong>Lichtdoorlatend met privacy</strong>
                             <p style="margin: 0; font-size: 0.9375rem;">Laat licht door en beperkt inkijk afhankelijk van perforatie en open area.</p>
                         </div>
                     </div>
                     <div class="feature-item">
-                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                        </svg>
+                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         <div>
                             <strong>Veel perforatiepatronen</strong>
                             <p style="margin: 0; font-size: 0.9375rem;">Rond, vierkant, sleuf en decoratieve patronen voor functie en ontwerpvrijheid.</p>
                         </div>
                     </div>
                     <div class="feature-item">
-                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                        </svg>
+                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         <div>
                             <strong>Breed materiaalkeuze</strong>
                             <p style="margin: 0; font-size: 0.9375rem;">Leverbaar in o.a. staal, RVS, aluminium en verzinkt, maar ook koper en messing komen voor.</p>
                         </div>
                     </div>
                     <div class="feature-item">
-                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                        </svg>
+                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         <div>
                             <strong>Sterk en vormvast</strong>
                             <p style="margin: 0; font-size: 0.9375rem;">Plaatmateriaal blijft constructief logisch en is geschikt voor panelen en afschermingen.</p>
                         </div>
                     </div>
                     <div class="feature-item">
-                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                        </svg>
+                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         <div>
                             <strong>Geschikt voor coating en afwerking</strong>
                             <p style="margin: 0; font-size: 0.9375rem;">Bijvoorbeeld poedercoating en (bij staal) thermisch verzinken voor extra bescherming en uitstraling.</p>
@@ -593,7 +616,10 @@
                         <div class="application-content">
                             <h3>Gevelbekleding</h3>
                             <p>Geperforeerde gevelpanelen worden gebruikt als tweede huid voor zonwering, ventilatie en een herkenbare uitstraling. Perforatie bepaalt transparantie en ritme in het gevelbeeld.</p>
-                            <a href="#">Meer informatie →</a>
+                            <a href="#" class="application-btn">
+                                Gevelbekleding
+                                <span class="arrow">→</span>
+                            </a>
                         </div>
                     </div>
 
@@ -604,7 +630,10 @@
                         <div class="application-content">
                             <h3>Industrie & machineafscherming</h3>
                             <p>Ideaal voor afschermkappen en beschermpanelen waarbij ventilatie en zichtcontrole belangrijk zijn, zonder direct contact met bewegende delen.</p>
-                            <a href="#">Meer informatie →</a>
+                            <a href="#" class="application-btn">
+                                Industrie & machineafscherming
+                                <span class="arrow">→</span>
+                            </a>
                         </div>
                     </div>
 
@@ -615,7 +644,10 @@
                         <div class="application-content">
                             <h3>Interieur</h3>
                             <p>Toepasbaar als decoratief wandpaneel, plafonddeel of akoestisch element. Door patroonkeuze kan het ontwerp strak of juist uitgesproken zijn.</p>
-                            <a href="#">Meer informatie →</a>
+                            <a href="#" class="application-btn">
+                                Interieur
+                                <span class="arrow">→</span>
+                            </a>
                         </div>
                     </div>
 
@@ -626,7 +658,10 @@
                         <div class="application-content">
                             <h3>Dakopbouw</h3>
                             <p>Geschikt voor afschermingen rond technische installaties op daken, waar luchtstroom nodig is en het zicht op techniek beperkt moet worden.</p>
-                            <a href="#">Meer informatie →</a>
+                            <a href="#" class="application-btn">
+                                Dakopbouw
+                                <span class="arrow">→</span>
+                            </a>
                         </div>
                     </div>
 
@@ -637,7 +672,10 @@
                         <div class="application-content">
                             <h3>Hekwerk & terreinafscheiding</h3>
                             <p>Perforatieplaten worden toegepast in poorten en panelen voor privacy, robuustheid en een rustige uitstraling. Coating is hierbij vaak gewenst.</p>
-                            <a href="#">Meer informatie →</a>
+                            <a href="#" class="application-btn">
+                                Hekwerk & terreinafscheiding
+                                <span class="arrow">→</span>
+                            </a>
                         </div>
                     </div>
 
@@ -648,7 +686,10 @@
                         <div class="application-content">
                             <h3>Vloeren & trappen</h3>
                             <p>In industriële omgevingen worden geperforeerde platen ook gebruikt als antislip loopoppervlak en traptrede, waarbij afwatering en grip belangrijk zijn.</p>
-                            <a href="#">Meer informatie →</a>
+                            <a href="#" class="application-btn">
+                                Vloeren & trappen
+                                <span class="arrow">→</span>
+                            </a>
                         </div>
                     </div>
 
@@ -769,21 +810,21 @@
                 <h2>Afwerkingen van geperforeerd metaal</h2>
                 <div class="feature-grid">
                     <div class="feature-item">
-                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8"/></svg>
+                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         <div>
                             <strong>Thermisch verzinken</strong>
                             <p style="margin: 0; font-size: 0.9375rem;">Voor stalen platen is thermisch verzinken een veelgebruikte methode om corrosiebescherming voor buiten te verhogen.</p>
                         </div>
                     </div>
                     <div class="feature-item">
-                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8"/></svg>
+                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         <div>
                             <strong>Poedercoaten</strong>
                             <p style="margin: 0; font-size: 0.9375rem;">Poedercoating biedt kleurkeuze en een slijtvaste afwerking. Het wordt toegepast op staal, aluminium en verzinkt staal en combineert uitstraling met bescherming.</p>
                         </div>
                     </div>
                     <div class="feature-item">
-                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8"/></svg>
+                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         <div>
                             <strong>Anodiseren (aluminium)</strong>
                             <p style="margin: 0; font-size: 0.9375rem;">Anodiseren is een afwerking voor aluminium en wordt gebruikt voor een duurzame, nette toplaag en een stabiele uitstraling.</p>
@@ -803,28 +844,28 @@
                 
                 <div class="feature-grid" style="grid-template-columns: repeat(2, 1fr);">
                     <div class="feature-item">
-                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M3 3h14v2H3V3zm0 4h14v2H3V7zm0 4h14v2H3v-2zm0 4h14v2H3v-2z"/></svg>
+                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         <div>
                             <strong>Knippen / snijden</strong>
                             <p style="margin: 0;">Op maat leveren van platen en panelen, passend binnen het project.</p>
                         </div>
                     </div>
                     <div class="feature-item">
-                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M3 3h14v2H3V3zm0 4h14v2H3V7zm0 4h14v2H3v-2zm0 4h14v2H3v-2z"/></svg>
+                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         <div>
                             <strong>Zetten en kanten</strong>
                             <p style="margin: 0;">Plooien en randafwerking voor stijfheid, veiligheid en montage.</p>
                         </div>
                     </div>
                     <div class="feature-item">
-                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M3 3h14v2H3V3zm0 4h14v2H3V7zm0 4h14v2H3v-2zm0 4h14v2H3v-2z"/></svg>
+                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         <div>
                             <strong>Walsen</strong>
                             <p style="margin: 0;">Rondingen en krommingen voor specifieke ontwerp- of pasvormeisen.</p>
                         </div>
                     </div>
                     <div class="feature-item">
-                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M3 3h14v2H3V3zm0 4h14v2H3V7zm0 4h14v2H3v-2zm0 4h14v2H3v-2z"/></svg>
+                        <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         <div>
                             <strong>Lassen tot panelen</strong>
                             <p style="margin: 0;">Samenstellen van complete panelen of kaders voor montage en stabiliteit.</p>
