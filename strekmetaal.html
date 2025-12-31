@@ -238,9 +238,9 @@
         }
 
         .application-card {
-            padding: var(--space-5);
             background: var(--gray-50);
             border-radius: var(--radius-lg);
+            overflow: hidden;
             transition: all var(--transition);
         }
 
@@ -248,6 +248,28 @@
             background: var(--white);
             box-shadow: var(--shadow);
             transform: translateY(-4px);
+        }
+
+        .application-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-600);
+            font-size: 0.875rem;
+            font-style: italic;
+        }
+
+        .application-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .application-content {
+            padding: var(--space-5);
         }
 
         .application-card h3 {
@@ -477,50 +499,80 @@
                     <h2>Toepassingen van strekmetaal</h2>
                     <div class="application-grid">
                         <div class="application-card">
-                              <div class="application-image">
-                            <!-- Afbeelding placeholder - vervang met: <img src="afbeelding-url.jpg" alt="[Toepassing]"> -->
-                            [Afbeelding placeholder]
-                        </div>
-                        <div class="application-content">
-                            <h3>Gevelbekleding</h3>
-                            <p>Architectonische gevelbekleding met unieke uitstraling en functionele voordelen.</p>
-                            <a href="gevelbekleding.html">Meer informatie →</a>
-                        </div>
-
-                        <div class="application-card">
-                            <h3>Balkons & balustrades</h3>
-                            <p>Veilige en stijlvolle invulling van balkonhekken volgens bouwvoorschriften.</p>
-                            <a href="#">Meer informatie →</a>
+                            <div class="application-image">
+                                Afbeelding placeholder
+                            </div>
+                            <div class="application-content">
+                                <h3>Gevelbekleding</h3>
+                                <p>Architectonische gevelbekleding met unieke uitstraling en functionele voordelen.</p>
+                                <a href="gevelbekleding.html">Meer informatie →</a>
+                            </div>
                         </div>
 
                         <div class="application-card">
-                            <h3>Dakopbouw</h3>
-                            <p>Ventilatiepanelen en afschermingen voor technische installaties op daken.</p>
-                            <a href="#">Meer informatie →</a>
+                            <div class="application-image">
+                                Afbeelding placeholder
+                            </div>
+                            <div class="application-content">
+                                <h3>Balkons & Balustrades</h3>
+                                <p>Veilige en stijlvolle invulling van balkonhekken volgens bouwvoorschriften.</p>
+                                <a href="#">Meer informatie →</a>
+                            </div>
                         </div>
 
                         <div class="application-card">
-                            <h3>Hekwerk & terreinafscheiding</h3>
-                            <p>Sterke en transparante afscheidingen voor bedrijven en openbare ruimtes.</p>
-                            <a href="#">Meer informatie →</a>
+                            <div class="application-image">
+                                Afbeelding placeholder
+                            </div>
+                            <div class="application-content">
+                                <h3>Dakopbouw</h3>
+                                <p>Ventilatiepanelen en afschermingen voor technische installaties op daken.</p>
+                                <a href="#">Meer informatie →</a>
+                            </div>
                         </div>
 
                         <div class="application-card">
-                            <h3>Vloeren & trappen</h3>
-                            <p>Antislip traptreden en loopvlakken met optimale grip en drainage.</p>
-                            <a href="#">Meer informatie →</a>
+                            <div class="application-image">
+                                Afbeelding placeholder
+                            </div>
+                            <div class="application-content">
+                                <h3>Hekwerk & Terreinafscheiding</h3>
+                                <p>Sterke en transparante afscheidingen voor bedrijven en openbare ruimtes.</p>
+                                <a href="#">Meer informatie →</a>
+                            </div>
                         </div>
 
                         <div class="application-card">
-                            <h3>Interieur</h3>
-                            <p>Roomdividers, wandpanelen en decoratieve elementen voor modern interieur.</p>
-                            <a href="#">Meer informatie →</a>
+                            <div class="application-image">
+                                Afbeelding placeholder
+                            </div>
+                            <div class="application-content">
+                                <h3>Vloeren & Trappen</h3>
+                                <p>Antislip traptreden en loopvlakken met optimale grip en drainage.</p>
+                                <a href="#">Meer informatie →</a>
+                            </div>
                         </div>
 
                         <div class="application-card">
-                            <h3>Industrie & machineafscherming</h3>
-                            <p>CE-conforme beschermkappen met ventilatie en zichtcontrole.</p>
-                            <a href="#">Meer informatie →</a>
+                            <div class="application-image">
+                                Afbeelding placeholder
+                            </div>
+                            <div class="application-content">
+                                <h3>Interieur</h3>
+                                <p>Roomdividers, wandpanelen en decoratieve elementen voor modern interieur.</p>
+                                <a href="#">Meer informatie →</a>
+                            </div>
+                        </div>
+
+                        <div class="application-card">
+                            <div class="application-image">
+                                Afbeelding placeholder
+                            </div>
+                            <div class="application-content">
+                                <h3>Industrie & Machineafscherming</h3>
+                                <p>CE-conforme beschermkappen met ventilatie en zichtcontrole.</p>
+                                <a href="#">Meer informatie →</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -753,7 +805,7 @@
                     <p>Specialist in hoogwaardige metaalproducten voor bouw, industrie en architectuur.</p>
                     <p style="margin-top: 1rem;">
                         <strong>Tel:</strong> +31 (6) 47 93 90 58<br>
-                        <strong>Email:</strong> info@cplmetaal.nl
+                        <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="84edeae2ebc4e7f4e8e9e1f0e5e5e8aaeae8">[email&#160;protected]</a>
                     </p>
                 </div>
                 
@@ -780,9 +832,4 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 CPL Metaal. Alle rechten voorbehouden.</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+                <p
