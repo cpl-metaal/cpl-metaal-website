@@ -3,121 +3,121 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://jouwdomein.nl/</loc>
+    <loc>https://www.cplmetaal.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- Producten Overzichtspagina -->
   <url>
-    <loc>https://jouwdomein.nl/producten</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://www.cplmetaal.com/producten</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <!-- Producten -->
   <url>
-    <loc>https://jouwdomein.nl/producten/strekmetaal</loc>
+    <loc>https://www.cplmetaal.com/producten/strekmetaal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://jouwdomein.nl/producten/geperforeerd-metaal</loc>
+    <loc>https://www.cplmetaal.com/producten/geperforeerd-metaal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://jouwdomein.nl/producten/gaasproducten</loc>
+    <loc>https://www.cplmetaal.com/producten/gaasproducten</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://jouwdomein.nl/producten/roosters</loc>
+    <loc>https://www.cplmetaal.com/producten/roosters</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://jouwdomein.nl/producten/cortenstaal</loc>
+    <loc>https://www.cplmetaal.com/producten/cortenstaal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <!-- Toepassingen Overzichtspagina -->
   <url>
-    <loc>https://jouwdomein.nl/toepassingen</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://www.cplmetaal.com/toepassingen</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <!-- Toepassingen -->
   <url>
-    <loc>https://jouwdomein.nl/toepassingen/gevelbekleding</loc>
+    <loc>https://www.cplmetaal.com/toepassingen/gevelbekleding</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://jouwdomein.nl/toepassingen/balkons-balustrades</loc>
+    <loc>https://www.cplmetaal.com/toepassingen/balkons-balustrades</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://jouwdomein.nl/toepassingen/dakopbouw</loc>
+    <loc>https://www.cplmetaal.com/toepassingen/dakopbouw</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://jouwdomein.nl/toepassingen/hekwerk-terreinafscheiding</loc>
+    <loc>https://www.cplmetaal.com/toepassingen/hekwerk-terreinafscheiding</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://jouwdomein.nl/toepassingen/vloeren-trappen</loc>
+    <loc>https://www.cplmetaal.com/toepassingen/vloeren-trappen</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://jouwdomein.nl/toepassingen/industrie-machineafscherming</loc>
+    <loc>https://www.cplmetaal.com/toepassingen/industrie-machineafscherming</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://jouwdomein.nl/toepassingen/groenvoorziening</loc>
+    <loc>https://www.cplmetaal.com/toepassingen/groenvoorziening</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://jouwdomein.nl/toepassingen/interieur</loc>
+    <loc>https://www.cplmetaal.com/toepassingen/interieur</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <!-- Overige pagina's -->
   <url>
-    <loc>https://jouwdomein.nl/over-cpl-metaal</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.cplmetaal.com/over-cpl-metaal</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.cplmetaal.com/contact</loc>
+    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://jouwdomein.nl/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://jouwdomein.nl/offerte-aanvragen</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.cplmetaal.com/offerte-aanvragen</loc>
+    <changefreq>yearly</changefreq>
     <priority>0.9</priority>
   </url>
   
