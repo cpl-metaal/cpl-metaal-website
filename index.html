@@ -592,34 +592,10 @@
     </style>
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="site-header">
-        <div class="container header-container">
-            <a href="#" class="logo">
-                <img src="logo.png" alt="CPL Metaal" style="height: 60px; width: auto;">
-            </a>
-            
-            <nav class="nav">
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="producten.html" class="nav-link">Producten</a></li>
-                    <li><a href="toepassingen.html" class="nav-link">Toepassingen</a></li>
-                    <li><a href="#sectoren" class="nav-link">Sectoren</a></li>
-                    <li><a href="over-ons.html" class="nav-link">Over Ons</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li><a href="offerte-aanvragen.html" class="btn btn-primary btn-sm">Offerte Aanvragen</a></li>
-                </ul>
-            </nav>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
+    <!-- Navigatie wordt hier geladen -->
+    <div id="navigation-placeholder"></div>
 
-    <!-- HERO SECTION -->
+<!-- HERO SECTION -->
     <section class="hero">
         <div class="container hero-content">
             <h1 class="hero-title">Specialist in Metaalproducten voor Bouwsector & Industrie</h1>
@@ -850,7 +826,7 @@
             
             <div style="color: rgba(255,255,255,0.95); font-size: 1rem;">
                 <p><strong>Direct contact:</strong></p>
-                <p>Tel: +31 (6) 47 93 90 58 | Email: <a href="mailto:info@cplmetaal.com" style="color: rgba(255,255,255,0.95);">info@cplmetaal.com</a></p>
+                <p>Tel: +31 (6) 47 93 90 58 | Email: <a href="/cdn-cgi/l/email-protection#aac3c4ccc5eac9dac6c7cfdecbcbc684c9c5c7" style="color: rgba(255,255,255,0.95);"><span class="__cf_email__" data-cfemail="86efe8e0e9c6e5f6eaebe3f2e7e7eaa8e5e9eb">[email&#160;protected]</span></a></p>
             </div>
         </div>
     </section>
@@ -871,90 +847,17 @@
                     <div style="font-family: var(--font-display); font-size: 3.5rem; font-weight: 700; color: #1a5490;">24u</div>
                     <div style="font-weight: 600; color: #6c757d;">Reactietijd</div>
                 </div>
+                <div>
+                    <div style="font-family: var(--font-display); font-size: 3.5rem; font-weight: 700; color: #1a5490;">5+</div>
+                    <div style="font-weight: 600; color: #6c757d;">Materiaalsoorten</div>
+                </div>
             </div>
         </div>
     </section>
+    <!-- Footer wordt hier geladen -->
+    <div id="footer-placeholder"></div>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h4>CPL Metaal</h4>
-                    <p>Specialist in hoogwaardige metaalproducten voor bouw, industrie en architectuur.</p>
-                    <p style="margin-top: 1.5rem;">
-                        <strong>Tel:</strong> +31 (6) 47 93 90 58<br>
-                        <strong>Email:</strong> <a href="mailto:info@cplmetaal.com">info@cplmetaal.com</a><br>
-                        <strong>Locatie:</strong> Sint Anthonis
-                    </p>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Producten</h4>
-                    <ul>
-                        <li><a href="#">Strekmetaal</a></li>
-                        <li><a href="#">Geperforeerd Metaal</a></li>
-                        <li><a href="#">Gaasproducten</a></li>
-                        <li><a href="#">Roosters</a></li>
-                        <li><a href="#">Cortenstaal</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Toepassingen</h4>
-                    <ul>
-                        <li><a href="#">Gevelbekleding</a></li>
-                        <li><a href="#">Hekwerk</a></li>
-                        <li><a href="#">Balkons & Balustrades</a></li>
-                        <li><a href="#">Vloeren & Trappen</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Bedrijf</h4>
-                    <ul>
-                        <li><a href="#">Over CPL Metaal</a></li>
-                        <li><a href="#">Maatwerk</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="offerte-aanvragen.html">Offerte</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 CPL Metaal. Alle rechten voorbehouden.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile Menu
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navMenu = document.getElementById('navMenu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-        // Close menu on link click
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#' && document.querySelector(href)) {
-                    e.preventDefault();
-                    document.querySelector(href).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
+    <!-- Loader script -->
+    <script src="/js/includes.js"></script>
 </body>
 </html>
