@@ -346,6 +346,7 @@
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             color: var(--white);
             overflow: hidden;
+            margin-top: -1px; /* Verberg witte border van header */
         }
 
         .hero::before {
@@ -367,7 +368,7 @@
         
         @media (max-width: 992px) {
             .hero-content {
-                padding: clamp(4rem, 10vw, 6rem) 0;
+                padding: clamp(5rem, 12vw, 7rem) 0 clamp(4rem, 10vw, 6rem) 0;
             }
         }
 
