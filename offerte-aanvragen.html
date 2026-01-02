@@ -550,7 +550,7 @@
                     <!-- Contact Info -->
                     <div style="margin-top: var(--space-8); padding: var(--space-5); background: var(--gray-50); border-radius: var(--radius-lg); text-align: center;">
                         <h3>Liever direct contact?</h3>
-                        <p>Bel ons op <strong><a href="tel:+31647939058">+31 (6) 47 93 90 58</a></strong> of mail naar <strong><a href="mailto:info@cplmetaal.com">info@cplmetaal.com</a></strong></p>
+                        <p>Bel ons op <strong><a href="tel:+31647939058">+31 (6) 47 93 90 58</a></strong> of mail naar <strong><a href="/cdn-cgi/l/email-protection#87eee9e1e8c7e4f7ebeae2f3e6e6eba9e9eb"><span class="__cf_email__" data-cfemail="c3aaada5ac83a0b3afaea6b7a2a2afedadaf">[email&#160;protected]</span></a></strong></p>
                         <p style="margin: 0; color: var(--gray-600);">Bereikbaar: ma-vr van 08:00 - 17:00 uur</p>
                     </div>
                 </div>
@@ -628,7 +628,17 @@ Datum: ${new Date().toLocaleString('nl-NL')}
                         submitBtn.disabled = false;
                     }, 3000);
                 }, 500);
-        
+                
+            } catch (error) {
+                // Show error message
+                form.classList.remove('loading');
+                submitBtn.textContent = '📋 Verstuur Offerte-Aanvraag';
+                submitBtn.disabled = false;
+                errorMsg.classList.add('show');
+                console.error('Form submission error:', error);
+            }
+        });
+    </script>
 
     <!-- Loader script -->
     <script src="/js/includes.js"></script>
