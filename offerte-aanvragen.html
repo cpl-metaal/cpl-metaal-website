@@ -357,33 +357,10 @@
     </style>
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="site-header">
-        <div class="container header-container">
-            <a href="index.html" class="logo">
-                <img src="logo.png" alt="CPL Metaal">
-            </a>
-            
-            <nav class="nav">
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="#" class="nav-link">Producten</a></li>
-                    <li><a href="#" class="nav-link">Toepassingen</a></li>
-                    <li><a href="#" class="nav-link">Over Ons</a></li>
-                    <li><a href="#" class="nav-link">Contact</a></li>
-                    <li><a href="offerte-aanvragen.html" class="btn btn-primary btn-sm">Offerte Aanvragen</a></li>
-                </ul>
-            </nav>
-            
-            <button class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
+    <!-- Navigatie wordt hier geladen -->
+    <div id="navigation-placeholder"></div>
 
-    <!-- PAGE HEADER -->
+<!-- PAGE HEADER -->
     <section class="page-header">
         <div class="container">
             <h1>Vrijblijvende Offerte Aanvragen</h1>
@@ -573,56 +550,17 @@
                     <!-- Contact Info -->
                     <div style="margin-top: var(--space-8); padding: var(--space-5); background: var(--gray-50); border-radius: var(--radius-lg); text-align: center;">
                         <h3>Liever direct contact?</h3>
-                        <p>Bel ons op <strong><a href="tel:+31647939058">+31 (6) 47 93 90 58</a></strong> of mail naar <strong><a href="mailto:info@cplmetaal.nl">info@cplmetaal.nl</a></strong></p>
+                        <p>Bel ons op <strong><a href="tel:+31647939058">+31 (6) 47 93 90 58</a></strong> of mail naar <strong><a href="/cdn-cgi/l/email-protection#87eee9e1e8c7e4f7ebeae2f3e6e6eba9e9eb"><span class="__cf_email__" data-cfemail="c3aaada5ac83a0b3afaea6b7a2a2afedadaf">[email&#160;protected]</span></a></strong></p>
                         <p style="margin: 0; color: var(--gray-600);">Bereikbaar: ma-vr van 08:00 - 17:00 uur</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    <!-- Footer wordt hier geladen -->
+    <div id="footer-placeholder"></div>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h4>CPL Metaal</h4>
-                    <p>Specialist in hoogwaardige metaalproducten voor bouw, industrie en architectuur.</p>
-                    <p style="margin-top: 1rem;">
-                        <strong>Tel:</strong> +31 (6) 47 93 90 58<br>
-                        <strong>Email:</strong> info@cplmetaal.nl
-                    </p>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Producten</h4>
-                    <ul>
-                        <li><a href="strekmetaal.html">Strekmetaal</a></li>
-                        <li><a href="#">Geperforeerd Metaal</a></li>
-                        <li><a href="#">Gaasproducten</a></li>
-                        <li><a href="#">Roosters</a></li>
-                        <li><a href="#">Cortenstaal</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Bedrijf</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Over Ons</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="offerte-aanvragen.html">Offerte Aanvragen</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 CPL Metaal. Alle rechten voorbehouden.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- FORM HANDLER SCRIPT -->
+<!-- FORM HANDLER SCRIPT -->
     <script>
         document.getElementById('offerteForm').addEventListener('submit', async function(e) {
             e.preventDefault();
@@ -690,15 +628,9 @@ Datum: ${new Date().toLocaleString('nl-NL')}
                         submitBtn.disabled = false;
                     }, 3000);
                 }, 500);
-                
-            } catch (error) {
-                console.error('Error:', error);
-                form.classList.remove('loading');
-                submitBtn.textContent = '📋 Verstuur Offerte-Aanvraag';
-                submitBtn.disabled = false;
-                errorMsg.classList.add('show');
-            }
-        });
-    </script>
+        
+
+    <!-- Loader script -->
+    <script src="/js/includes.js"></script>
 </body>
 </html>

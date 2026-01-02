@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrie & Machineafscherming | CPL Metaal</title>
+    <meta name="description" content="Metalen oplossingen voor industrie en machineafscherming met strekmetaal, geperforeerd metaal, gaasproducten en roosters">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1a5490;
+            --primary-dark: #143f6d;
+            --secondary: #ff6b35;
+            --dark: #1d3a55;
+            --light: #ecf0f1;
+            --white: #ffffff;
+            --gray-50: #f8f9fa;
+            --gray-300: #ced4da;
+            --gray-600: #495057;
+            --font-display: 'Rajdhani', sans-serif;
+            --font-body: 'Karla', sans-serif;
+            --space-4: 1rem;
+            --space-5: 1.5rem;
+            --space-6: 2rem;
+            --space-8: 4rem;
+            --radius: 8px;
+            --radius-lg: 16px;
+            --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--dark);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark);
+            margin-bottom: var(--space-4);
+        }
+
+        h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+        h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+
+        p { margin-bottom: var(--space-4); }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+
+        a:hover { color: var(--primary-dark); }
+
+        .container {
+            width: 100%;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 15px; }
+        }
+
+        .section {
+            padding: clamp(3rem, 8vw, 6rem) 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.75rem;
+            font-family: var(--font-display);
+            font-weight: 600;
+            border: 2px solid transparent;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        .btn-outline {
+            background-color: var(--white);
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        /* HEADER */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-300);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        /* PAGE HEADER */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, #2874a6 100%);
+            color: var(--white);
+            padding: 4rem 0 3rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.125rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9375rem;
+        }
+
+        .breadcrumb a {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--white);
+        }
+
+        /* CONTENT SECTIONS */
+        .content-section {
+            margin-bottom: var(--space-8);
+        }
+
+        .content-section h2 {
+            margin-bottom: var(--space-5);
+            padding-bottom: var(--space-4);
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        .bg-light {
+            background: var(--gray-50);
+        }
+
+        /* PRODUCT APPLICATION SECTION */
+        .product-application {
+            margin-bottom: var(--space-8);
+        }
+
+        .product-application h2 {
+            margin-bottom: var(--space-5);
+        }
+
+        .product-application > p {
+            font-size: 1.0625rem;
+            margin-bottom: var(--space-6);
+            color: var(--gray-600);
+        }
+
+        /* BULLETS LIST */
+        .bullets-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-4);
+            margin-bottom: var(--space-6);
+        }
+
+        @media (max-width: 768px) {
+            .bullets-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .bullet-item {
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+        }
+
+        .bullet-icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            color: var(--secondary);
+            margin-top: 2px;
+        }
+
+        .bullet-item p {
+            margin: 0;
+            font-size: 0.9375rem;
+            color: var(--dark);
+        }
+
+        /* INSPIRATION IMAGES */
+        .inspiration-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-5);
+            margin-top: var(--space-6);
+        }
+
+        @media (max-width: 768px) {
+            .inspiration-images {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .inspiration-image {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--primary) 0%, #2874a6 100%);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .inspiration-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .inspiration-image::after {
+            content: 'Inspiratie afbeelding';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--white);
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .inspiration-image:has(img[src])::after {
+            display: none;
+        }
+
+        /* CTA BOX */
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary) 0%, #2874a6 100%);
+            color: var(--white);
+            padding: clamp(2.5rem, 5vw, 4rem);
+            border-radius: var(--radius-lg);
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            color: var(--white);
+            margin-bottom: var(--space-4);
+            border: none;
+            padding: 0;
+        }
+
+        .cta-box p {
+            font-size: 1.125rem;
+            opacity: 0.95;
+            margin-bottom: var(--space-6);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: var(--space-4);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 640px) {
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .cta-buttons .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* FOOTER */
+        .site-footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: var(--space-8) 0 var(--space-5);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-6);
+            margin-bottom: var(--space-6);
+        }
+
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer-section h4 {
+            color: var(--white);
+            margin-bottom: var(--space-4);
+        }
+
+        .footer-section p,
+        .footer-section ul {
+            font-size: 0.9375rem;
+            opacity: 0.9;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--white);
+            opacity: 0.9;
+        }
+
+        .footer-section a:hover {
+            opacity: 1;
+            color: var(--secondary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--space-5);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigatie wordt hier geladen -->
+    <div id="navigation-placeholder"></div>
+
+<!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Industrie & machineafscherming</h1>
+            <p>Metalen oplossingen voor industrie en machineafscherming worden toegepast om installaties en werkplekken veilig af te schermen, zonder functionaliteit zoals zicht, ventilatie en toegankelijkheid te verliezen. CPL Metaal levert diverse producten voor industriële omgevingen, afgestemd op veiligheidseisen en praktisch gebruik.</p>
+            <div class="breadcrumb">
+                <a href="/">Home</a>
+                <span>›</span>
+                <a href="/toepassingen">Toepassingen</a>
+                <span>›</span>
+                <span>Industrie & machineafscherming</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- STREKMETAAL INDUSTRIE & MACHINEAFSCHERMING -->
+    <section class="section">
+        <div class="container">
+            <div class="product-application">
+                <h2>Strekmetaal voor industrie & machineafscherming</h2>
+                <p>Strekmetaal wordt veel toegepast als robuuste machineafscherming. Door de doorlopende structuur zonder lasnaden is het materiaal sterk en bestand tegen impact, terwijl zicht op machines behouden blijft.</p>
+                
+                <div class="bullets-list">
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Hoge mechanische sterkte</p>
+                    </div>
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Goede zichtbaarheid van machines en processen</p>
+                    </div>
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Doorlaatbaar voor lucht en warmte</p>
+                    </div>
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Geschikt voor veiligheidsafschermingen en omkastingen</p>
+                    </div>
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Leverbaar in staal, verzinkt staal en aluminium</p>
+                    </div>
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Af te werken met coating of verzinking</p>
+                    </div>
+                </div>
+
+                <div class="inspiration-images">
+                    <div class="inspiration-image">
+                        <img src="images/inspiratie/strekmetaal-industrie-1.jpg" alt="Strekmetaal industrie & machineafscherming inspiratie 1">
+                    </div>
+                    <div class="inspiration-image">
+                        <img src="images/inspiratie/strekmetaal-industrie-2.jpg" alt="Strekmetaal industrie & machineafscherming inspiratie 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GEPERFOREERD METAAL INDUSTRIE & MACHINEAFSCHERMING -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="product-application">
+                <h2>Geperforeerd metaal voor industrie & machineafscherming</h2>
+                <p>Geperforeerd metaal wordt toegepast wanneer een gesloten en strak afschermingspaneel nodig is met behoud van ventilatie. Het perforatiepatroon kan worden afgestemd op veiligheids- en zichtvereisten.</p>
+                
+                <div class="bullets-list">
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Gecontroleerde openheid door perforatie</p>
+                    </div>
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Strak en uniform uiterlijk</p>
+                    </div>
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Geschikt voor behuizingen en afschermpanelen</p>
+                    </div>
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Toepasbaar in staal, RVS en aluminium</p>
+                    </div>
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Combineerbaar met frames en zetwerk</p>
+                    </div>
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Geschikt voor coating in veiligheidskleuren</p>
+                    </div>
+                </div>
+
+                <div class="inspiration-images">
+                    <div class="inspiration-image">
+                        <img src="images/inspiratie/geperforeerd-industrie-1.jpg" alt="Geperforeerd metaal industrie & machineafscherming inspiratie 1">
+                    </div>
+                    <div class="inspiration-image">
+                        <img src="images/inspiratie/geperforeerd-industrie-2.jpg" alt="Geperforeerd metaal industrie & machineafscherming inspiratie 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GAASPRODUCTEN INDUSTRIE & MACHINEAFSCHERMING -->
+    <section class="section">
+        <div class="container">
+            <div class="product-application">
+                <h2>Gaasproducten voor industrie & machineafscherming</h2>
+                <p>Gaasproducten worden ingezet voor lichte tot middelzware afscherming waar maximale transparantie gewenst is. Ze bieden een duidelijke fysieke barrière zonder het zicht op het proces te beperken.</p>
+                
+                <div class="bullets-list">
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Hoge transparantie</p>
+                    </div>
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Keuze in maaswijdte en draaddikte</p>
+                    </div>
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Geschikt voor veiligheidshekken en scheidingswanden</p>
+                    </div>
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Leverbaar in verzinkt staal en RVS</p>
+                    </div>
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Eenvoudig te combineren met frames</p>
+                    </div>
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Geschikt voor grote industriële ruimtes</p>
+                    </div>
+                </div>
+
+                <div class="inspiration-images">
+                    <div class="inspiration-image">
+                        <img src="images/inspiratie/gaas-industrie-1.jpg" alt="Gaasproducten industrie & machineafscherming inspiratie 1">
+                    </div>
+                    <div class="inspiration-image">
+                        <img src="images/inspiratie/gaas-industrie-2.jpg" alt="Gaasproducten industrie & machineafscherming inspiratie 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METALEN ROOSTERS INDUSTRIE & MACHINEAFSCHERMING -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="product-application">
+                <h2>Metalen roosters voor industrie & machineafscherming</h2>
+                <p>Metalen roosters worden toegepast als onderhoudsplatforms, loopbruggen en bordessen rondom machines en installaties. Ze zorgen voor veilige toegang en goede afwatering in industriële omgevingen.</p>
+                
+                <div class="bullets-list">
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Hoge draagkracht voor onderhoud en inspectie</p>
+                    </div>
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Open structuur voor afvoer van vuil en vloeistoffen</p>
+                    </div>
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Antislip loopoppervlak</p>
+                    </div>
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Geschikt voor binnen- en buitentoepassingen</p>
+                    </div>
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Leverbaar als panelen en maatwerkdelen</p>
+                    </div>
+                    <div class="bullet-item">
+                        <svg class="bullet-icon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p>Af te werken met verzinking of coating</p>
+                    </div>
+                </div>
+
+                <div class="inspiration-images">
+                    <div class="inspiration-image">
+                        <img src="images/inspiratie/roosters-industrie-1.jpg" alt="Metalen roosters industrie & machineafscherming inspiratie 1">
+                    </div>
+                    <div class="inspiration-image">
+                        <img src="images/inspiratie/roosters-industrie-2.jpg" alt="Metalen roosters industrie & machineafscherming inspiratie 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BOX -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Interesse in industrie & machineafscherming?</h2>
+                <p>Neem contact op voor advies, technische specificaties of een vrijblijvende offerte op maat</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-secondary">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3.293 3.293 3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                        Vraag Offerte Aan
+                    </a>
+                    <a href="tel:+31647939058" class="btn btn-outline">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                        Bel: +31 (6) 47 93 90 58
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer wordt hier geladen -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Loader script -->
+    <script src="/js/includes.js"></script>
+</body>
+</html>
