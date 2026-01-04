@@ -576,66 +576,49 @@
             errorMsg.classList.remove('show');
             
             // Show loading state
-            form.classList.add('loading');
             submitBtn.textContent = '⏳ Bezig met verzenden...';
             submitBtn.disabled = true;
             
-            // Create email body
-            const emailBody = `
-NIEUWE OFFERTE-AANVRAAG VIA WEBSITE
-
-CONTACTGEGEVENS:
-Naam contactpersoon: ${formData.get('naam')}
-Bedrijfsnaam: ${formData.get('bedrijf')}
-Email: ${formData.get('email')}
-Telefoon: ${formData.get('telefoon')}
-
-PRODUCTINFORMATIE:
-Product: ${formData.get('product')}
-
-SPECIFICATIES:
-Afmetingen: ${formData.get('afmetingen') || 'Niet opgegeven'}
-Materiaal: ${formData.get('materiaal') || 'Niet opgegeven'}
-Aantal/Oppervlak: ${formData.get('aantal') || 'Niet opgegeven'}
-Afwerking: ${formData.get('afwerking') || 'Niet opgegeven'}
-Gewenste levertijd: ${formData.get('levertijd') || 'Niet opgegeven'}
-
-OVERIGE WENSEN:
-${formData.get('specificaties') || 'Geen aanvullende informatie'}
-
----
-Deze aanvraag is verzonden via het contact formulier op cplmetaal.nl
-Datum: ${new Date().toLocaleString('nl-NL')}
-            `.trim();
-            
-            // Use mailto as fallback (opens email client)
-            const mailto = `mailto:info@cplmetaal.nl?subject=Offerte Aanvraag - ${formData.get('product')}&body=${encodeURIComponent(emailBody)}`;
-            
             try {
-                // Open mailto link
-                window.location.href = mailto;
+                // Send to Cloud86 PHP backend
+                const response = await fetch('https://www.cplmetaal.com/api/send-offerte.php', {
+                    method: 'POST',
+                    body: formData
+                });
                 
-                // Show success message after short delay
-                setTimeout(() => {
-                    form.classList.remove('loading');
+                const data = await response.json();
+                
+                if (response.ok && data.success) {
+                    // Success!
                     submitBtn.textContent = '✓ Verzonden!';
+                    submitBtn.style.backgroundColor = '#28a745';
                     successMsg.classList.add('show');
                     
-                    // Reset form
+                    // Reset form after 3 seconds
                     setTimeout(() => {
                         form.reset();
                         submitBtn.textContent = '📋 Verstuur Offerte-Aanvraag';
+                        submitBtn.style.backgroundColor = '';
                         submitBtn.disabled = false;
+                        successMsg.classList.remove('show');
                     }, 3000);
-                }, 500);
+                    
+                } else {
+                    throw new Error(data.error || 'Onbekende fout');
+                }
                 
             } catch (error) {
-                // Show error message
-                form.classList.remove('loading');
-                submitBtn.textContent = '📋 Verstuur Offerte-Aanvraag';
-                submitBtn.disabled = false;
-                errorMsg.classList.add('show');
                 console.error('Form submission error:', error);
+                submitBtn.textContent = '❌ Fout opgetreden';
+                submitBtn.style.backgroundColor = '#dc3545';
+                errorMsg.classList.add('show');
+                
+                setTimeout(() => {
+                    submitBtn.textContent = '📋 Verstuur Offerte-Aanvraag';
+                    submitBtn.style.backgroundColor = '';
+                    submitBtn.disabled = false;
+                    errorMsg.classList.remove('show');
+                }, 3000);
             }
         });
     </script>
