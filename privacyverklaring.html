@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacyverklaring | CPL Metaal</title>
+    <meta name="description" content="Privacyverklaring van CPL Metaal. Lees hoe wij omgaan met uw persoonsgegevens volgens de AVG.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1a5490;
+            --primary-dark: #143f6d;
+            --secondary: #ff6b35;
+            --dark: #1d3a55;
+            --light: #ecf0f1;
+            --white: #ffffff;
+            --gray-50: #f8f9fa;
+            --gray-100: #e9ecef;
+            --gray-300: #ced4da;
+            --gray-600: #495057;
+            --gray-800: #343a40;
+            --font-display: 'Rajdhani', sans-serif;
+            --font-body: 'Karla', sans-serif;
+            --radius: 8px;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: var(--gray-50);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .privacy-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 3rem 2.5rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--gray-100);
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            color: var(--primary-dark);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--dark);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        .info-box {
+            background-color: var(--gray-50);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: var(--radius);
+        }
+
+        .info-box h3 {
+            margin-top: 0;
+            font-size: 1.125rem;
+        }
+
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-info {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius);
+            margin: 2rem 0;
+        }
+
+        .contact-info h3 {
+            color: var(--white);
+            margin-top: 0;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info a {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 1rem;
+            border-bottom: 1px solid var(--gray-300);
+        }
+
+        th {
+            background-color: var(--gray-50);
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            color: var(--white);
+        }
+
+        .version-info {
+            text-align: center;
+            color: var(--gray-600);
+            font-size: 0.875rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-300);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .privacy-card {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            table {
+                font-size: 0.875rem;
+            }
+
+            th, td {
+                padding: 0.75rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="privacy-card">
+            <h1>Privacyverklaring</h1>
+            <p class="subtitle">CPL Metaal respecteert uw privacy en behandelt uw persoonsgegevens vertrouwelijk</p>
+
+            <p>Bij CPL Metaal vinden wij uw privacy belangrijk. Wij houden ons aan de relevante wet- en regelgeving op het gebied van privacy, waaronder de Algemene Verordening Gegevensbescherming (AVG). Dit betekent dat uw gegevens veilig bij ons zijn en dat wij ze altijd netjes gebruiken.</p>
+
+            <p>In deze privacyverklaring leggen wij uit welke persoonsgegevens wij verzamelen en gebruiken en voor welke doeleinden. Wij raden u aan deze privacyverklaring zorgvuldig te lezen.</p>
+
+            <div class="info-box">
+                <h3>📅 Laatst bijgewerkt</h3>
+                <p><strong>5 januari 2026</strong></p>
+                <p>Deze privacyverklaring kan worden gewijzigd. De laatste versie staat altijd op deze pagina.</p>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>1. Wie zijn wij?</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>CPL Metaal</strong> is een specialist in metaalbewerking op maat. Wij verwerken persoonsgegevens van onze klanten, prospects en websitebezoekers.</p>
+
+            <div class="contact-info">
+                <h3>📍 Contactgegevens</h3>
+                <p><strong>Bedrijfsnaam:</strong> CPL Metaal</p>
+                <p><strong>Adres:</strong> Noordkant 24a</p>
+                <p><strong>Postcode en plaats:</strong> 5845 EW Sint Anthonis</p>
+                <p><strong>KvK-nummer:</strong> 98745212</p>
+                <p><strong>BTW-nummer:</strong> NL868625140B01</p>
+                <p><strong>Telefoon:</strong> <a href="tel:+31647939058">+31 (6) 47 93 90 58</a></p>
+                <p><strong>E‑mail:</strong> <a href="mailto:info@cplmetaal.com">info@cplmetaal.com</a></p>
+                <p><strong>Website:</strong> <a href="https://cplmetaal.com">cplmetaal.com</a></p>
+                <p><strong>Functionaris gegevensbescherming:</strong> CPL Metaal is niet verplicht een functionaris gegevensbescherming aan te stellen. Voor privacyvragen kunt u terecht bij bovenstaande contactgegevens.</p>
+            </div>
+
+            <p>CPL Metaal is de <strong>verwerkingsverantwoordelijke</strong> voor de verwerking van persoonsgegevens zoals beschreven in deze privacyverklaring.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>2. Waarom verwerken wij uw persoonsgegevens?</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p>CPL Metaal verwerkt uw persoonsgegevens voor de volgende doeleinden:</p>
+
+            <h3>2.1. Offerte-aanvragen en klantencontact</h3>
+            <p>Wanneer u via onze website een offerte aanvraagt of contact met ons opneemt, verwerken wij uw gegevens om:</p>
+            <ul>
+                <li>Uw aanvraag te kunnen behandelen</li>
+                <li>Een offerte op maat te kunnen opstellen</li>
+                <li>Contact met u op te nemen over uw aanvraag</li>
+                <li>Vragen te beantwoorden</li>
+                <li>Technisch advies te geven</li>
+            </ul>
+
+            <h3>2.2. Uitvoering van opdrachten</h3>
+            <p>Als u klant bij ons wordt, verwerken wij uw gegevens om:</p>
+            <ul>
+                <li>Onze diensten te kunnen leveren</li>
+                <li>Overeenkomsten uit te voeren</li>
+                <li>Facturen te versturen</li>
+                <li>Betalingen te verwerken</li>
+                <li>U op de hoogte te houden van de status van uw order</li>
+            </ul>
+
+            <h3>2.3. Wettelijke verplichtingen</h3>
+            <p>Wij verwerken uw gegevens om te voldoen aan wettelijke verplichtingen, zoals:</p>
+            <ul>
+                <li>Administratieplicht (belastingwetgeving)</li>
+                <li>Boekhoudkundige verplichtingen</li>
+            </ul>
+
+            <h3>2.4. Websitebezoek en analyse</h3>
+            <p>Bij het bezoeken van onze website worden bepaalde gegevens automatisch verzameld voor:</p>
+            <ul>
+                <li>Het verbeteren van onze website</li>
+                <li>Het analyseren van websitegebruik</li>
+                <li>Het waarborgen van de beveiliging</li>
+            </ul>
+
+            <h3>2.5. Gevolgen van het niet verstrekken van gegevens</h3>
+            <p>Voor het aanvragen van een offerte of het afsluiten en uitvoeren van een overeenkomst hebben wij enkele persoonsgegevens nodig, zoals uw naam, contactgegevens en productspecificaties. Zonder deze gegevens kunnen wij uw aanvraag niet verwerken of onze diensten niet leveren. Het verstrekken van deze gegevens is daarom een noodzakelijke voorwaarde voor het tot stand komen van een overeenkomst.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>3. Welke persoonsgegevens verwerken wij?</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p>Afhankelijk van uw contact met ons kunnen wij de volgende persoonsgegevens van u verwerken:</p>
+
+            <h3>3.1. Bij offerte-aanvragen</h3>
+            <ul>
+                <li>Voor- en achternaam</li>
+                <li>Bedrijfsnaam</li>
+                <li>E-mailadres</li>
+                <li>Telefoonnummer</li>
+                <li>Productgegevens: productomschrijving, afmetingen, materiaal, aantal stuks, afwerking van het product, gewenste levertijd en eventuele opmerkingen</li>
+                <li>Eventuele bijlagen (tekeningen, foto's)</li>
+            </ul>
+
+            <h3>3.2. Bij klantrelaties</h3>
+            <ul>
+                <li>NAW-gegevens (naam, adres, woonplaats)</li>
+                <li>Factuuradres</li>
+                <li>Leveradres</li>
+                <li>KvK-nummer</li>
+                <li>BTW-nummer</li>
+                <li>Bankrekeningnummer (IBAN)</li>
+                <li>Orderhistorie</li>
+                <li>Correspondentie</li>
+            </ul>
+
+            <h3>3.3. Bij websitebezoek</h3>
+            <ul>
+                <li>IP-adres</li>
+                <li>Browsertype en -versie</li>
+                <li>Besturingssysteem</li>
+                <li>Bezochte pagina's</li>
+                <li>Datum en tijdstip van bezoek</li>
+            </ul>
+
+            <div class="info-box">
+                <h3>🔒 Geen bijzondere persoonsgegevens</h3>
+                <p>CPL Metaal verwerkt <strong>geen</strong> bijzondere persoonsgegevens zoals gegevens over uw gezondheid, religie, politieke voorkeur, ras, seksuele geaardheid of strafrechtelijke gegevens. Deze zijn niet nodig voor onze dienstverlening.</p>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>4. Op welke grondslag verwerken wij uw gegevens?</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p>CPL Metaal verwerkt uw persoonsgegevens op basis van de volgende rechtsgrondslagen uit de AVG (artikel 6):</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Verwerking</th>
+                        <th>Rechtsgrond</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Offerte-aanvraag behandelen</td>
+                        <td><strong>Pre-contractuele maatregelen</strong> (uitvoering overeenkomst, art. 6 lid 1 sub b AVG)</td>
+                    </tr>
+                    <tr>
+                        <td>Uitvoering van opdrachten</td>
+                        <td><strong>Uitvoering overeenkomst</strong> (art. 6 lid 1 sub b AVG)</td>
+                    </tr>
+                    <tr>
+                        <td>Facturatie en boekhouding</td>
+                        <td><strong>Wettelijke verplichting</strong> (art. 6 lid 1 sub c AVG)</td>
+                    </tr>
+                    <tr>
+                        <td>Klantrelatiebeheer</td>
+                        <td><strong>Gerechtvaardigd belang</strong> (art. 6 lid 1 sub f AVG)</td>
+                    </tr>
+                    <tr>
+                        <td>Website-analyse</td>
+                        <td><strong>Gerechtvaardigd belang</strong> (art. 6 lid 1 sub f AVG)</td>
+                    </tr>
+                    <tr>
+                        <td>Nieuwsbrieven (indien van toepassing)</td>
+                        <td><strong>Toestemming</strong> (art. 6 lid 1 sub a AVG)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Gerechtvaardigd belang</h3>
+            <p>Ons gerechtvaardigd belang bij de verwerking van uw persoonsgegevens bestaat uit:</p>
+            <ul>
+                <li>Het onderhouden van klantrelaties en het bieden van goede service</li>
+                <li>Het verbeteren van onze dienstverlening en website</li>
+                <li>Het waarborgen van de beveiliging van onze systemen</li>
+            </ul>
+            <p>Wij hebben beoordeeld dat deze belangen zwaarder wegen dan uw privacy-belangen, aangezien:</p>
+            <ul>
+                <li>De verwerking noodzakelijk is voor onze bedrijfsvoering</li>
+                <li>De gegevens minimaal en proportioneel worden verwerkt</li>
+                <li>U redelijkerwijs kunt verwachten dat wij uw gegevens voor deze doeleinden gebruiken</li>
+            </ul>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>5. Met wie delen wij uw gegevens?</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p>CPL Metaal verkoopt uw gegevens <strong>niet</strong> aan derden. Wij verstrekken uw persoonsgegevens alleen aan derden als dit noodzakelijk is voor de uitvoering van onze diensten of om te voldoen aan een wettelijke verplichting.</p>
+
+            <h3>5.1. Verwerkers</h3>
+            <p>Wij maken gebruik van de volgende externe partijen die namens ons persoonsgegevens verwerken (verwerkers):</p>
+
+            <ul>
+                <li><strong>Web3Forms</strong> – verwerking van ons offerteformulier. Web3Forms verzendt de door u ingevulde gegevens direct naar ons e‑mailadres en bewaart geen kopieën. Serverlogs met persoonsgegevens worden na twee maanden verwijderd en de servers staan in de Verenigde Staten; CPL Metaal heeft passende waarborgen getroffen voor deze doorgifte (zie paragraaf 5.3).</li>
+                <li><strong>GitHub Pages</strong> – hostingprovider voor onze website. GitHub Pages zorgt ervoor dat onze website online toegankelijk is.</li>
+                <li><strong>Google Workspace</strong> (indien van toepassing) – onze e‑maildienst en documentbeheer. Dit systeem wordt gebruikt voor het versturen en ontvangen van berichten en voor het opslaan van interne documenten.</li>
+                <li><strong>Boekhoudsoftware</strong> – voor het opstellen en bewaren van facturen en administratieve gegevens.</li>
+            </ul>
+
+            <p>Met deze partijen hebben wij verwerkersovereenkomsten gesloten waarin afspraken zijn vastgelegd over de bescherming van uw persoonsgegevens.</p>
+
+            <h3>5.2. Overige derden</h3>
+            <p>In bepaalde gevallen kunnen wij uw gegevens delen met:</p>
+            <ul>
+                <li><strong>Toezichthouders en opsporingsdiensten</strong> - wanneer wij hiertoe wettelijk verplicht zijn</li>
+                <li><strong>Transporteurs</strong> - voor het bezorgen van uw bestelling (naam, adres, telefoonnummer)</li>
+            </ul>
+
+            <h3>5.3. Doorgifte buiten de EU</h3>
+            <p>CPL Metaal streeft ernaar om persoonsgegevens binnen de Europese Unie (EU) of de Europese Economische Ruimte (EER) te verwerken. Sommige dienstverleners (zoals Web3Forms) verwerken echter gegevens in landen buiten de EU/EER, bijvoorbeeld in de Verenigde Staten.</p>
+
+            <p>Wanneer persoonsgegevens buiten de EU/EER worden verwerkt, zorgen wij voor passende waarborgen. Afhankelijk van de dienstverlener kunnen dit zijn:</p>
+            <ul>
+                <li>Een **EU‑standaardcontractbepaling** (Standard Contractual Clauses) met de dienstverlener;</li>
+                <li>Een **adequaatheidsbesluit** of deelname aan het **EU‑VS Data Privacy Framework**;</li>
+                <li>Andere passende beveiligingsmaatregelen om de privacy van uw gegevens te waarborgen.</li>
+            </ul>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>6. Hoe lang bewaren wij uw gegevens?</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p>CPL Metaal bewaart uw persoonsgegevens niet langer dan noodzakelijk voor de doeleinden waarvoor de gegevens zijn verzameld. Wij hanteren de volgende bewaartermijnen:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Gegevenstype</th>
+                        <th>Bewaartermijn</th>
+                        <th>Reden</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Offerte-aanvragen (geen klant geworden)</td>
+                        <td>2 jaar</td>
+                        <td>Mogelijk latere interesse</td>
+                    </tr>
+                    <tr>
+                        <td>Klantgegevens (actieve relatie)</td>
+                        <td>Duur van de relatie + 2 jaar</td>
+                        <td>Klantrelatiebeheer</td>
+                    </tr>
+                    <tr>
+                        <td>Facturen en boekhouding</td>
+                        <td>7 jaar</td>
+                        <td>Wettelijke bewaarplicht (Belastingwet)</td>
+                    </tr>
+                    <tr>
+                        <td>Orderhistorie en correspondentie</td>
+                        <td>7 jaar</td>
+                        <td>Garantie, aansprakelijkheid</td>
+                    </tr>
+                    <tr>
+                        <td>Website-analysegegevens</td>
+                        <td>26 maanden</td>
+                        <td>Statistieken en verbetering website</td>
+                    </tr>
+                    <tr>
+                        <td>E-mailcorrespondentie</td>
+                        <td>2 jaar na laatste contact</td>
+                        <td>Klantservice en administratie</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Na afloop van deze termijnen worden uw persoonsgegevens verwijderd of geanonimiseerd, tenzij er een wettelijke bewaarplicht geldt of er een geschil loopt.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>7. Hoe beveiligen wij uw gegevens?</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p>CPL Metaal neemt de bescherming van uw gegevens serieus en neemt passende beveiligingsmaatregelen om misbruik, verlies, onbevoegde toegang, ongewenste openbaarmaking en ongeoorloofde wijziging tegen te gaan.</p>
+
+            <h3>Onze beveiligingsmaatregelen:</h3>
+            <ul>
+                <li><strong>SSL/TLS-versleuteling</strong> - Alle communicatie via onze website is versleuteld (HTTPS)</li>
+                <li><strong>Sterke wachtwoorden</strong> - Wij hanteren strenge wachtwoordeisen voor toegang tot systemen</li>
+                <li><strong>Beperkte toegang</strong> - Alleen geautoriseerde medewerkers hebben toegang tot persoonsgegevens</li>
+                <li><strong>Regelmatige updates</strong> - Software en systemen worden up-to-date gehouden</li>
+                <li><strong>Back-ups</strong> - Regelmatige back-ups om gegevensverlies te voorkomen</li>
+                <li><strong>Firewalls en antivirussoftware</strong> - Bescherming tegen ongeautoriseerde toegang</li>
+            </ul>
+
+            <p>Als u het idee heeft dat uw gegevens niet goed beveiligd zijn of er aanwijzingen zijn van misbruik, neem dan contact met ons op via <a href="mailto:info@cplmetaal.com">info@cplmetaal.com</a>.</p>
+            <h3>7.1. Datalekken</h3>
+            <p>CPL&nbsp;Metaal heeft procedures ingesteld om (vermoede) datalekken te registreren in een datalekregister en zo nodig te melden. Indien er sprake is van een datalek met een risico voor uw rechten en vrijheden, melden wij dit <strong>zonder onredelijke vertraging en uiterlijk binnen 72&nbsp;uur</strong> aan de Autoriteit&nbsp;Persoonsgegevens en de betrokkenen【525874708319355†L184-L189】. Als het datalek geen risico oplevert, hoeven wij het niet te melden, maar registreren we het wel. Wij nemen maatregelen om het lek te verhelpen en herhaling te voorkomen.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>8. Uw rechten met betrekking tot uw gegevens</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p>Op grond van de AVG heeft u een aantal rechten met betrekking tot uw persoonsgegevens:</p>
+
+            <h3>8.1. Recht op inzage (artikel 15 AVG)</h3>
+            <p>U heeft het recht om te weten of en welke persoonsgegevens wij van u verwerken. U kunt een verzoek indienen om een overzicht te ontvangen van de persoonsgegevens die wij van u hebben.</p>
+
+            <h3>8.2. Recht op rectificatie (artikel 16 AVG)</h3>
+            <p>U heeft het recht om onjuiste of onvolledige persoonsgegevens te laten corrigeren of aan te vullen.</p>
+
+            <h3>8.3. Recht op verwijdering / 'recht op vergetelheid' (artikel 17 AVG)</h3>
+            <p>U kunt ons verzoeken om uw persoonsgegevens te verwijderen. Wij zullen hier gehoor aan geven, tenzij:</p>
+            <ul>
+                <li>Wij de gegevens nog nodig hebben voor het doel waarvoor ze zijn verzameld</li>
+                <li>Wij wettelijk verplicht zijn de gegevens te bewaren (bijvoorbeeld facturen)</li>
+                <li>Er sprake is van een lopend geschil waarbij de gegevens relevant zijn</li>
+            </ul>
+
+            <h3>8.4. Recht op beperking van de verwerking (artikel 18 AVG)</h3>
+            <p>U heeft het recht om ons te verzoeken de verwerking van uw persoonsgegevens (tijdelijk) te beperken, bijvoorbeeld in afwachting van een correctie van uw gegevens.</p>
+
+            <h3>8.5. Recht op dataportabiliteit (artikel 20 AVG)</h3>
+            <p>U heeft het recht om de persoonsgegevens die u aan ons heeft verstrekt in een gestructureerde, gangbare en machineleesbare vorm te ontvangen, zodat u deze eventueel aan een andere partij kunt overdragen.</p>
+
+            <h3>8.6. Recht van bezwaar (artikel 21 AVG)</h3>
+            <p>U heeft het recht om bezwaar te maken tegen de verwerking van uw persoonsgegevens. Dit geldt met name voor verwerkingen op basis van ons gerechtvaardigd belang.</p>
+
+            <h3>8.7. Recht om toestemming in te trekken</h3>
+            <p>Als wij uw gegevens verwerken op basis van uw toestemming (bijvoorbeeld voor nieuwsbrieven), kunt u deze toestemming te allen tijde intrekken.</p>
+
+            <div class="info-box">
+                <h3>📧 Hoe oefent u uw rechten uit?</h3>
+                <p>Om één van bovengenoemde rechten uit te oefenen, kunt u een verzoek indienen door te mailen naar <a href="mailto:info@cplmetaal.com">info@cplmetaal.com</a> of door ons te bellen op <a href="tel:+31647939058">+31 (6) 47 93 90 58</a>.</p>
+                <p>Wij zullen binnen <strong>1 maand</strong> na ontvangst van uw verzoek reageren. In complexe gevallen kunnen wij deze termijn met maximaal 2 maanden verlengen.</p>
+                <p>Om misbruik te voorkomen kunnen wij u vragen om u adequaat te identificeren. Dit doen wij door bijvoorbeeld om een kopie van uw identiteitsbewijs te vragen (waarbij u uw pasfoto en BSN mag afschermen).</p>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>9. Klachten indienen</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p>Indien u een klacht heeft over de verwerking van uw persoonsgegevens door CPL Metaal, horen wij dit graag. Neem dan contact met ons op via <a href="mailto:info@cplmetaal.com">info@cplmetaal.com</a>.</p>
+
+            <p>Daarnaast heeft u altijd het recht om een klacht in te dienen bij de toezichthouder op het gebied van privacy, de <strong>Autoriteit Persoonsgegevens</strong>:</p>
+
+            <div class="info-box">
+                <h3>📮 Autoriteit Persoonsgegevens</h3>
+                <p><strong>Website:</strong> <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank">www.autoriteitpersoonsgegevens.nl</a></p>
+                <p><strong>Telefoonnummer:</strong> <a href="tel:+31703888500">+31 (070) 888 85 00</a></p>
+                <p><strong>Postadres:</strong><br>
+                Autoriteit Persoonsgegevens<br>
+                Postbus 93374<br>
+                2509 AJ Den Haag</p>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>10. Cookies en vergelijkbare technieken</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p>CPL Metaal maakt op haar website gebruik van cookies en vergelijkbare technieken. Cookies zijn kleine tekstbestanden die worden opgeslagen op uw computer, tablet of smartphone wanneer u onze website bezoekt.</p>
+
+            <h3>Welke cookies gebruiken wij?</h3>
+
+            <h4>Functionele cookies (geen toestemming vereist)</h4>
+            <p>Deze cookies zijn noodzakelijk voor het goed functioneren van de website en kunnen niet worden uitgeschakeld:</p>
+            <ul>
+                <li>Sessiecookies voor het bijhouden van ingevulde formuliervelden</li>
+                <li>Beveiligingscookies</li>
+            </ul>
+
+            <h4>Analytische cookies (geanonimiseerd)</h4>
+            <p>Wij gebruiken mogelijk Google Analytics om te analyseren hoe bezoekers onze website gebruiken. Deze informatie helpt ons om onze website te verbeteren. Wij hebben met Google een verwerkersovereenkomst gesloten en gebruiken Google Analytics op een privacy-vriendelijke manier:</p>
+            <ul>
+                <li>IP-adressen worden geanonimiseerd</li>
+                <li>Gegevens worden niet gedeeld met Google</li>
+                <li>Er wordt geen gebruik gemaakt van andere Google-diensten</li>
+            </ul>
+
+            <h4>Spam- en beveiligingscookies (reCAPTCHA/hCaptcha)</h4>
+            <p>Onze website maakt gebruik van spam- en beveiligingsdiensten, zoals Google&nbsp;reCAPTCHA en/of hCaptcha via Web3Forms, om te controleren of een formulier wordt ingevuld door een mens. Deze diensten plaatsen cookies en analyseren onder andere IP‑adres, muisbewegingen, interacties en browserinformatie om spam, fraude en misbruik te voorkomen【190828089767990†L94-L105】. De cookies die voor deze bescherming worden gebruikt zijn noodzakelijk voor de beveiliging en zorgen ervoor dat verzoeken binnen een sessie echt door de gebruiker worden gedaan【82776206914026†L131-L146】. Meer informatie over de gegevensverwerking vindt u in de privacyverklaringen van Google en hCaptcha.</p>
+
+            <h3>Cookies uitschakelen</h3>
+            <p>U kunt cookies uitschakelen via de instellingen van uw browser. Houd er rekening mee dat bepaalde delen van onze website mogelijk niet goed werken als u alle cookies uitschakelt.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>11. Links naar andere websites</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p>Onze website kan links bevatten naar websites van derden. CPL Metaal is niet verantwoordelijk voor de privacypraktijken van deze externe websites. Wij raden u aan om de privacyverklaringen van deze websites te lezen wanneer u deze bezoekt.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>12. Wijzigingen in deze privacyverklaring</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p>CPL Metaal kan deze privacyverklaring van tijd tot tijd aanpassen. Wij raden u aan om deze privacyverklaring regelmatig te raadplegen, zodat u op de hoogte blijft van eventuele wijzigingen.</p>
+
+            <p>De laatste versie van deze privacyverklaring is gedateerd op: <strong>5 januari 2026</strong></p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>13. Geautomatiseerde besluitvorming</h2>
+            <p>CPL&nbsp;Metaal neemt <strong>geen</strong> beslissingen op basis van geautomatiseerde verwerkingen die (aanzienlijke) gevolgen kunnen hebben voor personen. Het gaat hier om besluiten die worden genomen door computerprogramma’s of -systemen zonder dat daar een mens (bijvoorbeeld een medewerker van CPL&nbsp;Metaal) tussen zit. U hoeft dus niet te vrezen voor geautomatiseerde profilering of besluiten zonder menselijke tussenkomst.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>14. Contact</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p>Voor vragen over deze privacyverklaring of over de verwerking van uw persoonsgegevens kunt u contact met ons opnemen:</p>
+
+            <div class="contact-info">
+                <h3>📞 Neem contact op</h3>
+                <p><strong>CPL Metaal</strong></p>
+                <p><strong>E-mail:</strong> <a href="mailto:info@cplmetaal.com">info@cplmetaal.com</a></p>
+                <p><strong>Telefoon:</strong> <a href="tel:+31647939058">+31 (6) 47 93 90 58</a></p>
+                <p><strong>Website:</strong> <a href="https://www.cplmetaal.com">www.cplmetaal.com</a></p>
+                <p><strong>Bereikbaar:</strong> Maandag t/m vrijdag van 08:00 - 17:00 uur</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="/" class="btn">← Terug naar Home</a>
+            </div>
+
+            <div class="version-info">
+                <p><strong>Privacyverklaring CPL Metaal</strong></p>
+                <p>Versie 1.1 | Laatst bijgewerkt: 5 januari 2026</p>
+                <p>Deze privacyverklaring is opgesteld in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG / GDPR)</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Loader script (indien gebruikt op deze pagina) -->
+    <!-- <script src="/js/includes.js"></script> -->
+</body>
+</html>
