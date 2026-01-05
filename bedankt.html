@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bedankt voor uw Aanvraag | CPL Metaal</title>
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1a5490;
+            --primary-dark: #143f6d;
+            --secondary: #ff6b35;
+            --dark: #1d3a55;
+            --success: #28a745;
+            --white: #ffffff;
+            --gray-50: #f8f9fa;
+            --font-display: 'Rajdhani', sans-serif;
+            --font-body: 'Karla', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--dark);
+            background: var(--gray-50);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .success-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+            margin-top: 4rem;
+        }
+
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--success);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            animation: scaleIn 0.5s ease-out;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .checkmark svg {
+            width: 48px;
+            height: 48px;
+            stroke: var(--white);
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+            animation: drawCheck 0.5s ease-out 0.3s;
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes drawCheck {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: var(--dark);
+            margin-bottom: 2rem;
+        }
+
+        .info-box {
+            background: var(--gray-50);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .info-box h3 {
+            font-family: var(--font-display);
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-box li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .info-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.3s;
+            margin: 0.5rem;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--gray-50);
+        }
+
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            color: var(--primary-dark);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .success-card {
+                padding: 2rem 1.5rem;
+                margin-top: 2rem;
+            }
+
+            .btn {
+                display: block;
+                width: 100%;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-card">
+            <div class="checkmark">
+                <svg viewBox="0 0 52 52">
+                    <polyline points="14 27 22 35 38 19" />
+                </svg>
+            </div>
+
+            <h1>Bedankt voor uw aanvraag!</h1>
+            <p>Uw offerte-aanvraag is succesvol verzonden en in goede orde ontvangen.</p>
+
+            <div class="info-box">
+                <h3>📋 Wat gebeurt er nu?</h3>
+                <ul>
+                    <li>U ontvangt binnen enkele minuten een bevestigingsmail</li>
+                    <li>Wij nemen binnen 24 uur contact met u op</li>
+                    <li>U krijgt een vrijblijvende offerte op maat</li>
+                </ul>
+            </div>
+
+            <div style="margin: 2rem 0;">
+                <a href="/" class="btn">🏠 Terug naar Home</a>
+                <a href="/producten.html" class="btn btn-secondary">📦 Bekijk Producten</a>
+            </div>
+
+            <div class="contact-info">
+                <p><strong>Nog vragen?</strong></p>
+                <p>
+                    📞 Bel ons: <a href="tel:+31647939058">+31 (6) 47 93 90 58</a><br>
+                    📧 Email: <a href="mailto:info@cplmetaal.com">info@cplmetaal.com</a><br>
+                    🕐 Bereikbaar: ma-vr van 08:00 - 17:00 uur
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional: Auto-redirect after 15 seconds -->
+    <!-- Uncomment the script below to enable auto-redirect -->
+    <!--
+    <script>
+        setTimeout(() => {
+            window.location.href = '/';
+        }, 15000); // 15 seconds
+    </script>
+    -->
+</body>
+</html>
