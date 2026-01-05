@@ -5,6 +5,9 @@ Allow: /
 # Sitemap locatie
 Sitemap: https://cpl-metaal.github.io/cpl-metaal-website/sitemap.xml
 
+User-agent: *
+Disallow: /privacy.html
+
 # Disallow specifieke directories (indien nodig)
 # Disallow: /private/
 # Disallow: /temp/
