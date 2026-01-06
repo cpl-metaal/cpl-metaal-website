@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producten | CPL Metaal</title>
+    <meta name="description" content="Ontdek ons volledige assortiment metaalproducten: strekmetaal, geperforeerd metaal, gaasproducten, roosters en cortenstaal. ✓ Maatwerk ✓ Vakkundig advies">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1a5490;
+            --primary-dark: #143f6d;
+            --secondary: #ff6b35;
+            --dark: #1d3a55;
+            --light: #ecf0f1;
+            --white: #ffffff;
+            --gray-50: #f8f9fa;
+            --gray-300: #ced4da;
+            --gray-600: #495057;
+            --font-display: 'Rajdhani', sans-serif;
+            --font-body: 'Karla', sans-serif;
+            --space-4: 1rem;
+            --space-5: 1.5rem;
+            --space-6: 2rem;
+            --space-8: 4rem;
+            --radius: 8px;
+            --radius-lg: 16px;
+            --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--dark);
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark);
+            margin-bottom: var(--space-4);
+        }
+
+        h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+        h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+
+        p { margin-bottom: var(--space-4); }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+
+        a:hover { color: var(--primary-dark); }
+
+        .container {
+            width: 100%;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 15px; }
+        }
+
+        .section { padding: clamp(3rem, 8vw, 6rem) 0; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.75rem;
+            font-family: var(--font-display);
+            font-weight: 600;
+            border: 2px solid transparent;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all var(--transition);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        /* HEADER */
+        /* PAGE HEADER */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, #2874a6 100%);
+            color: var(--white);
+            padding: 4rem 0 3rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* PRODUCT GRID */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-6);
+        }
+
+        @media (max-width: 992px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-body {
+            padding: var(--space-6);
+        }
+
+        /* FOOTER */
+        .site-footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.8);
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul { list-style: none; }
+        .footer-section li { margin-bottom: 0.5rem; }
+        .footer-section a { color: rgba(255,255,255,0.8); }
+        .footer-section a:hover { color: var(--secondary); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 992px) {
+    </style>
+</head>
+<body>
+    <!-- Navigatie wordt hier geladen -->
+    <div id="navigation-placeholder"></div>
+
+<!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Onze Producten</h1>
+            <p style="font-size: 1.25rem; margin: 0; opacity: 0.95;">Hoogwaardige metaalproducten voor bouw, industrie en architectuur</p>
+            <div class="breadcrumb">
+                <a href="/" style="color: rgba(255,255,255,0.9);">Home</a>
+                <span>›</span>
+                <span>Producten</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="product-grid">
+                    <!-- Strekmetaal -->
+                    <article class="card">
+                        <div style="background: linear-gradient(135deg, #1a5490 0%, #2874a6 100%); height: 240px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                            🔷
+                        </div>
+                        <div class="card-body">
+                            <h3>Strekmetaal</h3>
+                            <p>Veelzijdig en sterk metaalproduct voor gevelbekleding, hekwerk, trappen en architectonische toepassingen.</p>
+                            <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                                <li>✓ Diverse maasgroottes</li>
+                                <li>✓ Verschillende materialen</li>
+                                <li>✓ Op maat leverbaar</li>
+                            </ul>
+                            <a href="/producten/strekmetaal/" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Bekijk strekmetaal →</a>
+                        </div>
+                    </article>
+
+                    <!-- Geperforeerd Metaal -->
+                    <article class="card">
+                        <div style="background: linear-gradient(135deg, #1a5490 0%, #2874a6 100%); height: 240px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                            ⚫
+                        </div>
+                        <div class="card-body">
+                            <h3>Geperforeerd Metaal</h3>
+                            <p>Metaalplaten met precisiegemaakte perforaties in diverse patronen. Perfect voor gevelpanelen en decoratieve toepassingen.</p>
+                            <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                                <li>✓ Maatwerk perforaties</li>
+                                <li>✓ Verschillende patronen</li>
+                                <li>✓ Hoogwaardige afwerking</li>
+                            </ul>
+                            <a href="/producten/geperforeerd-metaal/" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Bekijk geperforeerd metaal →</a>
+                        </div>
+                    </article>
+
+                    <!-- Gaasproducten -->
+                    <article class="card">
+                        <div style="background: linear-gradient(135deg, #1a5490 0%, #2874a6 100%); height: 240px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                            🔲
+                        </div>
+                        <div class="card-body">
+                            <h3>Gaasproducten</h3>
+                            <p>Van draadgaas tot geweven gaas. Toepasbaar voor zeeftechniek, filterindustrie en machineafscherming.</p>
+                            <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                                <li>✓ Diverse gaastypen</li>
+                                <li>✓ Maaswijdtes op maat</li>
+                                <li>✓ RVS en verzinkt</li>
+                            </ul>
+                            <a href="gaasproducten/" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Bekijk gaasproducten →</a>
+                        </div>
+                    </article>
+
+                    <!-- Roosters -->
+                    <article class="card">
+                        <div style="background: linear-gradient(135deg, #1a5490 0%, #2874a6 100%); height: 240px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                            ▦
+                        </div>
+                        <div class="card-body">
+                            <h3>Roosters</h3>
+                            <p>Sterke metalen roosters voor vloeren, trappen en industriële toepassingen met excellent draagvermogen.</p>
+                            <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                                <li>✓ Hoog draagvermogen</li>
+                                <li>✓ Antislip oppervlak</li>
+                                <li>✓ Diverse mazen</li>
+                            </ul>
+                            <a href="roosters/" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Bekijk roosters →</a>
+                        </div>
+                    </article>
+
+                    <!-- Cortenstaal -->
+                    <article class="card">
+                        <div style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); height: 240px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                            🏠
+                        </div>
+                        <div class="card-body">
+                            <h3>Cortenstaal</h3>
+                            <p>Weerbestendig staal met karakteristieke roestbruine uitstraling. Perfect voor groenvoorziening en decoratie.</p>
+                            <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                                <li>✓ Natuurlijke patina</li>
+                                <li>✓ Onderhoudsvrij</li>
+                                <li>✓ Duurzaam materiaal</li>
+                            </ul>
+                            <a href="cortenstaal/" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Bekijk cortenstaal →</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- CTA Section -->
+                <div style="background: var(--light); padding: var(--space-8); border-radius: var(--radius-lg); text-align: center; margin-top: var(--space-8);">
+                    <h2>Niet gevonden wat u zoekt?</h2>
+                    <p style="font-size: 1.125rem; margin-bottom: 2rem;">Wij leveren ook maatwerk oplossingen. Neem contact op voor een vrijblijvend adviesgesprek.</p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="/offerte-aanvragen.html" class="btn btn-primary" style="font-size: 1.125rem;">📋 Vraag Offerte Aan</a>
+                        <a href="tel:+31647939058" class="btn btn-outline" style="font-size: 1.125rem;">📞 Bel: +31 (6) 47 93 90 58</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer wordt hier geladen -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Loader script -->
+    <script src="/js/includes.js"></script>
+</body>
+</html>
