@@ -118,54 +118,6 @@
         }
 
         /* HEADER */
-        .site-header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: var(--white);
-            border-bottom: 1px solid var(--gray-300);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        }
-
-        .header-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem 0;
-        }
-
-        .logo img { height: 60px; width: auto; }
-
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: var(--space-6);
-            list-style: none;
-        }
-
-        .nav-link {
-            font-family: var(--font-display);
-            font-weight: 500;
-            font-size: 1.0625rem;
-            color: var(--dark);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-
-        .mobile-menu-btn span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--dark);
-            margin: 5px 0;
-        }
-
         /* PAGE HEADER */
         .page-header {
             background: linear-gradient(135deg, var(--primary) 0%, #2874a6 100%);
@@ -283,9 +235,6 @@
         }
 
         @media (max-width: 992px) {
-            .nav-menu { display: none; }
-            .mobile-menu-btn { display: block; }
-        }
     </style>
 </head>
 <body>
