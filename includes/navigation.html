@@ -219,6 +219,47 @@
     margin-left: 1rem;
 }
 
+/* CSS VARIABLES - Voor consistentie op alle pagina's */
+:root {
+    --primary-dark: #143f6d;
+    --gray-200: #dee2e6;
+    --gray-50: #f8f9fa;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* BUTTON STYLES - Voor nav-cta-btn */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all var(--transition);
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-sm {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+}
+
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -226,7 +267,7 @@
     cursor: pointer;
     padding: 0.5rem;
     flex-direction: column;
-    gap: 4px;
+    gap: 3px;
     justify-content: center;
 }
 
