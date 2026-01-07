@@ -180,3 +180,17 @@
     }
 }
 }
+/* Fixes: mobile menu overlay, width, hamburger color, padding */
+.mobile-menu-btn span {
+    background-color: var(--primary) !important;
+}
+
+@media (max-width: 992px) {
+    .nav-menu {
+        width: 100% !important;
+    }
+    body {
+        padding-top: 92px !important;
+    }
+}
+
