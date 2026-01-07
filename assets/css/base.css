@@ -1,0 +1,60 @@
+/* Base styles for sections, headings and paragraphs */
+section {
+  padding: 4rem 0;
+}
+h1, h2, h3 {
+  font-family: var(--font-display);
+  margin-bottom: 1rem;
+  color: var(--gray-900);
+}
+p {
+  margin-bottom: 1rem;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Grid utilities */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Card component */
+.card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-sm);
+  padding: 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* CTA button */
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn:hover {
+  background: var(--secondary);
+}
+
+/* No-scroll class to lock body when mobile menu is open */
+body.no-scroll {
+  overflow: hidden;
+}
