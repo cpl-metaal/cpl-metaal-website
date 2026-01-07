@@ -1,5 +1,5 @@
 <!-- NAVIGATIE - includes/navigation.html -->
-<!-- Kopieer deze code NERGENS - dit is het centraal bestand -->
+<!-- GEFIXTE VERSIE - Mobiele navigatie problemen opgelost -->
 
 <header class="site-header">
     <div class="container header-container">
@@ -48,7 +48,7 @@
                     </ul>
                 </li>
                 
-                <li><a href="/over-cpl-metaal" class="nav-link">Over Ons</a></li>
+                <li><a href="/over-cpl-metaal.html" class="nav-link">Over Ons</a></li>
                 <li><a href="/contact.html" class="nav-link">Contact</a></li>
                 <li><a href="/offerte-aanvragen.html" class="btn btn-primary btn-sm nav-cta-btn">Offerte Aanvragen</a></li>
             </ul>
@@ -63,7 +63,7 @@
 </header>
 
 <style>
-/* NAVIGATIE STYLING - Wordt automatisch geladen */
+/* NAVIGATIE STYLING - GEFIXTE VERSIE */
 .site-header {
     position: sticky;
     top: 0;
@@ -219,47 +219,6 @@
     margin-left: 1rem;
 }
 
-/* CSS VARIABLES - Voor consistentie op alle pagina's */
-:root {
-    --primary-dark: #143f6d;
-    --gray-200: #dee2e6;
-    --gray-50: #f8f9fa;
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
-    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
-}
-
-/* BUTTON STYLES - Voor nav-cta-btn */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.875rem 1.75rem;
-    font-family: var(--font-display);
-    font-weight: 600;
-    text-decoration: none;
-    border: 2px solid transparent;
-    border-radius: var(--radius);
-    cursor: pointer;
-    transition: all var(--transition);
-    font-size: 1rem;
-}
-
-.btn-primary {
-    background-color: var(--primary);
-    border-color: var(--primary);
-    color: var(--white);
-}
-
-.btn-primary:hover {
-    background-color: var(--primary-dark);
-}
-
-.btn-sm {
-    padding: 0.625rem 1.25rem;
-    font-size: 0.875rem;
-}
-
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -267,7 +226,7 @@
     cursor: pointer;
     padding: 0.5rem;
     flex-direction: column;
-    gap: 3px;
+    gap: 4px;
     justify-content: center;
 }
 
@@ -292,6 +251,9 @@
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* ========================================================================
+   MOBIELE NAVIGATIE - GEFIXTE VERSIE
+   ======================================================================== */
 @media (max-width: 992px) {
     .mobile-menu-btn {
         display: flex;
@@ -299,7 +261,7 @@
     
     .nav-menu {
         position: fixed;
-        top: 83px;
+        top: 92px;  /* ✅ GEFIXED: was 83px, nu correct berekend */
         left: 0;
         right: 0;
         background: var(--white);
@@ -316,7 +278,7 @@
     }
     
     .nav-menu.active {
-        max-height: calc(100vh - 83px);
+        max-height: calc(100vh - 92px);  /* ✅ GEFIXED: was 83px */
         overflow-y: auto;
     }
     
@@ -335,6 +297,7 @@
         display: none;
     }
     
+    /* ✅ DROPDOWN MENU - VERBETERDE VERSIE */
     .dropdown-menu {
         position: static;
         transform: none;
@@ -345,13 +308,16 @@
         border-radius: 0;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease, overflow 0s 0.3s;
+        opacity: 1;  /* ✅ TOEGEVOEGD: Zorg dat opacity altijd 1 is op mobiel */
+        visibility: visible;  /* ✅ TOEGEVOEGD: Altijd visible op mobiel */
+        transition: max-height 0.3s ease;
     }
     
+    /* ✅ DROPDOWN ACTIVE STATE - EXTRA SPECIFIEK */
     .nav-item-dropdown.active .dropdown-menu {
-        max-height: 500px;
+        max-height: 600px;  /* ✅ VERGROOT: was 500px */
         overflow-y: auto;
-        transition: max-height 0.3s ease, overflow 0s;
+        display: block;  /* ✅ TOEGEVOEGD: Forceer display */
     }
     
     .dropdown-menu a {
@@ -368,6 +334,23 @@
         margin: 1rem 1.5rem;
         text-align: center;
         width: auto;
+    }
+}
+
+/* ========================================================================
+   FALLBACK FIXES - Voor extra zekerheid
+   ======================================================================== */
+   
+/* Zorg ervoor dat active dropdown ALTIJD zichtbaar is */
+.nav-item-dropdown.active > .dropdown-menu {
+    display: block !important;
+    visibility: visible !important;
+}
+
+@media (max-width: 992px) {
+    /* Extra fix voor content die onder header begint */
+    body {
+        padding-top: 0;
     }
 }
 </style>
