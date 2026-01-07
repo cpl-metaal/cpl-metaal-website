@@ -1,9 +1,14 @@
 /**
  * CPL METAAL - Include Loader
- * Versie 2.0 - Volledig herschreven voor correcte JavaScript initialisatie
+ * Versie 2.2 - GEFIXTE VERSIE met verbeterde mobile dropdown en debugging
  * 
  * Dit script laadt automatisch de navigatie en footer op elke pagina
  * EN initialiseert de JavaScript functionaliteit correct
+ * 
+ * FIXES:
+ * - Verbeterde dropdown toggle op mobiel
+ * - Extra debug logging
+ * - Betere event handling
  */
 
 // Functie om HTML includes te laden
@@ -63,14 +68,16 @@ function initializeNavigation() {
     
     // Controleer of elementen bestaan
     if (!mobileMenuBtn) {
-        console.error('Mobile menu button not found');
+        console.error('❌ Mobile menu button not found');
         return;
     }
     
     if (!navMenu) {
-        console.error('Navigation menu not found');
+        console.error('❌ Navigation menu not found');
         return;
     }
+    
+    console.log('✅ Navigation elements found');
     
     // ===================================================================
     // HAMBURGERMENU TOGGLE
@@ -79,44 +86,88 @@ function initializeNavigation() {
         e.preventDefault();
         e.stopPropagation();
         
-        this.classList.toggle('active');
+        const isActive = this.classList.toggle('active');
         navMenu.classList.toggle('active');
+        
+        console.log(isActive ? '📖 Menu opened' : '📕 Menu closed');
         
         // Prevent body scroll when menu is open
         if (navMenu.classList.contains('active')) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = '';
+            
+            // Sluit ook alle dropdowns bij het sluiten van menu
+            document.querySelectorAll('.nav-item-dropdown').forEach(item => {
+                item.classList.remove('active');
+            });
         }
     });
     
     // ===================================================================
-    // DROPDOWN ITEMS - MOBIEL
+    // DROPDOWN ITEMS - MOBIEL & DESKTOP
     // ===================================================================
     const dropdownItems = document.querySelectorAll('.nav-item-dropdown');
+    console.log(`✅ Found ${dropdownItems.length} dropdown items`);
     
-    dropdownItems.forEach(item => {
+    dropdownItems.forEach((item, index) => {
         const link = item.querySelector('.nav-link');
         
-        if (link) {
-            link.addEventListener('click', function(e) {
-                // Alleen op mobiel: prevent default en toggle dropdown
-                if (window.innerWidth <= 992) {
-                    e.preventDefault();
-                    
-                    // Sluit andere dropdowns
-                    dropdownItems.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            otherItem.classList.remove('active');
-                        }
-                    });
-                    
-                    // Toggle huidige dropdown
-                    item.classList.toggle('active');
-                }
-                // Op desktop: normale link werking
-            });
+        if (!link) {
+            console.error(`❌ No link found in dropdown item ${index}`);
+            return;
         }
+        
+        console.log(`✅ Setting up dropdown ${index}: ${link.textContent.trim()}`);
+        
+        link.addEventListener('click', function(e) {
+            const isMobile = window.innerWidth <= 992;
+            
+            console.log(`🖱️ Click on: ${this.textContent.trim()}, Mobile: ${isMobile}`);
+            
+            // Alleen op mobiel: prevent default en toggle dropdown
+            if (isMobile) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                console.log('📱 Mobile: Preventing default and toggling dropdown');
+                
+                // Check huidige state
+                const wasActive = item.classList.contains('active');
+                console.log(`Current state: ${wasActive ? 'active' : 'inactive'}`);
+                
+                // Sluit andere dropdowns
+                dropdownItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                        const otherLink = otherItem.querySelector('.nav-link');
+                        console.log(`🔽 Closing: ${otherLink ? otherLink.textContent.trim() : 'unknown'}`);
+                    }
+                });
+                
+                // Toggle huidige dropdown
+                item.classList.toggle('active');
+                const isNowActive = item.classList.contains('active');
+                console.log(`${isNowActive ? '🔼' : '🔽'} ${isNowActive ? 'Opening' : 'Closing'}: ${this.textContent.trim()}`);
+                
+                // Check of dropdown menu bestaat en zichtbaar is
+                const dropdownMenu = item.querySelector('.dropdown-menu');
+                if (dropdownMenu) {
+                    const styles = window.getComputedStyle(dropdownMenu);
+                    console.log(`Dropdown menu styles:`, {
+                        display: styles.display,
+                        maxHeight: styles.maxHeight,
+                        visibility: styles.visibility,
+                        opacity: styles.opacity
+                    });
+                } else {
+                    console.error('❌ Dropdown menu not found!');
+                }
+            } else {
+                console.log('🖥️ Desktop: Normal link behavior (going to page)');
+                // Op desktop: normale link werking (gaat naar de pagina)
+            }
+        });
     });
     
     // ===================================================================
@@ -124,6 +175,9 @@ function initializeNavigation() {
     // ===================================================================
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('.nav-link, .dropdown-menu a');
+    
+    console.log(`🔍 Current path: ${currentPath}`);
+    console.log(`✅ Found ${navLinks.length} navigation links to check`);
     
     navLinks.forEach(link => {
         if (!link.href) return;
@@ -134,6 +188,7 @@ function initializeNavigation() {
             // Exact match voor homepage
             if (linkPath === '/' && currentPath === '/') {
                 link.classList.add('active');
+                console.log(`✅ Active: ${link.textContent.trim()} (homepage)`);
             }
             // Match voor andere pagina's
             else if (linkPath !== '/' && currentPath !== '/') {
@@ -144,6 +199,7 @@ function initializeNavigation() {
                 if (normalizedCurrent === normalizedLink || 
                     normalizedCurrent.startsWith(normalizedLink + '/')) {
                     link.classList.add('active');
+                    console.log(`✅ Active: ${link.textContent.trim()}`);
                     
                     // Als het een dropdown item is, highlight ook de parent
                     const parentDropdown = link.closest('.nav-item-dropdown');
@@ -151,13 +207,14 @@ function initializeNavigation() {
                         const parentLink = parentDropdown.querySelector('.nav-link');
                         if (parentLink) {
                             parentLink.classList.add('active');
+                            console.log(`✅ Active parent: ${parentLink.textContent.trim()}`);
                         }
                     }
                 }
             }
         } catch (e) {
             // Negeer ongeldige URLs
-            console.warn('Invalid URL in navigation:', link.href);
+            console.warn('⚠️ Invalid URL in navigation:', link.href);
         }
     });
     
@@ -168,15 +225,19 @@ function initializeNavigation() {
     
     menuLinks.forEach(link => {
         link.addEventListener('click', function(e) {
+            const isMobile = window.innerWidth <= 992;
+            
             // Niet sluiten als het een dropdown parent link is op mobiel
-            if (window.innerWidth <= 992 && 
+            if (isMobile && 
                 this.closest('.nav-item-dropdown') && 
                 this === this.closest('.nav-item-dropdown').querySelector('.nav-link')) {
+                console.log('📱 Dropdown parent clicked, not closing menu');
                 return; // Dit is al gehandeld door de dropdown toggle hierboven
             }
             
             // Sluit menu na het klikken op een link (mobiel)
-            if (window.innerWidth <= 992) {
+            if (isMobile) {
+                console.log('📱 Link clicked, closing menu in 200ms');
                 setTimeout(() => {
                     navMenu.classList.remove('active');
                     mobileMenuBtn.classList.remove('active');
@@ -184,6 +245,8 @@ function initializeNavigation() {
                     
                     // Sluit alle dropdowns
                     dropdownItems.forEach(item => item.classList.remove('active'));
+                    
+                    console.log('✅ Menu closed');
                 }, 200);
             }
         });
@@ -198,7 +261,10 @@ function initializeNavigation() {
             if (!e.target.closest('.nav-item-dropdown') && 
                 !e.target.closest('.mobile-menu-btn')) {
                 dropdownItems.forEach(item => {
-                    item.classList.remove('active');
+                    if (item.classList.contains('active')) {
+                        item.classList.remove('active');
+                        console.log('🖥️ Closed dropdown (click outside)');
+                    }
                 });
             }
         }
@@ -214,6 +280,7 @@ function initializeNavigation() {
                 mobileMenuBtn.classList.remove('active');
                 document.body.style.overflow = '';
                 dropdownItems.forEach(item => item.classList.remove('active'));
+                console.log('✅ Menu closed (ESC key)');
             }
         }
     });
@@ -231,11 +298,17 @@ function initializeNavigation() {
                 mobileMenuBtn.classList.remove('active');
                 document.body.style.overflow = '';
                 dropdownItems.forEach(item => item.classList.remove('active'));
+                console.log('🖥️ Resized to desktop, closed mobile menu');
             }
         }, 250);
     });
     
     console.log('✅ Navigation initialized successfully');
+    console.log('📊 Navigation stats:', {
+        dropdownItems: dropdownItems.length,
+        menuLinks: menuLinks.length,
+        navLinks: navLinks.length
+    });
 }
 
 // ===================================================================
@@ -247,3 +320,5 @@ if (document.readyState === 'loading') {
     // DOMContentLoaded is al afgevuurd
     loadIncludes();
 }
+
+console.log('📝 includes.js loaded - Version 2.2 (FIXED)');
