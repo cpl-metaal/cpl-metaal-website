@@ -65,20 +65,48 @@
     {% endfor %}
   {% endif %}
 
-  <script>
+<script>
   (function () {
-    const btn = document.querySelector('.mobile-menu-btn');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
     const menu = document.querySelector('.nav-menu');
-    if (!btn || !menu) return;
+    if (!menuBtn || !menu) return;
 
-    btn.addEventListener('click', () => {
+    /* Toggle main mobile menu */
+    menuBtn.addEventListener('click', () => {
       const isOpen = menu.classList.toggle('active');
-      btn.setAttribute('aria-expanded', String(isOpen));
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
       document.body.classList.toggle('no-scroll', isOpen);
+
+      /* Close all dropdowns when menu closes */
+      if (!isOpen) {
+        document
+          .querySelectorAll('.nav-item-dropdown > .nav-link[aria-expanded]')
+          .forEach(btn => btn.setAttribute('aria-expanded', 'false'));
+      }
+    });
+
+    /* Toggle dropdowns (Producten / Toepassingen) */
+    const dropdownToggles = document.querySelectorAll(
+      '.nav-item-dropdown > .nav-link[aria-haspopup="true"]'
+    );
+
+    dropdownToggles.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+      });
+    });
+
+    /* Optional: close dropdowns when clicking a link */
+    menu.addEventListener('click', (e) => {
+      if (e.target.closest('a')) {
+        dropdownToggles.forEach(btn =>
+          btn.setAttribute('aria-expanded', 'false')
+        );
+      }
     });
   })();
 </script>
-
   
 </body>
 </html>
