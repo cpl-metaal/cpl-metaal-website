@@ -65,5 +65,20 @@
     {% endfor %}
   {% endif %}
 
+  <script>
+  (function () {
+    const btn = document.querySelector('.mobile-menu-btn');
+    const menu = document.querySelector('.nav-menu');
+    if (!btn || !menu) return;
+
+    btn.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('active');
+      btn.setAttribute('aria-expanded', String(isOpen));
+      document.body.classList.toggle('no-scroll', isOpen);
+    });
+  })();
+</script>
+
+  
 </body>
 </html>
