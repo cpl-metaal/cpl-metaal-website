@@ -1,20 +1,69 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- 1) Basis -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- 2) Title + description (komen uit de pagina front matter) -->
+  <title>
+    {% if page.title %}{{ page.title }} | {% endif %}CPL Metaal
+  </title>
+  {% if page.description %}
+    <meta name="description" content="{{ page.description | escape }}" />
+  {% endif %}
+
+  <!-- 3) Canonical (netjes voor SEO) -->
+  <link rel="canonical" href="https://www.cplmetaal.com{{ page.url }}" />
+
+  <!-- 4) Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.cplmetaal.com{{ page.url }}" />
+  <meta property="og:title" content="{% if page.og_title %}{{ page.og_title | escape }}{% elsif page.title %}{{ page.title | escape }} | CPL Metaal{% else %}CPL Metaal{% endif %}" />
+  {% if page.description %}
+    <meta property="og:description" content="{{ page.description | escape }}" />
+  {% endif %}
+  <meta property="og:image" content="https://www.cplmetaal.com/logo.png" />
+
+  <!-- 5) Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- 6) Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- 7) CSS (globaal) -->
+  <link rel="stylesheet" href="/assets/css/variables.css" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="/assets/css/navigation.css" />
+
+  <!-- 8) Extra CSS per pagina (optioneel) -->
+  {% if page.extra_css %}
+    {% for css_file in page.extra_css %}
+      <link rel="stylesheet" href="{{ css_file }}" />
+    {% endfor %}
+  {% endif %}
 </head>
 
 <body>
 
+  <!-- Header (Jekyll include, vervangt navigation-placeholder + includes.js) -->
   {% include header.html %}
 
-  <main>
+  <main id="main-content">
     {{ content }}
   </main>
 
+  <!-- Footer (Jekyll include) -->
   {% include footer.html %}
+
+  <!-- 9) Extra scripts per pagina (optioneel) -->
+  {% if page.extra_js %}
+    {% for js_file in page.extra_js %}
+      <script src="{{ js_file }}"></script>
+    {% endfor %}
+  {% endif %}
 
 </body>
 </html>
