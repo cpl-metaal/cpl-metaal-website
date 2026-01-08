@@ -138,6 +138,7 @@
   cursor: pointer;
   border: none;
   background: transparent;
+  margin-left: auto; /* ✅ duwt hamburger helemaal naar rechts */
 }
 
 .mobile-menu-btn span {
