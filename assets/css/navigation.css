@@ -153,6 +153,10 @@
 @media (max-width: 992px) {
   .mobile-menu-btn { display: flex; }
 
+  /* ✅ FIX: anchor the dropdown to the full header width */
+  .header-container { position: relative; }
+  .site-header nav { position: static; }
+
   .nav-menu {
     position: absolute;
     left: 0;
