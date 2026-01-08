@@ -182,6 +182,22 @@
     width: 100%;
   }
 
+    .nav-menu {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-menu > li {
+    border-top: 1px solid var(--gray-200);
+  }
+
+  .nav-menu > li:first-child {
+    border-top: none;
+  }
+
+  
   .nav-link {
     width: 100%;
     padding: 0.85rem 0;
