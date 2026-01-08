@@ -66,6 +66,14 @@
   transition: color 0.3s;
 }
 
+/* Make dropdown toggle button look like a link */
+button.nav-link {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
 .nav-link:hover {
   color: var(--primary-dark);
 }
