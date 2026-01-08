@@ -147,23 +147,27 @@
 
 /* MOBILE */
 @media (max-width: 992px) {
-  .mobile-menu-btn {
-    display: flex;
-  }
+  .mobile-menu-btn { display: flex; }
 
-  /* Dropdown menu that expands downward */
   .nav-menu {
     position: absolute;
     left: 0;
     right: 0;
-    top: 100%;                 /* direct onder de header-container/nav */
+    top: 100%;
     width: 100%;
     background: var(--white);
     border-bottom: 1px solid var(--gray-200);
     box-shadow: var(--shadow-lg);
     overflow: hidden;
 
-    /* closed state */
+    /* mobile list layout */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 1rem 1.5rem;
+
+    /* closed */
     max-height: 0;
     opacity: 0;
     pointer-events: none;
@@ -171,43 +175,26 @@
     transition: max-height 0.35s ease, opacity 0.2s ease;
   }
 
-  /* open state */
   .nav-menu.active {
-    max-height: 80vh;          /* genoeg voor veel items */
+    max-height: 80vh;
     opacity: 1;
     pointer-events: auto;
   }
 
   .nav-menu > li {
     width: 100%;
-  }
-
-    .nav-menu {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    padding: 1rem 1.5rem;
-  }
-
-  .nav-menu > li {
     border-top: 1px solid var(--gray-200);
   }
 
-  .nav-menu > li:first-child {
-    border-top: none;
-  }
+  .nav-menu > li:first-child { border-top: none; }
 
-  
   .nav-link {
     width: 100%;
     padding: 0.85rem 0;
   }
 
-  .nav-link::after {
-    display: none;
-  }
+  .nav-link::after { display: none; }
 
-  /* Zorg dat dropdown submenu's (Producten etc) in mobile inline kunnen openen */
   .nav-item-dropdown > .dropdown-menu {
     position: static;
     border: none;
@@ -217,13 +204,9 @@
     min-width: 0;
   }
 
-  .dropdown-menu a {
-    padding: 0.5rem 0 0.5rem 1.25rem;
-  }
+  .dropdown-menu a { padding: 0.5rem 0 0.5rem 1.25rem; }
 
-  /* show submenu when expanded */
   .nav-item-dropdown > .nav-link[aria-expanded="true"] + .dropdown-menu {
     display: block;
   }
 }
-
