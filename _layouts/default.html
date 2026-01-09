@@ -67,43 +67,86 @@
 
 <script>
   (function () {
-    const menuBtn = document.querySelector('.mobile-menu-btn');
-    const menu = document.querySelector('.nav-menu');
+    // Prevent double init (in case of hot reload / duplicate includes)
+    if (document.body.dataset.navInit === "true") return;
+    document.body.dataset.navInit = "true";
+
+    const menuBtn = document.querySelector(".mobile-menu-btn");
+    const menu = document.querySelector(".nav-menu");
     if (!menuBtn || !menu) return;
 
-    /* Toggle main mobile menu */
-    menuBtn.addEventListener('click', () => {
-      const isOpen = menu.classList.toggle('active');
-      menuBtn.setAttribute('aria-expanded', String(isOpen));
-      document.body.classList.toggle('no-scroll', isOpen);
-
-      /* Close all dropdowns when menu closes */
-      if (!isOpen) {
-        document
-          .querySelectorAll('.nav-item-dropdown > .nav-link[aria-expanded]')
-          .forEach(btn => btn.setAttribute('aria-expanded', 'false'));
-      }
-    });
-
-    /* Toggle dropdowns (Producten / Toepassingen) */
-    const dropdownToggles = document.querySelectorAll(
-      '.nav-item-dropdown > .nav-link[aria-haspopup="true"]'
+    const dropdownToggles = Array.from(
+      document.querySelectorAll(
+        ".nav-item-dropdown > .dropdown-toggle[aria-haspopup='true']"
+      )
     );
 
+    function closeAllDropdowns() {
+      dropdownToggles.forEach((btn) => btn.setAttribute("aria-expanded", "false"));
+    }
+
+    function closeMenu() {
+      menu.classList.remove("active");
+      menuBtn.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("no-scroll");
+      closeAllDropdowns();
+    }
+
+    function openMenu() {
+      menu.classList.add("active");
+      menuBtn.setAttribute("aria-expanded", "true");
+      document.body.classList.add("no-scroll");
+    }
+
+    function toggleMenu() {
+      const isOpen = menu.classList.contains("active");
+      if (isOpen) closeMenu();
+      else openMenu();
+    }
+
+    // 1) Toggle main mobile menu
+    menuBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // 2) Dropdown toggles (Producten / Toepassingen)
     dropdownToggles.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!expanded));
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const wasOpen = btn.getAttribute("aria-expanded") === "true";
+
+        // close others first (only one open at a time)
+        closeAllDropdowns();
+
+        // toggle current
+        btn.setAttribute("aria-expanded", String(!wasOpen));
       });
     });
 
-    /* Optional: close dropdowns when clicking a link */
-    menu.addEventListener('click', (e) => {
-      if (e.target.closest('a')) {
-        dropdownToggles.forEach(btn =>
-          btn.setAttribute('aria-expanded', 'false')
-        );
-      }
+    // 3) Close menu + dropdowns when clicking a link in the menu
+    menu.addEventListener("click", (e) => {
+      const link = e.target.closest("a");
+      if (!link) return;
+      closeMenu();
+    });
+
+    // 4) Close menu when clicking outside header/menu (mobile)
+    document.addEventListener("click", (e) => {
+      const header = e.target.closest(".site-header");
+      const menuIsOpen = menu.classList.contains("active");
+      if (!menuIsOpen) return;
+
+      // click outside the header while menu open => close
+      if (!header) closeMenu();
+    });
+
+    // 5) Close on Escape
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu();
     });
   })();
 </script>
