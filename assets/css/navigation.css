@@ -37,7 +37,7 @@
 }
 
 .logo-img {
-  height: 60px;
+  height: 100px;
   width: auto;
 }
 
@@ -57,7 +57,7 @@
 .nav-link {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 1.0625rem;
+  font-size: 1.2rem;
   color: var(--dark);
   text-decoration: none;
   position: relative;
