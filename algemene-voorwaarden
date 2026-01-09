@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algemene Voorwaarden | CPL Metaal</title>
+    <meta name="description" content="Algemene voorwaarden van CPL Metaal. Lees de voorwaarden voor levering, garantie en aansprakelijkheid.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1a5490;
+            --primary-dark: #143f6d;
+            --secondary: #ff6b35;
+            --dark: #1d3a55;
+            --light: #ecf0f1;
+            --white: #ffffff;
+            --gray-50: #f8f9fa;
+            --gray-100: #e9ecef;
+            --gray-300: #ced4da;
+            --gray-600: #495057;
+            --gray-800: #343a40;
+            --font-display: 'Rajdhani', sans-serif;
+            --font-body: 'Karla', sans-serif;
+            --radius: 8px;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: var(--gray-50);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .privacy-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 3rem 2.5rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--gray-100);
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            color: var(--primary-dark);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--dark);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-family: var(--font-display);
+            font-size: 1.125rem;
+            color: var(--dark);
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        .info-box {
+            background-color: var(--gray-50);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: var(--radius);
+        }
+
+        .info-box h3 {
+            margin-top: 0;
+            font-size: 1.125rem;
+        }
+
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-info {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius);
+            margin: 2rem 0;
+        }
+
+        .contact-info h3 {
+            color: var(--white);
+            margin-top: 0;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info a {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: var(--white);
+        }
+
+        th, td {
+            padding: 0.875rem;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-300);
+        }
+
+        th {
+            background-color: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+            font-family: var(--font-display);
+        }
+
+        tr:hover {
+            background-color: var(--gray-50);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 0.875rem 2rem;
+            text-decoration: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            font-family: var(--font-display);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            color: var(--white);
+        }
+
+        .version-info {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--gray-100);
+            text-align: center;
+            color: var(--gray-600);
+            font-size: 0.875rem;
+        }
+
+        .version-info p {
+            margin-bottom: 0.25rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .privacy-card {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            table {
+                font-size: 0.875rem;
+            }
+
+            th, td {
+                padding: 0.625rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="privacy-card">
+            <h1>Algemene Voorwaarden</h1>
+            <p class="subtitle">CPL Metaal V.O.F. - Voorwaarden voor levering en dienstverlening</p>
+
+            <div class="info-box">
+                <h3>Laatst bijgewerkt</h3>
+                <p><strong>7 november 2025</strong></p>
+                <p>Deze algemene voorwaarden zijn van toepassing op alle offertes, leveringen en overeenkomsten van CPL Metaal.</p>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>1. Definities</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>1.1 CPL Metaal:</strong> CPL Metaal V.O.F., gevestigd te Sint Anthonis, ingeschreven in het handelsregister onder KvK-nummer 98745212.</p>
+            
+            <p><strong>1.2 Klant:</strong> iedere zakelijke afnemer die goederen en/of diensten van CPL Metaal afneemt.</p>
+            
+            <p><strong>1.3 Goederen:</strong> door CPL Metaal geleverde materialen en maatwerkproducten, waaronder strekmetaal, geperforeerd metaal en bewerkte eindproducten.</p>
+            
+            <p><strong>1.4 Overeenkomst:</strong> iedere afspraak tussen CPL Metaal en Klant, inclusief offertes, orderbevestigingen en aanvullende afspraken.</p>
+            
+            <p><strong>1.5 Bewerkers:</strong> externe partners die in opdracht van CPL Metaal materialen verwerken of afwerken.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>2. Toepasselijkheid en rangorde</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>2.1</strong> Deze voorwaarden zijn van toepassing op alle offertes, leveringen en overeenkomsten van CPL Metaal.</p>
+            
+            <p><strong>2.2</strong> Algemene voorwaarden van de Klant worden uitdrukkelijk van de hand gewezen.</p>
+            
+            <p><strong>2.3</strong> Afwijkingen gelden alleen indien schriftelijk bevestigd door CPL Metaal.</p>
+            
+            <p><strong>2.4</strong> Bij strijd geldt: (i) schriftelijke overeenkomst/orderbevestiging, (ii) deze voorwaarden.</p>
+            
+            <p><strong>2.5</strong> CPL Metaal publiceert deze voorwaarden op haar website en verstrekt deze bij offertes en/of orderbevestigingen.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>3. Offertes en totstandkoming</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>3.1</strong> Offertes van CPL Metaal zijn vrijblijvend en 30 dagen geldig, tenzij anders vermeld.</p>
+            
+            <p><strong>3.2</strong> Een overeenkomst ontstaat na schriftelijke orderbevestiging door CPL Metaal of feitelijke uitvoering.</p>
+            
+            <p><strong>3.3</strong> Door CPL Metaal verstrekte tekeningen, modellen, berekeningen en technische gegevens blijven eigendom van CPL Metaal.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>4. Prijzen, toeslagen en meerwerk</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>4.1</strong> Prijzen zijn exclusief btw, transport, verpakking, certificaten, montage en verzekeringen.</p>
+            
+            <p><strong>4.2</strong> Indien na de offerte grondstof-, energie-, transport- of bewerkingskosten stijgen, mag CPL Metaal de prijs evenredig aanpassen.</p>
+            
+            <p><strong>4.3</strong> Meerwerk, spoed, wachttijd en extra bewerkingen worden aanvullend gefactureerd tegen geldende tarieven.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>5. Maatwerk, tekeningen en verantwoordelijkheid Klant</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>5.1</strong> CPL Metaal levert maatwerk op basis van specificaties, tekeningen en eisen van de Klant.</p>
+            
+            <p><strong>5.2</strong> De Klant staat volledig in voor juistheid en volledigheid van deze specificaties.</p>
+            
+            <p><strong>5.3</strong> CPL Metaal controleert niet of het product voldoet aan constructieve eisen, vergunningen of toepassingsgeschiktheid, tenzij schriftelijk anders overeengekomen.</p>
+            
+            <p><strong>5.4</strong> De Klant vrijwaart CPL Metaal voor claims die voortkomen uit fouten in door hem aangeleverde tekeningen, bestekken of toepassingsvereisten.</p>
+
+            <div class="info-box">
+                <h3>⚠️ Technisch advies</h3>
+                <p><strong>5.5</strong> CPL Metaal verleent technisch advies uitsluitend ter ondersteuning. Dit advies houdt geen ontwerp- of berekeningsverantwoordelijkheid in en vormt geen garantie voor geschiktheid voor de specifieke toepassing. De Klant blijft te allen tijde verantwoordelijk voor ontwerpbeslissingen, belastings- en constructieve eisen, tenzij CPL Metaal dit vooraf en schriftelijk heeft aanvaard.</p>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>6. Toleranties en materiaalafwijkingen</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>6.1</strong> Toleranties in maatvoering, vlakheid, perforatie, kleur en coating zijn toegestaan binnen gangbare EN/ISO-normen en fabrieksstandaarden.</p>
+            
+            <p><strong>6.2</strong> Batch- en kleurverschillen, glansafwijkingen, restspanning en oppervlaktetextuur vallen onder toelaatbare materiaaleigenschappen.</p>
+            
+            <p><strong>6.3</strong> Dergelijke afwijkingen vormen geen tekortkoming.</p>
+            
+            <p><strong>6.4</strong> De Klant is verantwoordelijk voor de keuze van materiaalsoort, oppervlaktebehandeling, corrosieklasse en geschiktheid van de toepassing in de betreffende omgeving, tenzij CPL Metaal dit vooraf en schriftelijk heeft bevestigd.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>7. Uitbesteding aan bewerkers</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>7.1</strong> CPL Metaal mag werkzaamheden geheel of gedeeltelijk uitbesteden aan bewerkers.</p>
+            
+            <p><strong>7.2</strong> Garanties en termijnen voor deze bewerkingen gelden voor zover verstrekt door de betreffende bewerker.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>8. Levering, levertijd en risico</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>8.1</strong> Levering vindt plaats franco afleveradres binnen Nederland, tenzij schriftelijk anders overeengekomen.</p>
+            
+            <p><strong>8.2</strong> De levertijd gaat in op de datum van de schriftelijke orderbevestiging door CPL Metaal, of op het moment dat alle benodigde informatie en goedgekeurde tekeningen volledig beschikbaar zijn.</p>
+            
+            <p><strong>8.3</strong> Levertijden zijn indicatief en geen fatale termijnen.</p>
+            
+            <p><strong>8.4</strong> Het risico op de goederen gaat over op de Klant bij levering of gereedmelding indien Klant niet tijdig afneemt.</p>
+            
+            <p><strong>8.5</strong> CPL Metaal mag deelleveringen verrichten.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>9. Overmacht</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>9.1</strong> Overmacht omvat onder meer: schaarste, capaciteitsproblemen bij bewerkers, machinedefecten, ziekte, tekort aan grondstoffen, transportbelemmeringen, overheidsmaatregelen en extreme weersomstandigheden.</p>
+            
+            <p><strong>9.2</strong> Bij overmacht mag CPL Metaal de overeenkomst opschorten of ontbinden zonder schadeplichtigheid.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>10. Keuring en klachten</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>10.1</strong> Klant controleert de goederen direct bij levering.</p>
+            
+            <p><strong>10.2</strong> Zichtbare gebreken meldt de Klant binnen 48 uur schriftelijk met bewijs.</p>
+            
+            <p><strong>10.3</strong> Niet-zichtbare gebreken meldt de Klant binnen 5 werkdagen na ontdekking en uiterlijk binnen 6 maanden na levering.</p>
+            
+            <p><strong>10.4</strong> Bij gegronde klacht kiest CPL Metaal voor herstel, vervanging of creditering.</p>
+            
+            <p><strong>10.5</strong> Klachtrecht vervalt na verwerking of montage van de goederen.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>11. Garantie</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <h3>11.1 Omvang van de garantie</h3>
+            <p>De omvang van de garantie van CPL Metaal is beperkt tot de uitdrukkelijk overeengekomen kwaliteitsnormen of productspecificaties zoals vastgelegd in de orderbevestiging. Zonder zulke vastlegging geldt dat CPL Metaal levert volgens gangbare branche- en fabricagestandaarden.</p>
+
+            <h3>11.2 Uitsluitingen</h3>
+            <p>De garantie geldt niet:</p>
+            <ul>
+                <li><strong>a)</strong> zolang de Klant enige betalingsverplichting jegens CPL Metaal niet is nagekomen;</li>
+                <li><strong>b)</strong> indien de geleverde goederen zijn blootgesteld aan omstandigheden die afwijken van normaal en zorgvuldig gebruik, waaronder foutieve opslag, onjuiste montage, onvoldoende onderhoud of gebruik in een corrosieve of chemisch belastende omgeving die niet vooraf aan CPL Metaal is gemeld;</li>
+                <li><strong>c)</strong> indien goederen langer dan gebruikelijk zijn opgeslagen en hierdoor kwaliteits- of functioneel verlies is ontstaan;</li>
+                <li><strong>d)</strong> indien CPL Metaal niet tijdig schriftelijk op de hoogte is gesteld van het gestelde gebrek en niet in de gelegenheid is gesteld het gebrek te onderzoeken;</li>
+                <li><strong>e)</strong> indien meer dan twaalf maanden zijn verstreken sinds de leverdatum, tenzij schriftelijk anders overeengekomen.</li>
+            </ul>
+
+            <h3>11.3 Geschiktheid voor specifiek gebruik</h3>
+            <p>CPL Metaal garandeert niet en wordt niet geacht te garanderen dat de geleverde goederen geschikt zijn voor een specifiek gebruik of toepassing van de Klant, tenzij CPL Metaal dit vooraf en schriftelijk heeft bevestigd op basis van volledige technische informatie van de Klant. Eventueel verstrekte monsters gelden uitsluitend als indicatieve voorbeelden.</p>
+
+            <h3>11.4 Doorlevering</h3>
+            <p>Indien de geleverde goederen (geheel of gedeeltelijk) bestaan uit materialen of componenten die CPL Metaal van derden heeft betrokken, is de garantie van CPL Metaal beperkt tot de garantie die CPL Metaal van die betreffende leverancier ontvangt.</p>
+
+            <h3>11.5 Herstel bij garantieclaim</h3>
+            <p>Bij een terechte garantieclaim kiest CPL Metaal, naar eigen keuze, voor:</p>
+            <ul>
+                <li>kosteloos herstel, of</li>
+                <li>vervanging van de betreffende goederen, of</li>
+                <li>creditering van het evenredige deel van de factuurprijs.</li>
+            </ul>
+            <p>Dit is de enige aanspraak die de Klant heeft uit hoofde van garantie.</p>
+
+            <h3>11.6 Beperking aansprakelijkheid</h3>
+            <p>Voor zover wettelijk toegestaan, is de aansprakelijkheid van CPL Metaal voor schade als gevolg van een gebrek beperkt tot directe schade en maximaal tot:</p>
+            <ul>
+                <li>het bedrag dat onder de aansprakelijkheidsverzekering van CPL Metaal wordt uitgekeerd, of</li>
+                <li>indien geen dekking bestaat: het bedrag van de factuurwaarde van het betreffende deel van de levering.</li>
+            </ul>
+
+            <div class="info-box">
+                <h3>❌ Uitgesloten schade</h3>
+                <p><strong>11.7</strong> Onder directe schade wordt niet verstaan:</p>
+                <ul>
+                    <li>bedrijfsschade, waaronder productiestilstand, vertragingsschade en gederfde winst;</li>
+                    <li>gevolgschade, vermogensschade en gemiste besparingen;</li>
+                    <li>schade aan andere objecten waarop of waaraan is gewerkt (opzichtschade).</li>
+                </ul>
+            </div>
+
+            <p><strong>11.8</strong> CPL Metaal, haar medewerkers en door haar ingeschakelde derden zijn, buiten de in dit artikel bedoelde verplichting tot herstel/vervanging/creditering, niet aansprakelijk voor enige andere vorm van schade, tenzij sprake is van opzet of bewuste roekeloosheid aan de zijde van CPL Metaal.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>12. Eigendomsvoorbehoud</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>12.1</strong> Alle geleverde goederen blijven eigendom van CPL Metaal totdat alle openstaande bedragen volledig zijn voldaan.</p>
+            
+            <p><strong>12.2</strong> Indien de door CPL Metaal geleverde goederen door de Klant worden verwerkt, gemonteerd, gecombineerd of ingebouwd in andere producten, blijft het eigendomsvoorbehoud van CPL Metaal bestaan. In dat geval wordt CPL Metaal mede-eigenaar van het nieuw gevormde product, in verhouding tot de waarde van de door CPL Metaal geleverde goederen op het moment van levering. Dit mede-eigendom blijft gelden totdat alle vorderingen volledig zijn voldaan.</p>
+            
+            <p><strong>12.3</strong> Indien de Klant niet of niet tijdig betaalt, mag CPL Metaal de geleverde goederen op kosten van de Klant terugnemen, na één schriftelijke kennisgeving, zonder rechterlijke tussenkomst. De Klant geeft CPL Metaal hierbij toestemming om toegang te verkrijgen tot de plaatsen waar de goederen zich bevinden, om deze terug te nemen.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>13. Betaling</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>13.1</strong> Betalingstermijn: 30 dagen na factuurdatum.</p>
+            
+            <p><strong>13.2</strong> Bij te late betaling is de Klant de wettelijke handelsrente en incassokosten verschuldigd conform artikel 6:96 BW en staffel buitengerechtelijke incassokosten.</p>
+            
+            <p><strong>13.3</strong> Verrekening en opschorting door de Klant zijn uitgesloten.</p>
+            
+            <p><strong>13.4</strong> CPL Metaal mag leveringen opschorten of goederen achterhouden zolang facturen onbetaald zijn. CPL Metaal mag vooruitbetaling of zekerheid vragen.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>14. Zekerheidsstelling</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>14.1</strong> CPL Metaal is bevoegd, indien naar haar redelijk oordeel de financiële toestand van de Klant daartoe aanleiding geeft, vooruitbetaling of zekerheidsstelling te verlangen.</p>
+            
+            <p><strong>14.2</strong> CPL Metaal is gerechtigd in afwachting daarvan de gehele of gedeeltelijke uitvoering van de overeenkomst op te schorten.</p>
+            
+            <p><strong>14.3</strong> Indien deze vooruitbetaling uitblijft of de zekerheid niet naar redelijk verlangen wordt verschaft, mag CPL Metaal de overeenkomst zonder rechtelijke tussenkomst ontbinden, onverminderd het recht op schadevergoeding en zonder dat de Klant aanspraak heeft op enige vergoeding.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>15. Annulering</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>15.1</strong> Bij annulering door Klant worden alle reeds gemaakte kosten plus een redelijke winstderving in rekening gebracht.</p>
+            
+            <p><strong>15.2</strong> Bij maatwerk bedraagt deze vergoeding minimaal 80% van de overeengekomen prijs.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>16. Intellectuele eigendom</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>16.1</strong> Alle tekeningen, werktekeningen, modellen, mallen, tools en productiemethoden blijven eigendom van CPL Metaal.</p>
+            
+            <p><strong>16.2</strong> Klant mag deze niet kopiëren, gebruiken voor derden of reverse-engineeren.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>17. Certificaten en documentatie</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>17.1</strong> Certificaten, keuringsrapporten of prestatiedocumenten worden uitsluitend verstrekt indien vooraf schriftelijk overeengekomen. Kosten kunnen worden doorbelast.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>18. Montage</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>18.1</strong> Levering is exclusief montage, tenzij schriftelijk anders afgesproken.</p>
+            
+            <p><strong>18.2</strong> Bij montage zorgt de Klant voor veilige en toegankelijke werkomgeving.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>19. Export en eindbestemming</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>19.1</strong> Klant verklaart dat goederen niet worden toegepast in strijd met export- en sanctiewetgeving.</p>
+            
+            <p><strong>19.2</strong> Klant vrijwaart CPL Metaal voor claims en schade, voortvloeiend uit onrechtmatige eindbestemming.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>20. Aansprakelijkheid</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>20.1</strong> Aansprakelijkheid van CPL Metaal is beperkt tot de factuurwaarde van het betreffende deel van de levering.</p>
+            
+            <p><strong>20.2</strong> CPL Metaal is niet aansprakelijk voor indirecte schade, waaronder bedrijfsstilstand, winstderving en gevolgschade.</p>
+            
+            <p><strong>20.3</strong> Deze beperking geldt niet bij opzet of bewuste roekeloosheid.</p>
+            
+            <p><strong>20.4</strong> CPL Metaal is niet aansprakelijk voor schade door montage, bevestiging, verankering, onderconstructie, dilataties, detailopbouw of combinaties met andere materialen die door de Klant of derden zijn uitgevoerd.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>21. Toepasselijk recht en geschillen</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>21.1</strong> Op de overeenkomst met CPL Metaal is Nederlands recht van toepassing, met uitsluiting van het Weens Koopverdrag (CISG).</p>
+            
+            <p><strong>21.2</strong> Geschillen worden bij uitsluiting voorgelegd aan de bevoegde rechter in de regio waar CPL Metaal is gevestigd.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>22. Overdracht van vorderingen</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p><strong>22.1</strong> CPL Metaal is gerechtigd haar vorderingen op de Klant over te dragen, te verpanden of aan derden over te dragen, zonder voorafgaande toestemming van de Klant.</p>
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <h2>Contact</h2>
+            <!-- ═══════════════════════════════════════════════════════════ -->
+
+            <p>Voor vragen over deze algemene voorwaarden kunt u contact met ons opnemen:</p>
+
+            <div class="contact-info">
+                <h3>📞 Neem contact op</h3>
+                <p><strong>CPL Metaal V.O.F.</strong></p>
+                <p><strong>Adres:</strong> Noordkant 24a, 5845 EW Sint Anthonis</p>
+                <p><strong>E-mail:</strong> <a href="mailto:info@cplmetaal.com">info@cplmetaal.com</a></p>
+                <p><strong>Telefoon:</strong> <a href="tel:+31647939058">+31 (6) 47 93 90 58</a></p>
+                <p><strong>Website:</strong> <a href="https://www.cplmetaal.com">www.cplmetaal.com</a></p>
+                <p><strong>KvK-nummer:</strong> 98745212</p>
+                <p><strong>BTW-nummer:</strong> NL868625140B01</p>
+                <p><strong>Bereikbaar:</strong> Maandag t/m vrijdag van 08:00 - 17:00 uur</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="/" class="btn">← Terug naar Home</a>
+            </div>
+
+            <div class="version-info">
+                <p><strong>Algemene Voorwaarden CPL Metaal V.O.F.</strong></p>
+                <p>Versie 1.0 | Laatst bijgewerkt: 7 november 2025</p>
+                <p>Deze voorwaarden zijn van toepassing op alle offertes, leveringen en overeenkomsten</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
