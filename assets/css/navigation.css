@@ -56,8 +56,8 @@
 
 .nav-link {
   font-family: var(--font-display);
-  font-weight: 500;
-  font-size: 1.2rem;
+  font-weight: 700;
+  font-size: 1.5rem;
   color: var(--dark);
   text-decoration: none;
   position: relative;
