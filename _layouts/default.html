@@ -52,13 +52,6 @@
   <!-- Footer (Jekyll include) -->
   {% include footer.html %}
 
-  <!-- 8) Extra scripts per pagina (optioneel) -->
-  {% if page.extra_js %}
-    {% for js_file in page.extra_js %}
-      <script src="{{ js_file }}"></script>
-    {% endfor %}
-  {% endif %}
-
 <script>
 (function () {
   const menuBtn = document.querySelector('.mobile-menu-btn');
