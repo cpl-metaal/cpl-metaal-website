@@ -136,7 +136,7 @@ button.nav-link {
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: calc(100%);
+  top: 100%;
   left: 0;
   background: var(--white);
   border: 1px solid var(--gray-200);
