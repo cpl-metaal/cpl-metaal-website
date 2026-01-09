@@ -339,7 +339,7 @@ button.nav-link {
   .nav-item-row::after {
     content: "+";
     margin-left: auto;
-    font-size: 1.4rem;
+    font-size: 2.2rem;
     line-height: 1;
     color: var(--primary);
     padding: 0.2rem 0;
