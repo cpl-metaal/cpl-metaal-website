@@ -286,7 +286,7 @@ button.nav-link {
   .nav-link::after { display: none; }
 
   /* Mobiel: chevron (desktop) uit, plus-toggle aan */
-  .dropdown-link::after { display: none; }
+  .dropdown-link::before { display: none; }
 
   .nav-item-row { width: 100%; }
 
