@@ -74,13 +74,6 @@ button.nav-link {
   text-align: left;
 }
 
-/* Zorg dat dropdown buttons zich op desktop gedragen als normale menu-items */
-button.nav-link.dropdown-toggle {
-  width: auto;                 /* desktop: niet full-width */
-  display: inline-flex;        /* ✅ maakt uitlijning stabiel */
-  align-items: center;
-}
-
 .nav-link:hover {
   color: var(--primary-dark);
 }
@@ -105,44 +98,6 @@ button.nav-link.dropdown-toggle {
 .nav-link.active {
   color: var(--primary);
   font-weight: 600;
-}
-
-/* Dropdown toggle chevron: right-aligned inside the menu item */
-.dropdown-toggle {
-  position: relative;
-  padding-right: 1.6rem; /* ruimte voor chevron rechts */
-  display: inline-block; /* houdt desktop spacing netjes */
-}
-
-/* Chevron down (default) */
-.dropdown-toggle::before {
-  content: "";
-  position: absolute;
-  right: 0.25rem;     /* afstand tot rechterrand van menu-item */
-  top: 50%;
-  width: 0.45rem;
-  height: 0.45rem;
-  border-right: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  transform: translateY(-60%) rotate(45deg); /* ↓ chevron */
-  opacity: 0.8;
-  transition: transform 0.2s ease;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .nav-item-dropdown:hover > .dropdown-menu {
-    display: block;
-  }
-
-  /* chevron up on hover (desktop only) */
-  .nav-item-dropdown:hover > .dropdown-toggle::before {
-    transform: translateY(-40%) rotate(-135deg);
-  }
-}
-
-/* Mobile/click open -> chevron up */
-.dropdown-toggle[aria-expanded="true"]::before {
-  transform: translateY(-40%) rotate(-135deg); /* ↑ chevron */
 }
 
 /* Dropdown base */
@@ -252,12 +207,6 @@ button.nav-link.dropdown-toggle {
     padding: 0.85rem 0;
   }
 
-  /* Dropdown buttons moeten op mobiel ook full-width en klikbaar zijn */
-  button.nav-link.dropdown-toggle {
-    width: 100%;
-    text-align: left;
-  }
-
   .nav-link::after { display: none; }
 
   /* Submenu in mobile: standaard dicht (voorkomt 'blijft open') */
@@ -276,10 +225,5 @@ button.nav-link.dropdown-toggle {
 
   .dropdown-menu a {
     padding: 0.5rem 0 0.5rem 1.25rem;
-  }
-
-  /* Alleen open als dropdown-button aria-expanded=true */
-  .nav-item-dropdown > .dropdown-toggle[aria-expanded="true"] ~ .dropdown-menu {
-    display: block;
   }
 }
