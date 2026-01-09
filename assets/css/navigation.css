@@ -282,6 +282,23 @@ button.nav-link {
 
   .nav-link::after { display: none; }
 
+  /* Mobiel: chevron (desktop) uit, plus-toggle aan */
+  .dropdown-link::after { display: none; }
+
+  .nav-item-row { width: 100%; }
+
+  .dropdown-link {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .submenu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+  }
+
   /* Submenu in mobile: standaard dicht (voorkomt 'blijft open') */
   .nav-item-dropdown > .dropdown-menu {
     display: none;                 /* ✅ default dicht */
