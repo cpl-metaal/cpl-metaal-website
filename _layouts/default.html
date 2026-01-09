@@ -67,106 +67,61 @@
   const mobileMQ = window.matchMedia('(max-width: 992px)');
 
   function closeAllDropdowns() {
-    document.querySelectorAll('.nav-item-dropdown').forEach((li) => {
+    menu.querySelectorAll('.nav-item-dropdown').forEach((li) => {
       li.classList.remove('is-open');
-      const toggleBtn = li.querySelector('.submenu-toggle');
-      if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+      const btn = li.querySelector('.submenu-toggle');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
       const link = li.querySelector('.dropdown-link');
       if (link) link.setAttribute('aria-expanded', 'false');
     });
   }
 
-  function toggleDropdown(li) {
-    const isOpen = li.classList.toggle('is-open');
-
-    // sync aria on both (link + button) if present
-    const toggleBtn = li.querySelector('.submenu-toggle');
-    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', String(isOpen));
-
+  function setDropdownState(li, open) {
+    li.classList.toggle('is-open', open);
+    const btn = li.querySelector('.submenu-toggle');
+    if (btn) btn.setAttribute('aria-expanded', String(open));
     const link = li.querySelector('.dropdown-link');
-    if (link) link.setAttribute('aria-expanded', String(isOpen));
-
-    return isOpen;
+    if (link) link.setAttribute('aria-expanded', String(open));
   }
 
-  /* Toggle main mobile menu */
+  function toggleDropdown(li) {
+    const willOpen = !li.classList.contains('is-open');
+    // sluit andere dropdowns
+    menu.querySelectorAll('.nav-item-dropdown.is-open').forEach((other) => {
+      if (other !== li) setDropdownState(other, false);
+    });
+    setDropdownState(li, willOpen);
+  }
+
+  /* Main mobile menu open/close */
   menuBtn.addEventListener('click', () => {
     const isOpen = menu.classList.toggle('active');
     menuBtn.setAttribute('aria-expanded', String(isOpen));
     document.body.classList.toggle('no-scroll', isOpen);
-
     if (!isOpen) closeAllDropdowns();
   });
 
-  /* Dropdown behavior */
-  const dropdownItems = document.querySelectorAll('.nav-item-dropdown');
-
-  dropdownItems.forEach((li) => {
-    const row = li.querySelector('.nav-item-row');
-    const link = li.querySelector('.dropdown-link');
-    const btn = li.querySelector('.submenu-toggle');
-
-    // Desktop hover is CSS-driven; click should navigate (link) normally.
-    // Mobile: click on row (or link) toggles submenu and prevents navigation.
-    if (row) {
-      row.addEventListener('click', (e) => {
-        if (!mobileMQ.matches) return; // only mobile
-
-        // If click came from an <a>, prevent navigation on mobile
-        if (e.target.closest('a')) {
-          e.preventDefault();
-        }
-        e.stopPropagation();
-
-        // Toggle this dropdown (optioneel: sluit andere dropdowns)
-        dropdownItems.forEach((other) => {
-          if (other !== li) {
-            other.classList.remove('is-open');
-            const ob = other.querySelector('.submenu-toggle');
-            if (ob) ob.setAttribute('aria-expanded', 'false');
-            const ol = other.querySelector('.dropdown-link');
-            if (ol) ol.setAttribute('aria-expanded', 'false');
-          }
-        });
-
-        toggleDropdown(li);
-      });
-    }
-
-    // Fallback: button toggles too (als je hem later weer toont)
-    if (btn) {
-      btn.addEventListener('click', (e) => {
-        if (!mobileMQ.matches) return;
-        e.preventDefault();
-        e.stopPropagation();
-        toggleDropdown(li);
-      });
-    }
-
-    // Accessibility: on mobile, pressing Enter/Space on the link toggles (no navigation)
-    if (link) {
-      link.addEventListener('keydown', (e) => {
-        if (!mobileMQ.matches) return;
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          toggleDropdown(li);
-        }
-      });
-    }
-  });
-
-  /* Close menu ONLY when an actual submenu link is clicked (mobile) */
+  /* ✅ Eén click-handler voor ALLES in het menu (mobiel) */
   menu.addEventListener('click', (e) => {
     if (!mobileMQ.matches) return;
 
-    const a = e.target.closest('a');
-    if (!a) return;
+    const row = e.target.closest('.nav-item-dropdown .nav-item-row');
+    const submenuLink = e.target.closest('.dropdown-menu a');
+    const anyLink = e.target.closest('a');
 
-    // 1) Klik op dropdown "titel" (Producten/Toepassingen) -> NIET sluiten
-    if (a.closest('.nav-item-row')) return;
+    // 1) Klik op dropdown-rij (Producten/Toepassingen): toggle, NIET sluiten, NIET navigeren
+    if (row) {
+      const li = row.closest('.nav-item-dropdown');
+      if (!li) return;
 
-    // 2) Klik op een submenu-item -> WEL sluiten
-    if (a.closest('.dropdown-menu')) {
+      e.preventDefault();     // voorkomt navigatie via de <a> in de row
+      e.stopPropagation();
+      toggleDropdown(li);
+      return;
+    }
+
+    // 2) Klik op submenu item: sluit hele menu + dropdowns
+    if (submenuLink) {
       menu.classList.remove('active');
       menuBtn.setAttribute('aria-expanded', 'false');
       document.body.classList.remove('no-scroll');
@@ -174,15 +129,15 @@
       return;
     }
 
-    // 3) Klik op normale top-level link (Home/Over ons/Contact) -> WEL sluiten
-    if (!a.closest('.nav-item-dropdown')) {
+    // 3) Klik op normale top-level link (Home/Over ons/Contact): sluit menu
+    if (anyLink && !anyLink.closest('.nav-item-dropdown')) {
       menu.classList.remove('active');
       menuBtn.setAttribute('aria-expanded', 'false');
       document.body.classList.remove('no-scroll');
       closeAllDropdowns();
     }
   });
-  
+
 })();
 </script>
   
