@@ -100,6 +100,32 @@ button.nav-link {
   font-weight: 600;
 }
 
+/* Dropdown toggle arrow (Producten / Toepassingen) */
+.dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* arrow down (gesloten) */
+.dropdown-toggle::after {
+  content: "▾";
+  font-size: 0.9em;
+  line-height: 1;
+  transform: translateY(-1px);
+  transition: transform 0.2s ease;
+}
+
+/* desktop: hover open */
+.nav-item-dropdown:hover > .dropdown-toggle::after {
+  content: "▴";
+}
+
+/* mobiel: open via click */
+.dropdown-toggle[aria-expanded="true"]::after {
+  content: "▴";
+}
+
 /* Dropdown base */
 .dropdown-menu {
   display: none;
