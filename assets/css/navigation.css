@@ -76,8 +76,9 @@ button.nav-link {
 
 /* Zorg dat dropdown buttons zich op desktop gedragen als normale menu-items */
 button.nav-link.dropdown-toggle {
-  width: auto;         /* desktop: niet full-width */
-  display: inline-block;
+  width: auto;                 /* desktop: niet full-width */
+  display: inline-flex;        /* ✅ maakt uitlijning stabiel */
+  align-items: center;
 }
 
 .nav-link:hover {
