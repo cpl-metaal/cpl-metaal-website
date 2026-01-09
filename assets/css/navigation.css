@@ -122,9 +122,15 @@ button.nav-link {
   transition: transform 0.2s ease;
 }
 
-/* Desktop: hover open -> chevron up */
-.nav-item-dropdown:hover > .dropdown-toggle::before {
-  transform: translateY(-40%) rotate(-135deg); /* ↑ chevron */
+@media (hover: hover) and (pointer: fine) {
+  .nav-item-dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+
+  /* chevron up on hover (desktop only) */
+  .nav-item-dropdown:hover > .dropdown-toggle::before {
+    transform: translateY(-40%) rotate(-135deg);
+  }
 }
 
 /* Mobile/click open -> chevron up */
@@ -161,12 +167,6 @@ button.nav-link {
 .dropdown-menu a:hover {
   background: var(--gray-100);
   color: var(--primary);
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .nav-item-dropdown:hover > .dropdown-menu {
-    display: block;
-  }
 }
 
 /* Mobile button */
