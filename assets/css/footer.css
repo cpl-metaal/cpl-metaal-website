@@ -16,6 +16,8 @@
 .footer-section h4 {
   color: var(--white);
   margin-bottom: var(--space-4);
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 .footer-contact {
