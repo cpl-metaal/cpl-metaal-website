@@ -382,3 +382,15 @@ button.nav-link {
     margin-top: 1rem;
   }
 }
+
+@media (min-width: 993px) {
+  .nav-cta-btn {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-cta-btn {
+    font-size: 1.05rem;
+  }
+}
