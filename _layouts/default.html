@@ -46,7 +46,7 @@
   {% endif %} 
 </head>
 
-<body>
+<body class="{{ page.body_class | default: '' }}">
 
   <!-- Header (Jekyll include, vervangt navigation-placeholder + includes.js) -->
   {% include header.html %}
