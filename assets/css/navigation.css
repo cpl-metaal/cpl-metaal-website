@@ -148,12 +148,11 @@ button.nav-link {
   border: 1px solid var(--gray-200);
   border-radius: 0.5rem;
   box-shadow: var(--shadow-lg);
-  padding: 0.75rem 0;
+  padding: 0.75rem 0; /* houdt je verticale padding */
   min-width: 220px;
   z-index: 999;
   list-style: none;   /* ✅ bullets uit (desktop) */
   margin: 0;          /* ✅ reset default ul margin */
-  padding-left: 0;    /* ✅ extra zekerheid */
 }
 
 .dropdown-menu li {
