@@ -179,6 +179,7 @@ button.nav-link {
   position: absolute;
   top: 100%;
   left: 0;
+  margin-top: 0;      /* ✅ extra zekerheid: geen gap */
   background: var(--white);
   border: 1px solid var(--gray-200);
   border-radius: 0.5rem;
@@ -188,6 +189,7 @@ button.nav-link {
   z-index: 999;
   list-style: none;   /* ✅ bullets uit (desktop) */
   margin: 0;          /* ✅ reset default ul margin */
+  padding-left: 0;    /* ✅ extra zekerheid: geen ul indent */
 }
 
 .dropdown-menu li {
