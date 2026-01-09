@@ -245,18 +245,26 @@ button.nav-link {
 
   .nav-link::after { display: none; }
 
+  /* Submenu in mobile: standaard dicht (voorkomt 'blijft open') */
   .nav-item-dropdown > .dropdown-menu {
+    display: none;                 /* ✅ default dicht */
     position: static;
     border: none;
     box-shadow: none;
-    padding: 0.25rem 0 0.75rem;
     background: transparent;
     min-width: 0;
+
+    list-style: none;              /* ✅ geen bolletjes */
+    margin: 0;
+    padding: 0.25rem 0 0.75rem 0;
   }
 
-  .dropdown-menu a { padding: 0.5rem 0 0.5rem 1.25rem; }
+  .dropdown-menu a {
+    padding: 0.5rem 0 0.5rem 1.25rem;
+  }
 
-  .nav-item-dropdown > .nav-link[aria-expanded="true"] + .dropdown-menu {
+  /* Alleen open als dropdown-button aria-expanded=true */
+  .nav-item-dropdown > .dropdown-toggle[aria-expanded="true"] + .dropdown-menu {
     display: block;
   }
 }
