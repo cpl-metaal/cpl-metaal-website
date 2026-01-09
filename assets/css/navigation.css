@@ -74,6 +74,12 @@ button.nav-link {
   text-align: left;
 }
 
+/* Zorg dat dropdown buttons zich op desktop gedragen als normale menu-items */
+button.nav-link.dropdown-toggle {
+  width: auto;         /* desktop: niet full-width */
+  display: inline-block;
+}
+
 .nav-link:hover {
   color: var(--primary-dark);
 }
