@@ -111,4 +111,7 @@
   .is-home .btn {
     width: 100%;
   }
+
+  .is-home .hero {
+  padding: 0;
 }
