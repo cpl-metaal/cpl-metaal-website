@@ -100,30 +100,36 @@ button.nav-link {
   font-weight: 600;
 }
 
-/* Dropdown toggle arrow (Producten / Toepassingen) */
+/* Dropdown toggle chevron: right-aligned inside the menu item */
 .dropdown-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+  position: relative;
+  padding-right: 1.6rem; /* ruimte voor chevron rechts */
+  display: inline-block; /* houdt desktop spacing netjes */
 }
 
-/* arrow down (gesloten) */
-.dropdown-toggle::after {
-  content: "▾";
-  font-size: 0.9em;
-  line-height: 1;
-  transform: translateY(-1px);
+/* Chevron down (default) */
+.dropdown-toggle::before {
+  content: "";
+  position: absolute;
+  right: 0.25rem;     /* afstand tot rechterrand van menu-item */
+  top: 50%;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-60%) rotate(45deg); /* ↓ chevron */
+  opacity: 0.8;
   transition: transform 0.2s ease;
 }
 
-/* desktop: hover open */
-.nav-item-dropdown:hover > .dropdown-toggle::after {
-  content: "▴";
+/* Desktop: hover open -> chevron up */
+.nav-item-dropdown:hover > .dropdown-toggle::before {
+  transform: translateY(-40%) rotate(-135deg); /* ↑ chevron */
 }
 
-/* mobiel: open via click */
-.dropdown-toggle[aria-expanded="true"]::after {
-  content: "▴";
+/* Mobile/click open -> chevron up */
+.dropdown-toggle[aria-expanded="true"]::before {
+  transform: translateY(-40%) rotate(-135deg); /* ↑ chevron */
 }
 
 /* Dropdown base */
