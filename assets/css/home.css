@@ -1,5 +1,5 @@
 /* HERO (homepage only) */
-.hero {
+.is-home .hero {
   position: relative;
   min-height: clamp(500px, 70vh, 700px);
   display: flex;
@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-.hero::before {
+.is-home .hero::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -20,7 +20,7 @@
   opacity: 0.5;
 }
 
-.hero-content {
+.is-home .hero-content {
   position: relative;
   z-index: 1;
   padding: clamp(8rem, 10vw, 10rem) 0 var(--space-9) 0;
@@ -32,32 +32,32 @@
   }
 }
 
-.hero-title {
+.is-home .hero-title {
   color: var(--white);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.hero-subtitle {
+.is-home .hero-subtitle {
   font-size: clamp(1.25rem, 3vw, 1.75rem);
   color: rgba(255, 255, 255, 0.95);
   margin-bottom: var(--space-5);
 }
 
-.hero-cta {
+.is-home .hero-cta {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-4);
   margin-bottom: var(--space-6);
 }
 
-.hero-features {
+.is-home .hero-features {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-5);
   margin-top: var(--space-6);
 }
 
-.hero-feature {
+.is-home .hero-feature {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -66,12 +66,12 @@
 }
 
 /* Section header (homepage sections) */
-.section-header {
+.is-home .section-header {
   text-align: center;
   margin-bottom: var(--space-8);
 }
 
-.section-label {
+.is-home .section-label {
   display: inline-block;
   font-family: var(--font-display);
   font-size: 0.875rem;
@@ -82,14 +82,14 @@
   margin-bottom: var(--space-4);
 }
 
-.section-description {
+.is-home .section-description {
   font-size: 1.125rem;
   color: var(--gray-600);
   margin-bottom: 0;
 }
 
 /* Card image placeholder used on home */
-.card-image {
+.is-home .card-image {
   width: 100%;
   aspect-ratio: 4 / 3;
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
@@ -104,7 +104,7 @@
 
 /* Homepage-specific responsive tweaks */
 @media (max-width: 992px) {
-  .hero-cta {
+  .is-home .hero-cta {
     flex-direction: column;
   }
 
