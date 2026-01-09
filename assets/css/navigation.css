@@ -360,57 +360,25 @@ button.nav-link {
 }
 
 /* ================================
-   Header CTA (nav only) — Variant A
+   Header CTA – originele stijl
    ================================ */
 
-.nav-cta-btn {
-  /* match met menu */
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 0.01em;
-
-  /* compact en netjes */
-  padding: 0.55rem 1.05rem;
-  line-height: 1;
-  border-radius: 999px;
-
-  /* rustig: outline look */
-  background: transparent;
-  color: var(--primary);
-  border: 2px solid var(--primary);
-
-  box-shadow: none;
-  transform: none;
-}
-
-/* Hover: subtiele fill (past bij palet) */
-@media (hover: hover) and (pointer: fine) {
-  .nav-cta-btn:hover {
-    background: var(--primary);
-    color: var(--white);
-    transform: translateY(-1px);
-  }
-}
-
-/* Desktop spacing in menu */
+/* Desktop: rechts naast menu-items */
 @media (min-width: 993px) {
   .nav-cta {
-    margin-left: 0.25rem;
+    margin-left: 1rem;
   }
 
   .nav-cta-btn {
-    margin-left: 0.75rem;
+    white-space: nowrap; /* voorkomt afbreken */
   }
 }
 
-/* Mobile: maak 'm duidelijk en full-width */
+/* Mobile: CTA als duidelijke afsluiter onder menu */
 @media (max-width: 992px) {
   .nav-cta-btn {
     width: 100%;
     justify-content: center;
-    margin-top: 0.75rem;
-    padding: 0.8rem 1rem;
-    font-size: 1rem;
+    margin-top: 1rem;
   }
 }
