@@ -66,89 +66,116 @@
   {% endif %}
 
 <script>
-  (function () {
-    // Prevent double init (in case of hot reload / duplicate includes)
-    if (document.body.dataset.navInit === "true") return;
-    document.body.dataset.navInit = "true";
+(function () {
+  const menuBtn = document.querySelector('.mobile-menu-btn');
+  const menu = document.querySelector('.nav-menu');
+  if (!menuBtn || !menu) return;
 
-    const menuBtn = document.querySelector(".mobile-menu-btn");
-    const menu = document.querySelector(".nav-menu");
-    if (!menuBtn || !menu) return;
+  const mobileMQ = window.matchMedia('(max-width: 992px)');
 
-    const dropdownToggles = Array.from(
-      document.querySelectorAll(
-        ".nav-item-dropdown > .dropdown-toggle[aria-haspopup='true']"
-      )
-    );
-
-    function closeAllDropdowns() {
-      dropdownToggles.forEach((btn) => btn.setAttribute("aria-expanded", "false"));
-    }
-
-    function closeMenu() {
-      menu.classList.remove("active");
-      menuBtn.setAttribute("aria-expanded", "false");
-      document.body.classList.remove("no-scroll");
-      closeAllDropdowns();
-    }
-
-    function openMenu() {
-      menu.classList.add("active");
-      menuBtn.setAttribute("aria-expanded", "true");
-      document.body.classList.add("no-scroll");
-    }
-
-    function toggleMenu() {
-      const isOpen = menu.classList.contains("active");
-      if (isOpen) closeMenu();
-      else openMenu();
-    }
-
-    // 1) Toggle main mobile menu
-    menuBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      toggleMenu();
+  function closeAllDropdowns() {
+    document.querySelectorAll('.nav-item-dropdown').forEach((li) => {
+      li.classList.remove('is-open');
+      const toggleBtn = li.querySelector('.submenu-toggle');
+      if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+      const link = li.querySelector('.dropdown-link');
+      if (link) link.setAttribute('aria-expanded', 'false');
     });
+  }
 
-    // 2) Dropdown toggles (Producten / Toepassingen)
-    dropdownToggles.forEach((btn) => {
-      btn.addEventListener("click", (e) => {
+  function toggleDropdown(li) {
+    const isOpen = li.classList.toggle('is-open');
+
+    // sync aria on both (link + button) if present
+    const toggleBtn = li.querySelector('.submenu-toggle');
+    if (toggleBtn) toggleBtn.setAttribute('aria-expanded', String(isOpen));
+
+    const link = li.querySelector('.dropdown-link');
+    if (link) link.setAttribute('aria-expanded', String(isOpen));
+
+    return isOpen;
+  }
+
+  /* Toggle main mobile menu */
+  menuBtn.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('active');
+    menuBtn.setAttribute('aria-expanded', String(isOpen));
+    document.body.classList.toggle('no-scroll', isOpen);
+
+    if (!isOpen) closeAllDropdowns();
+  });
+
+  /* Dropdown behavior */
+  const dropdownItems = document.querySelectorAll('.nav-item-dropdown');
+
+  dropdownItems.forEach((li) => {
+    const row = li.querySelector('.nav-item-row');
+    const link = li.querySelector('.dropdown-link');
+    const btn = li.querySelector('.submenu-toggle');
+
+    // Desktop hover is CSS-driven; click should navigate (link) normally.
+    // Mobile: click on row (or link) toggles submenu and prevents navigation.
+    if (row) {
+      row.addEventListener('click', (e) => {
+        if (!mobileMQ.matches) return; // only mobile
+
+        // If click came from an <a>, prevent navigation on mobile
+        if (e.target.closest('a')) {
+          e.preventDefault();
+        }
+
+        // Toggle this dropdown (optioneel: sluit andere dropdowns)
+        dropdownItems.forEach((other) => {
+          if (other !== li) {
+            other.classList.remove('is-open');
+            const ob = other.querySelector('.submenu-toggle');
+            if (ob) ob.setAttribute('aria-expanded', 'false');
+            const ol = other.querySelector('.dropdown-link');
+            if (ol) ol.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        toggleDropdown(li);
+      });
+    }
+
+    // Fallback: button toggles too (als je hem later weer toont)
+    if (btn) {
+      btn.addEventListener('click', (e) => {
+        if (!mobileMQ.matches) return;
         e.preventDefault();
         e.stopPropagation();
-
-        const wasOpen = btn.getAttribute("aria-expanded") === "true";
-
-        // close others first (only one open at a time)
-        closeAllDropdowns();
-
-        // toggle current
-        btn.setAttribute("aria-expanded", String(!wasOpen));
+        toggleDropdown(li);
       });
-    });
+    }
 
-    // 3) Close menu + dropdowns when clicking a link in the menu
-    menu.addEventListener("click", (e) => {
-      const link = e.target.closest("a");
-      if (!link) return;
-      closeMenu();
-    });
+    // Accessibility: on mobile, pressing Enter/Space on the link toggles (no navigation)
+    if (link) {
+      link.addEventListener('keydown', (e) => {
+        if (!mobileMQ.matches) return;
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleDropdown(li);
+        }
+      });
+    }
+  });
 
-    // 4) Close menu when clicking outside header/menu (mobile)
-    document.addEventListener("click", (e) => {
-      const header = e.target.closest(".site-header");
-      const menuIsOpen = menu.classList.contains("active");
-      if (!menuIsOpen) return;
+  /* Close dropdowns when a submenu link is clicked (mobile) */
+  menu.addEventListener('click', (e) => {
+    const a = e.target.closest('a');
+    if (!a) return;
 
-      // click outside the header while menu open => close
-      if (!header) closeMenu();
-    });
+    // if user clicked a submenu item, close menu (mobile)
+    if (mobileMQ.matches) {
+      menu.classList.remove('active');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('no-scroll');
+      closeAllDropdowns();
+    }
+  });
 
-    // 5) Close on Escape
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeMenu();
-    });
-  })();
+})();
 </script>
   
 </body>
