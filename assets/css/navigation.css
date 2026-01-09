@@ -170,7 +170,7 @@ button.nav-link {
   .nav-item-dropdown:hover > .dropdown-menu {
     display: block;
   }
-  .nav-item-dropdown:hover > .nav-item-row .dropdown-link::after {
+  .nav-item-dropdown:hover > .nav-item-row .dropdown-link::before {
     transform: translateY(-40%) rotate(-135deg); /* ▲ */
   }
 }
