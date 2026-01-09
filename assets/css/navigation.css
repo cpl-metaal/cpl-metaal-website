@@ -278,7 +278,7 @@ button.nav-link.dropdown-toggle {
   }
 
   /* Alleen open als dropdown-button aria-expanded=true */
-  .nav-item-dropdown > .dropdown-toggle[aria-expanded="true"] + .dropdown-menu {
+  .nav-item-dropdown > .dropdown-toggle[aria-expanded="true"] ~ .dropdown-menu {
     display: block;
   }
 }
