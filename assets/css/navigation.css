@@ -100,6 +100,79 @@ button.nav-link {
   font-weight: 600;
 }
 
+/* ---------- Dropdown item row (link + mobile toggle) ---------- */
+.nav-item-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Desktop: link is klikbaar + chevron ▼ naast tekst */
+.dropdown-link {
+  position: relative;
+  padding-right: 1.2rem; /* ruimte voor chevron */
+}
+
+/* Chevron (desktop) */
+.dropdown-link::after {
+  content: "";
+  position: absolute;
+  right: 0.2rem;
+  top: 50%;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-60%) rotate(45deg); /* ▼ */
+  opacity: 0.85;
+  transition: transform 0.2s ease;
+}
+
+/* Submenu toggle button (mobiel: + / -) */
+.submenu-toggle {
+  display: none; /* desktop hidden */
+  width: 44px;
+  height: 44px;
+  margin-left: auto;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+/* + teken (mobiel) */
+.submenu-toggle::before,
+.submenu-toggle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 16px;
+  height: 2px;
+  background: currentColor;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+}
+
+.submenu-toggle::after {
+  transform: translate(-50%, -50%) rotate(90deg); /* vertical streep -> + */
+}
+
+/* geopend: maak er - van (verticale streep weg) */
+.nav-item-dropdown.is-open > .nav-item-row .submenu-toggle::after {
+  display: none;
+}
+
+/* Desktop: submenu open op hover + chevron omhoog */
+@media (hover: hover) and (pointer: fine) {
+  .nav-item-dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+  .nav-item-dropdown:hover > .nav-item-row .dropdown-link::after {
+    transform: translateY(-40%) rotate(-135deg); /* ▲ */
+  }
+}
+
 /* Dropdown base */
 .dropdown-menu {
   display: none;
