@@ -1,3 +1,56 @@
 <footer class="site-footer">
-  <p>© CPL Metaal</p>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h4>CPL Metaal</h4>
+        <p>Specialist in hoogwaardige metaalproducten voor bouw, industrie en architectuur.</p>
+
+        <p class="footer-contact">
+          <strong>Tel:</strong>
+          <a href="tel:+31647939058">+31 (6) 47 93 90 58</a><br>
+          <strong>Email:</strong>
+          <a href="mailto:info@cplmetaal.com">info@cplmetaal.com</a><br>
+          <strong>Locatie:</strong> Sint Anthonis
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Producten</h4>
+        <ul>
+          <li><a href="{{ '/producten/strekmetaal/' | relative_url }}">Strekmetaal</a></li>
+          <li><a href="{{ '/producten/geperforeerd-metaal/' | relative_url }}">Geperforeerd Metaal</a></li>
+          <li><a href="{{ '/producten/gaasproducten/' | relative_url }}">Gaasproducten</a></li>
+          <li><a href="{{ '/producten/metalen-roosters/' | relative_url }}">Metalen Roosters</a></li>
+          <li><a href="{{ '/producten/cortenstaal/' | relative_url }}">Cortenstaal</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Toepassingen</h4>
+        <ul>
+          <li><a href="{{ '/toepassingen/gevelbekleding/' | relative_url }}">Gevelbekleding</a></li>
+          <li><a href="{{ '/toepassingen/hekwerk-terreinafscheiding/' | relative_url }}">Hekwerk &amp; Terreinafscheiding</a></li>
+          <li><a href="{{ '/toepassingen/balkons-balustrades/' | relative_url }}">Balkons &amp; Balustrades</a></li>
+          <li><a href="{{ '/toepassingen/vloeren-trappen/' | relative_url }}">Vloeren &amp; Trappen</a></li>
+          <li><a href="{{ '/toepassingen/industrie-machineafscherming/' | relative_url }}">Industrie &amp; Machineafscherming</a></li>
+          <li><a href="{{ '/toepassingen/groenvoorziening/' | relative_url }}">Groenvoorziening</a></li>
+          <li><a href="{{ '/toepassingen/dakopbouw/' | relative_url }}">Dakopbouw</a></li>
+          <li><a href="{{ '/toepassingen/interieur/' | relative_url }}">Interieur</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Bedrijf</h4>
+        <ul>
+          <li><a href="{{ '/over-cpl-metaal/' | relative_url }}">Over CPL Metaal</a></li>
+          <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+          <li><a href="{{ '/offerte-aanvragen/' | relative_url }}">Offerte Aanvragen</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ "now" | date: "%Y" }} CPL Metaal. Alle rechten voorbehouden.</p>
+    </div>
+  </div>
 </footer>
