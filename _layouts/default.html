@@ -38,6 +38,12 @@
   <link rel="stylesheet" href="/assets/css/base.css" />
   <link rel="stylesheet" href="/assets/css/navigation.css" />
 
+  <!-- 8) Extra CSS per pagina (optioneel) --> 
+  {% if page.extra_css %} 
+    {% for css_file in page.extra_css %}
+      <link rel="stylesheet" href="{{ css_file }}" /> 
+    {% endfor %} 
+  {% endif %} 
 </head>
 
 <body>
