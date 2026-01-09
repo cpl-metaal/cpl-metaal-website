@@ -28,7 +28,7 @@
 
 @media (max-width: 992px) {
   .is-home .hero-content {
-    padding: 2.0rem 0.25 2.5rem 0.25;
+    padding: 2.0rem 0 2.5rem 0;
   }
 }
 
