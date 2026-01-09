@@ -374,23 +374,26 @@ button.nav-link {
   }
 }
 
-/* Mobile: CTA als duidelijke afsluiter onder menu */
-@media (max-width: 992px) {
-  .nav-cta-btn {
-    width: 100%;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-}
+/* ================================
+   Header CTA – originele stijl
+   ================================ */
 
 @media (min-width: 993px) {
+  .nav-cta {
+    margin-left: 1rem;
+  }
+
   .nav-cta-btn {
+    white-space: nowrap;
     font-size: 1.1rem;
   }
 }
 
 @media (max-width: 992px) {
   .nav-cta-btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
     font-size: 1.05rem;
   }
 }
