@@ -251,6 +251,12 @@ button.nav-link.dropdown-toggle {
     padding: 0.85rem 0;
   }
 
+  /* Dropdown buttons moeten op mobiel ook full-width en klikbaar zijn */
+  button.nav-link.dropdown-toggle {
+    width: 100%;
+    text-align: left;
+  }
+
   .nav-link::after { display: none; }
 
   /* Submenu in mobile: standaard dicht (voorkomt 'blijft open') */
