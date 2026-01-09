@@ -154,20 +154,34 @@
     }
   });
 
-  /* Close dropdowns when a submenu link is clicked (mobile) */
+  /* Close menu ONLY when an actual submenu link is clicked (mobile) */
   menu.addEventListener('click', (e) => {
+    if (!mobileMQ.matches) return;
+
     const a = e.target.closest('a');
     if (!a) return;
 
-    // if user clicked a submenu item, close menu (mobile)
-    if (mobileMQ.matches) {
+    // 1) Klik op dropdown "titel" (Producten/Toepassingen) -> NIET sluiten
+    if (a.closest('.nav-item-row')) return;
+
+    // 2) Klik op een submenu-item -> WEL sluiten
+    if (a.closest('.dropdown-menu')) {
+      menu.classList.remove('active');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('no-scroll');
+      closeAllDropdowns();
+      return;
+    }
+
+    // 3) Klik op normale top-level link (Home/Over ons/Contact) -> WEL sluiten
+    if (!a.closest('.nav-item-dropdown')) {
       menu.classList.remove('active');
       menuBtn.setAttribute('aria-expanded', 'false');
       document.body.classList.remove('no-scroll');
       closeAllDropdowns();
     }
   });
-
+  
 })();
 </script>
   
