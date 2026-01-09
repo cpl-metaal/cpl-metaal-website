@@ -163,9 +163,10 @@ button.nav-link {
   color: var(--primary);
 }
 
-/* Desktop: open on hover */
-.nav-item-dropdown:hover > .dropdown-menu {
-  display: block;
+@media (hover: hover) and (pointer: fine) {
+  .nav-item-dropdown:hover > .dropdown-menu {
+    display: block;
+  }
 }
 
 /* Mobile button */
