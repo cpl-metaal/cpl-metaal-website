@@ -27,7 +27,7 @@
 }
 
 @media (max-width: 992px) {
-  .hero-content {
+  .is-home .hero-content {
     padding: clamp(8rem, 15vw, 10rem) 0 clamp(4rem, 10vw, 6rem) 0;
   }
 }
@@ -108,7 +108,7 @@
     flex-direction: column;
   }
 
-  .btn {
+  .is-home .btn {
     width: 100%;
   }
 }
