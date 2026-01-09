@@ -314,6 +314,11 @@ button.nav-link {
     padding: 0.25rem 0 0.75rem 0;
   }
 
+  /* ✅ open state (mobiel): toon submenu als parent .is-open heeft */
+  .nav-item-dropdown.is-open > .dropdown-menu {
+    display: block;
+  }
+
   .dropdown-menu a {
     padding: 0.5rem 0 0.5rem 1.25rem;
   }
