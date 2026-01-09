@@ -316,6 +316,11 @@ button.nav-link {
     padding: 0.25rem 0 0.75rem 0;
   }
 
+  /* ✅ Toon submenu wanneer item open is (mobiel) */
+  .nav-item-dropdown.is-open > .dropdown-menu {
+    display: block;
+  }
+
     /* ✅ Open state: JS zet .is-open op <li class="nav-item-dropdown"> */
   .nav-item-dropdown.is-open > .dropdown-menu {
     display: block;
