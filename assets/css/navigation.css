@@ -314,8 +314,33 @@ button.nav-link {
     padding: 0.25rem 0 0.75rem 0;
   }
 
-  /* ✅ open state (mobiel): toon submenu als parent .is-open heeft */
-  .nav-item-dropdown.is-open > .dropdown-menu { display: block; }
+    /* ✅ Open state: JS zet .is-open op <li class="nav-item-dropdown"> */
+  .nav-item-dropdown.is-open > .dropdown-menu {
+    display: block;
+  }
+
+  /* ✅ Hele regel voelt klikbaar */
+  .nav-item-row {
+    cursor: pointer;
+  }
+
+  /* ✅ Plus/min rechts op de regel (zoals Almetaal) */
+  .nav-item-row::after {
+    content: "+";
+    margin-left: auto;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: var(--primary);
+    padding: 0.2rem 0;
+  }
+
+  .nav-item-dropdown.is-open > .nav-item-row::after {
+    content: "–";
+  }
+
+  /* ✅ We verbergen de losse button; hele regel is toggle */
+  .submenu-toggle {
+    display: none !important;
   }
 
   .dropdown-menu a {
