@@ -326,6 +326,10 @@ button.nav-link {
     cursor: pointer;
   }
 
+  .dropdown-link {
+    flex: 1;
+  }
+
   /* ✅ Plus/min rechts op de regel (zoals Almetaal) */
   .nav-item-row::after {
     content: "+";
