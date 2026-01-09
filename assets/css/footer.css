@@ -20,6 +20,10 @@
   font-weight: 700;
 }
 
+.footer-brand h4 {
+  font-size: 1.35rem;
+}
+
 .footer-contact {
   margin-top: 1.5rem;
 }
