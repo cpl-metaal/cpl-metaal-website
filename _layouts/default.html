@@ -116,6 +116,7 @@
         if (e.target.closest('a')) {
           e.preventDefault();
         }
+        e.stopPropagation();
 
         // Toggle this dropdown (optioneel: sluit andere dropdowns)
         dropdownItems.forEach((other) => {
