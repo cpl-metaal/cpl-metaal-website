@@ -315,8 +315,7 @@ button.nav-link {
   }
 
   /* ✅ open state (mobiel): toon submenu als parent .is-open heeft */
-  .nav-item-dropdown.is-open > .dropdown-menu {
-    display: block;
+  .nav-item-dropdown.is-open > .dropdown-menu { display: block; }
   }
 
   .dropdown-menu a {
