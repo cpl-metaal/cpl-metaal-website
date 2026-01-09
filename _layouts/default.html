@@ -38,12 +38,6 @@
   <link rel="stylesheet" href="/assets/css/base.css" />
   <link rel="stylesheet" href="/assets/css/navigation.css" />
 
-  <!-- 8) Extra CSS per pagina (optioneel) -->
-  {% if page.extra_css %}
-    {% for css_file in page.extra_css %}
-      <link rel="stylesheet" href="{{ css_file }}" />
-    {% endfor %}
-  {% endif %}
 </head>
 
 <body>
@@ -58,7 +52,7 @@
   <!-- Footer (Jekyll include) -->
   {% include footer.html %}
 
-  <!-- 9) Extra scripts per pagina (optioneel) -->
+  <!-- 8) Extra scripts per pagina (optioneel) -->
   {% if page.extra_js %}
     {% for js_file in page.extra_js %}
       <script src="{{ js_file }}"></script>
