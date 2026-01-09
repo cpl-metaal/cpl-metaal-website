@@ -111,10 +111,12 @@ button.nav-link {
 .dropdown-link {
   position: relative;
   padding-right: 1.2rem; /* ruimte voor chevron */
+  display: inline-flex;
+  align-items: center;
 }
 
-/* Chevron (desktop) */
-.dropdown-link::after {
+/* Chevron (desktop) -> gebruik ::before zodat .nav-link::after (underline) niet botst */
+.dropdown-link::before {
   content: "";
   position: absolute;
   right: 0.2rem;
