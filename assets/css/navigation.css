@@ -363,21 +363,6 @@ button.nav-link {
    Header CTA – originele stijl
    ================================ */
 
-/* Desktop: rechts naast menu-items */
-@media (min-width: 993px) {
-  .nav-cta {
-    margin-left: 1rem;
-  }
-
-  .nav-cta-btn {
-    white-space: nowrap; /* voorkomt afbreken */
-  }
-}
-
-/* ================================
-   Header CTA – originele stijl
-   ================================ */
-
 @media (min-width: 993px) {
   .nav-cta {
     margin-left: 1rem;
@@ -386,6 +371,13 @@ button.nav-link {
   .nav-cta-btn {
     white-space: nowrap;
     font-size: 1.1rem;
+
+    /* ✅ kleiner blok rondom tekst */
+    padding: 0.45rem 0.9rem;  /* pas dit aan naar smaak */
+    line-height: 1.1;         /* iets strakker */
+
+    /* ✅ tekst vet */
+    font-weight: 700;
   }
 }
 
@@ -394,6 +386,14 @@ button.nav-link {
     width: 100%;
     justify-content: center;
     margin-top: 1rem;
+
     font-size: 1.05rem;
+
+    /* ✅ mobiel ook iets compacter */
+    padding: 0.65rem 1rem;
+    line-height: 1.15;
+
+    /* ✅ vet */
+    font-weight: 700;
   }
 }
