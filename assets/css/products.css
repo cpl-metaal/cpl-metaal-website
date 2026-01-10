@@ -41,12 +41,12 @@
 
 /* Minder witruimte tussen secties op productpagina’s */
 .is-product section {
-  padding: clamp(2rem, 5vw, 4rem) 0; /* was 3rem/8vw/6rem in base */
+  padding: clamp(1.5rem, 3.5vw, 3rem) 0; /* was 3rem/8vw/6rem in base */
 }
 
 /* Content sections */
 .is-product .content-section {
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-5);
 }
 
 .is-product .content-section h2 {
