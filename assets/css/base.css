@@ -156,6 +156,18 @@ section {
   transform: translateY(-2px);
 }
 
+/* Outline button (generic) */
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
 /* CTA-box: outline button moet wit gevuld zijn (sitewide voor CTA-boxen) */
 .cta-box .btn-outline {
   background: var(--white);
