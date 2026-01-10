@@ -1,1 +1,288 @@
+/* ==========================
+   Products (universeel)
+   Scoped: alleen op .is-product
+   ========================== */
 
+.is-product .page-header {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: var(--white);
+  padding: 4rem 0 3rem;
+  text-align: center;
+}
+
+.is-product .page-header h1 {
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.is-product .page-header p {
+  font-size: 1.125rem;
+  opacity: 0.95;
+  margin-bottom: 0;
+}
+
+.is-product .breadcrumb {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9375rem;
+  flex-wrap: wrap;
+}
+
+.is-product .breadcrumb a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.is-product .breadcrumb a:hover {
+  color: var(--white);
+}
+
+/* Content sections */
+.is-product .content-section {
+  margin-bottom: var(--space-8);
+}
+
+.is-product .content-section h2 {
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-4);
+  border-bottom: 3px solid var(--secondary);
+}
+
+/* Light background helper (jij gebruikt bg-light in oude pagina) */
+.is-product .bg-light {
+  background: var(--gray-50);
+}
+
+/* Feature grid */
+.is-product .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin: var(--space-6) 0;
+}
+
+@media (max-width: 992px) {
+  .is-product .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .is-product .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.is-product .feature-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.is-product .feature-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  color: var(--secondary);
+}
+
+/* Applications grid (cards met image + button) */
+.is-product .application-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-5);
+  margin: var(--space-6) 0;
+}
+
+.is-product .application-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.is-product .application-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.is-product .application-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+}
+
+.is-product .application-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.is-product .application-content {
+  padding: var(--space-5);
+}
+
+.is-product .application-content h3 {
+  margin-bottom: var(--space-4);
+}
+
+.is-product .application-content p {
+  margin-bottom: var(--space-4);
+  color: var(--gray-600);
+}
+
+/* Full-width button inside card */
+.is-product .application-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: var(--primary);
+  color: var(--white) !important;
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.0625rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+
+.is-product .application-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.is-product .application-btn .arrow {
+  margin-left: 1rem;
+  font-size: 1.25rem;
+  transition: transform var(--transition);
+  color: var(--white);
+}
+
+.is-product .application-btn:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Specs table */
+.is-product .specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-6) 0;
+  background: var(--white);
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.is-product .specs-table thead {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.is-product .specs-table th,
+.is-product .specs-table td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--gray-300);
+}
+
+.is-product .specs-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.is-product .specs-table tbody tr:hover {
+  background: var(--gray-50);
+}
+
+@media (max-width: 768px) {
+  .is-product .specs-table {
+    font-size: 0.875rem;
+  }
+  .is-product .specs-table th,
+  .is-product .specs-table td {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Material cards */
+.is-product .material-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-5);
+  margin: var(--space-6) 0;
+}
+
+.is-product .material-card {
+  background: var(--white);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition);
+}
+
+.is-product .material-card:hover {
+  transform: translateY(-4px);
+}
+
+.is-product .material-card h4 {
+  color: var(--primary);
+  margin-bottom: var(--space-4);
+  font-size: 1.25rem;
+}
+
+.is-product .material-card strong {
+  display: block;
+  margin-top: var(--space-4);
+  margin-bottom: 0.5rem;
+}
+
+.is-product .material-card p {
+  font-size: 0.9375rem;
+  color: var(--gray-600);
+  margin-bottom: 0;
+}
+
+/* CTA box */
+.is-product .cta-box {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: var(--white);
+  padding: clamp(2.5rem, 5vw, 4rem);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.is-product .cta-box h2 {
+  color: var(--white);
+  margin-bottom: var(--space-4);
+}
+
+.is-product .cta-box p {
+  font-size: 1.125rem;
+  opacity: 0.95;
+  margin-bottom: var(--space-6);
+}
+
+.is-product .cta-buttons {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .is-product .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .is-product .cta-buttons .btn {
+    width: 100%;
+  }
+}
