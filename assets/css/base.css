@@ -156,15 +156,16 @@ section {
   transform: translateY(-2px);
 }
 
-.btn-outline {
-  background-color: transparent;
-  border-color: var(--primary);
+/* CTA-box: outline button moet wit gevuld zijn (sitewide voor CTA-boxen) */
+.cta-box .btn-outline {
+  background: var(--white);
   color: var(--primary);
+  border-color: var(--white);
 }
 
-.btn-outline:hover {
-  background-color: var(--primary);
-  color: var(--white);
+.cta-box .btn-outline:hover {
+  background: var(--gray-50);
+  color: var(--primary-dark);
 }
 
 .btn-white {
