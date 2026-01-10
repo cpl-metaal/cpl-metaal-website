@@ -41,7 +41,7 @@
 
 /* Content sections */
 .is-product .content-section {
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-6);
 }
 
 .is-product .content-section h2 {
